@@ -1,0 +1,95 @@
+---
+import { site, mail } from '../lib/site';
+
+interface Props {
+  subject?: string;
+  heading?: string;
+}
+const { subject = 'Enquiry for the editorial office', heading = 'Write to the editorial office' } = Astro.props;
+const hasForm = Boolean(site.web3formsKey);
+const address = mail('general');
+---
+
+<div>
+  <h2>{heading}</h2>
+  {hasForm ? (
+    <form class="form-grid" id="office-form">
+      <input type="hidden" name="access_key" value={site.web3formsKey} />
+      <input type="hidden" name="subject" value={subject} />
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+      <div>
+        <label for="cf-name">Your name</label>
+        <input type="text" id="cf-name" name="name" required />
+      </div>
+      <div>
+        <label for="cf-email">Email address</label>
+        <input type="email" id="cf-email" name="email" required />
+      </div>
+      <div>
+        <label for="cf-affiliation">Institution or affiliation</label>
+        <input type="text" id="cf-affiliation" name="affiliation" />
+      </div>
+      <div>
+        <label for="cf-topic">Reason for writing</label>
+        <select id="cf-topic" name="topic">
+          <option>Manuscript enquiry</option>
+          <option>Peer review invitation</option>
+          <option>Correction or complaint</option>
+          <option>Indexing or partnership</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div>
+        <label for="cf-message">Message</label>
+        <textarea id="cf-message" name="message" required></textarea>
+      </div>
+      <div>
+        <button class="btn btn-primary" type="submit">Send message</button>
+        <p class="form-status" id="cf-status" role="status"></p>
+      </div>
+      <p class="form-note">
+        Manuscripts are not accepted through this form. Send manuscript files to <a href={`mailto:${mail('submissions')}`}>{mail('submissions')}</a>.
+      </p>
+    </form>
+  ) : (
+    <div class="form-grid">
+      <p>
+        The editorial office answers all correspondence within five working days. Write to
+        <a href={`mailto:${address}?subject=${encodeURIComponent(subject)}`}>{address}</a> with your name, your
+        institution and a short description of your query.
+      </p>
+      <p>
+        <a class="btn btn-primary" href={`mailto:${address}?subject=${encodeURIComponent(subject)}`}>Compose an email</a>
+      </p>
+      <p class="form-note">
+        Manuscripts go to <a href={`mailto:${mail('submissions')}`}>{mail('submissions')}</a> with the subject line
+        described in the submission guidelines.
+      </p>
+    </div>
+  )}
+</div>
+
+<script>
+  const form = document.getElementById('office-form');
+  const status = document.getElementById('cf-status');
+  form?.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (status) status.textContent = 'Sending your message.';
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(Object.fromEntries(new FormData(form))),
+      });
+      const result = await response.json();
+      if (result.success) {
+        form.reset();
+        if (status) status.textContent = 'Message sent. The editorial office will reply within five working days.';
+      } else if (status) {
+        status.textContent = 'The message did not go through. Please email the editorial office directly.';
+      }
+    } catch (error) {
+      if (status) status.textContent = 'The message did not go through. Please email the editorial office directly.';
+    }
+  });
+</script>

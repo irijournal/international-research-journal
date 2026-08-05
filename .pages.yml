@@ -1,0 +1,195 @@
+media:
+  input: public/uploads
+  output: /uploads
+  extensions: [pdf, jpg, jpeg, png, webp, svg, docx]
+
+content:
+  - name: settings
+    label: Journal settings
+    type: file
+    path: src/data/settings.json
+    fields:
+      - { name: journalTitle, label: Journal title, type: string }
+      - { name: journalSubtitle, label: Subtitle, type: string }
+      - { name: shortTitle, label: Abbreviated title, type: string }
+      - { name: tagline, label: Tagline, type: string }
+      - { name: domain, label: Domain name, type: string, description: "Used to build every email address on the site, for example editor@yourdomain.com" }
+      - name: emailLocalParts
+        label: Email addresses, part before the @
+        type: object
+        fields:
+          - { name: editorInChief, label: Editor in Chief, type: string }
+          - { name: managingEditor, label: Managing Editor, type: string }
+          - { name: submissions, label: Manuscript submissions, type: string }
+          - { name: general, label: General enquiries, type: string }
+      - { name: issnOnline, label: ISSN (online), type: string, description: "Leave empty until the ISSN is allotted. The site then shows the number everywhere automatically." }
+      - { name: issnNote, label: ISSN status note, type: text }
+      - { name: publisher, label: Publisher, type: string }
+      - { name: placeOfPublication, label: Place of publication, type: string }
+      - { name: editorialOfficeAddress, label: Editorial office address, type: text }
+      - { name: phone, label: Telephone, type: string }
+      - { name: frequency, label: Frequency, type: string }
+      - { name: languages, label: Languages of publication, type: string }
+      - { name: reviewModel, label: Review model, type: string }
+      - { name: accessModel, label: Access model, type: string }
+      - { name: licence, label: Licence, type: string }
+      - { name: foundedYear, label: Year founded, type: string }
+      - { name: currentIssueSlug, label: Current issue, type: string, description: "The file name of the issue that should appear under Current Issue, for example volume-1-issue-1" }
+      - { name: web3formsKey, label: Contact form key, type: string, description: "Free access key from web3forms.com. Leave empty and the contact page shows an email button instead." }
+      - { name: googleFormUrl, label: Google Form URL, type: string, description: "Optional. Only used if you decide to collect submissions through a form." }
+      - { name: footerNote, label: Footer note, type: text }
+      - name: social
+        label: Social links
+        type: object
+        fields:
+          - { name: linkedin, label: LinkedIn URL, type: string }
+          - { name: instagram, label: Instagram URL, type: string }
+          - { name: x, label: X URL, type: string }
+
+  - name: articles
+    label: Articles
+    type: collection
+    path: src/content/articles
+    filename: '{fields.slug}.md'
+    view:
+      fields: [title, issue, section, articleType]
+      primary: title
+    fields:
+      - { name: slug, label: Web address, type: string, required: true, description: "Short, lowercase, words joined by hyphens. This becomes the article link and must never change once published." }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: authors, label: Authors, type: string, list: true, required: true }
+      - { name: affiliations, label: Affiliations, type: string, list: true }
+      - { name: abstract, label: Abstract, type: text, required: true }
+      - { name: keywords, label: Keywords, type: string, list: true, required: true }
+      - name: articleType
+        label: Article type
+        type: select
+        options:
+          values: [Research Article, Review Article, Case Comment, Short Communication, Book Review, Editorial]
+      - name: section
+        label: Research section
+        type: select
+        options:
+          values:
+            - Law and Constitutional Studies
+            - Health and Nursing Sciences
+            - Hindi Language and Literature
+            - History, Heritage and Culture
+            - Education and Pedagogy
+            - Society, Economy and Public Policy
+            - Science, Technology and Environment
+      - { name: issue, label: Issue file name, type: string, required: true, description: "For example volume-1-issue-1" }
+      - { name: pageRange, label: Page range, type: string, description: "For example 12 to 28" }
+      - { name: doi, label: DOI, type: string, description: "Only after Crossref membership. Leave empty otherwise." }
+      - { name: pdf, label: PDF path, type: string, description: "Upload the PDF under Media, then paste its path here, for example /uploads/article-name.pdf" }
+      - { name: receivedDate, label: Received, type: string }
+      - { name: acceptedDate, label: Accepted, type: string }
+      - { name: publishedDate, label: Published, type: string }
+      - { name: references, label: References, type: text, list: true }
+      - { name: order, label: Order in the issue, type: number }
+      - { name: body, label: Full text, type: rich-text }
+
+  - name: issues
+    label: Issues
+    type: collection
+    path: src/content/issues
+    filename: '{fields.slug}.md'
+    view:
+      fields: [editorialTitle, volume, number, year, status]
+      primary: editorialTitle
+    fields:
+      - { name: slug, label: Web address, type: string, required: true, description: "For example volume-1-issue-2" }
+      - { name: volume, label: Volume, type: number, required: true }
+      - { name: number, label: Number, type: number, required: true }
+      - { name: year, label: Year, type: number, required: true }
+      - { name: period, label: Period, type: string, required: true, description: "For example January to March" }
+      - name: status
+        label: Status
+        type: select
+        options:
+          values: [Open for submissions, In production, Published]
+      - { name: editorialTitle, label: Editorial note title, type: string, required: true }
+      - { name: editorialAuthor, label: Editorial note author, type: string, required: true }
+      - { name: summary, label: Issue summary, type: text, required: true }
+      - { name: submissionDeadline, label: Submission deadline, type: string }
+      - { name: publicationDate, label: Publication date, type: string }
+      - { name: order, label: Sort order, type: number }
+      - { name: body, label: Editorial note, type: rich-text }
+
+  - name: board
+    label: Editorial board
+    type: collection
+    path: src/content/board
+    filename: '{fields.slug}.md'
+    view:
+      fields: [name, role, institution]
+      primary: name
+    fields:
+      - { name: slug, label: File name, type: string, required: true, description: "The member's name in lowercase with hyphens, for example ravi-kumar" }
+      - { name: name, label: Full name with title, type: string, required: true }
+      - { name: role, label: Role, type: string, required: true }
+      - name: roleGroup
+        label: Group
+        type: select
+        options:
+          values: [Editorial Leadership, Editorial Board and Reviewers, Advisory Board]
+      - { name: qualification, label: Qualification, type: string, required: true }
+      - { name: designation, label: Designation, type: string, required: true }
+      - { name: institution, label: Institution, type: string }
+      - { name: email, label: Official email, type: string }
+      - { name: order, label: Sort order, type: number }
+
+  - name: sections
+    label: Research sections
+    type: collection
+    path: src/content/sections
+    filename: '{fields.slug}.md'
+    view:
+      fields: [title, order]
+      primary: title
+    fields:
+      - { name: slug, label: Web address, type: string, required: true }
+      - { name: title, label: Section title, type: string, required: true }
+      - { name: summary, label: One line scope, type: text, required: true }
+      - { name: editorNote, label: Note shown in the sidebar, type: text }
+      - { name: order, label: Sort order, type: number }
+      - { name: body, label: Full scope, type: rich-text }
+
+  - name: announcements
+    label: Announcements
+    type: collection
+    path: src/content/announcements
+    filename: '{fields.slug}.md'
+    view:
+      fields: [title, date, pinned]
+      primary: title
+    fields:
+      - { name: slug, label: Web address, type: string, required: true }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: date, label: Date, type: string, required: true, description: "For example 5 August 2026" }
+      - { name: summary, label: Summary, type: text, required: true }
+      - { name: pinned, label: Pin to the top, type: boolean }
+      - { name: body, label: Notice, type: rich-text }
+
+  - name: pages
+    label: Journal pages and policies
+    type: collection
+    path: src/content/pages
+    filename: '{fields.slug}.md'
+    view:
+      fields: [title, navGroup, updated]
+      primary: title
+    fields:
+      - { name: slug, label: Web address, type: string, required: true, description: "Changing this changes the page link. Existing pages should keep their address." }
+      - { name: title, label: Page title, type: string, required: true }
+      - { name: navLabel, label: Menu label, type: string, required: true }
+      - name: navGroup
+        label: Where it appears in the menu
+        type: select
+        options:
+          values: [About, For Authors, Standalone, Footer only]
+      - { name: summary, label: Summary shown under the title, type: text, required: true }
+      - { name: updated, label: Last updated, type: string, required: true }
+      - { name: order, label: Sort order, type: number }
+      - { name: showContactForm, label: Show the contact form on this page, type: boolean }
+      - { name: body, label: Page content, type: rich-text }

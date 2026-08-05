@@ -1,0 +1,208 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { site, mail, issnLine, byOrder, fullJournalName } from '../lib/site';
+
+const sections = (await getCollection('sections')).sort(byOrder);
+const issues = (await getCollection('issues')).sort(byOrder);
+const currentIssue = issues.find((i) => i.id === site.currentIssueSlug) ?? issues[0];
+const articles = (await getCollection('articles')).sort(byOrder);
+const currentArticles = currentIssue ? articles.filter((a) => a.data.issue === currentIssue.id) : [];
+const announcements = (await getCollection('announcements')).sort(
+  (a, b) => Number(b.data.pinned) - Number(a.data.pinned) || b.data.date.localeCompare(a.data.date),
+);
+const board = (await getCollection('board')).sort(byOrder);
+const leadership = board.filter((m) => m.data.roleGroup === 'Editorial Leadership');
+---
+
+<Base
+  title="Home"
+  description={`${fullJournalName}. A double anonymous peer reviewed, open access journal publishing research in law, health sciences, humanities, education and public policy.`}
+>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">{site.accessModel}</p>
+      <h1>{fullJournalName}</h1>
+      <p class="lede">
+        {site.journalTitle} publishes rigorous, peer reviewed scholarship across law, health sciences, humanities,
+        education and public policy. The journal exists for a simple reason: serious research produced outside the
+        largest institutions deserves an editorial process that treats it seriously.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="/submission-guidelines">Submit a manuscript</a>
+        <a class="btn btn-ghost" href="/current">Read the current issue</a>
+      </div>
+      <dl class="hero-plate">
+        <div>
+          <dt>Identification</dt>
+          <dd>{issnLine()}</dd>
+        </div>
+        <div>
+          <dt>Review model</dt>
+          <dd>{site.reviewModel}</dd>
+        </div>
+        <div>
+          <dt>Frequency</dt>
+          <dd>{site.frequency.split(',')[0]}, four issues a year</dd>
+        </div>
+        <div>
+          <dt>Languages</dt>
+          <dd>{site.languages}</dd>
+        </div>
+        <div>
+          <dt>Charges</dt>
+          <dd>No submission fee, no publication fee</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  {currentIssue && (
+    <section class="band">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Current issue</h2>
+          <a href="/archives">All issues</a>
+        </div>
+        <div class="layout-split">
+          <div>
+            <p class="meta">
+              Volume {currentIssue.data.volume}, Number {currentIssue.data.number}, {currentIssue.data.period}{' '}
+              {currentIssue.data.year}
+            </p>
+            <h3 style="font-size:1.5rem;margin-top:0.5rem">{currentIssue.data.editorialTitle}</h3>
+            <p>{currentIssue.data.summary}</p>
+            <p>
+              <a class="btn btn-outline" href="/current">Open the current issue</a>
+            </p>
+            {currentArticles.length > 0 && (
+              <ul class="toc" style="margin-top:2rem">
+                {currentArticles.slice(0, 5).map((article) => (
+                  <li>
+                    <span class="badge">{article.data.articleType}</span>
+                    <h3><a href={`/articles/${article.id}`}>{article.data.title}</a></h3>
+                    <p class="authors">{article.data.authors.join(', ')}</p>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+          <aside class="sidebar">
+            <h2>Issue status</h2>
+            <dl>
+              <dt>Stage</dt>
+              <dd>{currentIssue.data.status}</dd>
+              {currentIssue.data.submissionDeadline && (
+                <>
+                  <dt>Submission deadline</dt>
+                  <dd>{currentIssue.data.submissionDeadline}</dd>
+                </>
+              )}
+              {currentIssue.data.publicationDate && (
+                <>
+                  <dt>Publication date</dt>
+                  <dd>{currentIssue.data.publicationDate}</dd>
+                </>
+              )}
+              <dt>Manuscripts to</dt>
+              <dd><a href={`mailto:${mail('submissions')}`}>{mail('submissions')}</a></dd>
+            </dl>
+          </aside>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="band band-tint">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Research sections</h2>
+        <a href="/sections">Read the full scope</a>
+      </div>
+      <div class="grid grid-3">
+        {sections.map((section) => (
+          <article class="card">
+            <h3><a href={`/sections/${section.id}`}>{section.data.title}</a></h3>
+            <p>{section.data.summary}</p>
+            <a class="card-link" href={`/sections/${section.id}`}>Scope and submissions</a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="layout-split">
+        <div>
+          <div class="section-head">
+            <h2>Announcements</h2>
+            <a href="/announcements">All announcements</a>
+          </div>
+          <ul class="toc">
+            {announcements.slice(0, 4).map((item) => (
+              <li>
+                <p class="meta">{item.data.date}{item.data.pinned ? ' · Pinned' : ''}</p>
+                <h3><a href={`/announcements/${item.id}`}>{item.data.title}</a></h3>
+                <p>{item.data.summary}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <aside class="sidebar">
+          <h2>Editorial leadership</h2>
+          <ul>
+            {leadership.map((member) => (
+              <li>
+                <a href="/editorial-board">
+                  {member.data.name}
+                  <br />
+                  <span class="meta">{member.data.role}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <p style="margin-top:1rem"><a class="btn btn-outline" href="/editorial-board">Full editorial board</a></p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band-tint">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>How publication works</h2>
+        <a href="/peer-review-policy">Peer review policy</a>
+      </div>
+      <div class="grid grid-3">
+        <article class="card">
+          <p class="eyebrow">Stage one</p>
+          <h3>Editorial screening</h3>
+          <p>
+            Every manuscript is checked within seven working days for scope, structure, referencing and similarity.
+            Authors receive a written decision at this stage, never silence.
+          </p>
+          <a class="card-link" href="/submission-guidelines">Preparation checklist</a>
+        </article>
+        <article class="card">
+          <p class="eyebrow">Stage two</p>
+          <h3>Double anonymous review</h3>
+          <p>
+            Two reviewers assess the anonymised manuscript against a published rubric covering originality, method,
+            evidence, argument and referencing. Reports reach the author with the decision.
+          </p>
+          <a class="card-link" href="/peer-review-policy">Review criteria</a>
+        </article>
+        <article class="card">
+          <p class="eyebrow">Stage three</p>
+          <h3>Publication and archiving</h3>
+          <p>
+            Accepted work is copy edited, proofed with the author, published under {site.licence} and deposited in the
+            journal archive within the issue cycle.
+          </p>
+          <a class="card-link" href="/indexing-and-preservation">Preservation policy</a>
+        </article>
+      </div>
+    </div>
+  </section>
+</Base>

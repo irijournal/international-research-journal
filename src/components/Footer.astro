@@ -1,0 +1,75 @@
+---
+import { getCollection } from 'astro:content';
+import { site, mail, issnLine, byOrder } from '../lib/site';
+
+const pages = (await getCollection('pages')).sort(byOrder);
+const authorPages = pages.filter((p) => p.data.navGroup === 'For Authors');
+const aboutPages = pages.filter((p) => p.data.navGroup === 'About' && p.id !== 'about');
+const legalPages = pages.filter((p) => p.data.navGroup === 'Standalone' || p.data.navGroup === 'Footer only');
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="name">{site.journalTitle}</div>
+        <p>{site.journalSubtitle}. {site.footerNote}</p>
+        <p>{issnLine()}</p>
+      </div>
+
+      <div>
+        <h2>Read</h2>
+        <ul>
+          <li><a href="/current">Current issue</a></li>
+          <li><a href="/archives">Archives</a></li>
+          <li><a href="/sections">Research sections</a></li>
+          <li><a href="/announcements">Announcements</a></li>
+          <li><a href="/search">Search</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Publish</h2>
+        <ul>
+          {authorPages.map((p) => (
+            <li><a href={`/${p.id}`}>{p.data.navLabel}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h2>The journal</h2>
+        <ul>
+          <li><a href="/about">About the journal</a></li>
+          <li><a href="/editorial-board">Editorial board</a></li>
+          {aboutPages.map((p) => (
+            <li><a href={`/${p.id}`}>{p.data.navLabel}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h2>Editorial office</h2>
+        <ul>
+          <li>{site.editorialOfficeAddress}</li>
+          <li><a href={`mailto:${mail('general')}`}>{mail('general')}</a></li>
+          <li><a href={`mailto:${mail('submissions')}`}>{mail('submissions')}</a></li>
+          {site.phone ? <li>{site.phone}</li> : null}
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>Copyright {year} {site.publisher}. Articles are published under {site.licence}.</span>
+      <span>
+        {legalPages.map((p, index) => (
+          <>
+            {index > 0 ? ' · ' : ''}
+            <a href={`/${p.id}`}>{p.data.navLabel}</a>
+          </>
+        ))}
+      </span>
+    </div>
+  </div>
+</footer>

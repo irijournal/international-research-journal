@@ -1,0 +1,78 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import ContactForm from '../components/ContactForm.astro';
+import { getCollection, render } from 'astro:content';
+import { site, mail, byOrder } from '../lib/site';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('pages');
+  return pages.map((page) => ({ params: { page: page.id }, props: { page } }));
+}
+
+const { page } = Astro.props;
+const { Content } = await render(page);
+const related = (await getCollection('pages'))
+  .filter((p) => p.data.navGroup === page.data.navGroup && p.id !== page.id)
+  .sort(byOrder);
+---
+
+<Base title={page.data.title} description={page.data.summary}>
+  <PageHead
+    eyebrow={page.data.navGroup === 'For Authors' ? 'For authors' : 'Journal policy'}
+    title={page.data.title}
+    lede={page.data.summary}
+    crumbs={[{ label: page.data.title }]}
+  />
+
+  <section class="band">
+    <div class="wrap layout-split">
+      <div>
+        <div class="prose">
+          <Content />
+        </div>
+
+        {page.data.showContactForm && (
+          <div style="margin-top:3rem">
+            <ContactForm subject="Enquiry through the journal website" />
+          </div>
+        )}
+      </div>
+
+      <aside class="sidebar">
+        <h2>Editorial office</h2>
+        <dl>
+          <dt>Address</dt>
+          <dd>{site.editorialOfficeAddress}</dd>
+          <dt>General correspondence</dt>
+          <dd><a href={`mailto:${mail('general')}`}>{mail('general')}</a></dd>
+          <dt>Manuscripts</dt>
+          <dd><a href={`mailto:${mail('submissions')}`}>{mail('submissions')}</a></dd>
+          <dt>Editor in Chief</dt>
+          <dd><a href={`mailto:${mail('editorInChief')}`}>{mail('editorInChief')}</a></dd>
+          <dt>Managing Editor</dt>
+          <dd><a href={`mailto:${mail('managingEditor')}`}>{mail('managingEditor')}</a></dd>
+          {site.phone && (
+            <>
+              <dt>Telephone</dt>
+              <dd>{site.phone}</dd>
+            </>
+          )}
+          <dt>Page updated</dt>
+          <dd>{page.data.updated}</dd>
+        </dl>
+
+        {related.length > 0 && (
+          <>
+            <h2 style="margin-top:1.6rem">Related pages</h2>
+            <ul>
+              {related.map((item) => (
+                <li><a href={`/${item.id}`}>{item.data.navLabel}</a></li>
+              ))}
+            </ul>
+          </>
+        )}
+      </aside>
+    </div>
+  </section>
+</Base>

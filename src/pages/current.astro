@@ -1,0 +1,26 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import IssueView from '../components/IssueView.astro';
+import { getCollection } from 'astro:content';
+import { site, byOrder } from '../lib/site';
+
+const issues = (await getCollection('issues')).sort(byOrder);
+const issue = issues.find((i) => i.id === site.currentIssueSlug) ?? issues[0];
+const articles = (await getCollection('articles'))
+  .filter((a) => a.data.issue === issue.id)
+  .sort(byOrder);
+---
+
+<Base
+  title={`Current issue: Volume ${issue.data.volume}, Number ${issue.data.number}`}
+  description={issue.data.summary}
+>
+  <PageHead
+    eyebrow={`${issue.data.period} ${issue.data.year}`}
+    title={`Volume ${issue.data.volume}, Number ${issue.data.number}`}
+    lede={issue.data.summary}
+    crumbs={[{ label: 'Current issue' }]}
+  />
+  <IssueView issue={issue} articles={articles} />
+</Base>

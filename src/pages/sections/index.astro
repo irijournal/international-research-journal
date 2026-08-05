@@ -1,0 +1,38 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/PageHead.astro';
+import { getCollection } from 'astro:content';
+import { site, byOrder } from '../../lib/site';
+
+const sections = (await getCollection('sections')).sort(byOrder);
+---
+
+<Base
+  title="Research sections"
+  description={`The research sections of ${site.journalTitle}, with the scope of each and the kind of manuscript the editors are looking for.`}
+>
+  <PageHead
+    eyebrow="Scope"
+    title="Research sections"
+    lede="The journal is multidisciplinary by design, not by accident. Work is commissioned and reviewed within named sections so that every manuscript reaches reviewers who know the field. Choose the section that fits your argument and name it in your covering letter."
+    crumbs={[{ label: 'Research sections' }]}
+  />
+
+  <section class="band">
+    <div class="wrap">
+      <div class="grid grid-2">
+        {sections.map((section) => (
+          <article class="card">
+            <h3><a href={`/sections/${section.id}`}>{section.data.title}</a></h3>
+            <p>{section.data.summary}</p>
+            <a class="card-link" href={`/sections/${section.id}`}>Full scope</a>
+          </article>
+        ))}
+      </div>
+      <p style="margin-top:2rem" class="form-note">
+        Work that sits between two sections is welcome. Name both in your covering letter and the editors will assign
+        reviewers from each.
+      </p>
+    </div>
+  </section>
+</Base>

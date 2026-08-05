@@ -1,0 +1,93 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import { site } from '../lib/site';
+---
+
+<Base
+  title="Search"
+  description={`Search articles, issues, announcements and policies across ${site.journalTitle}.`}
+>
+  <PageHead
+    eyebrow="Find"
+    title="Search the journal"
+    lede="Search across article titles, abstracts, keywords, authors, issues, announcements and every editorial policy."
+    crumbs={[{ label: 'Search' }]}
+  />
+
+  <section class="band">
+    <div class="wrap">
+      <form class="search-page-form" id="search-form" role="search">
+        <label class="sr-only" for="q" style="position:absolute;left:-9999px">Search terms</label>
+        <input type="search" id="q" name="q" placeholder="Author, keyword, title or policy" autocomplete="off" />
+        <button class="btn btn-primary" type="submit">Search</button>
+      </form>
+      <p class="form-status" id="search-status" role="status">Type a term to search the whole journal.</p>
+      <ul class="search-results" id="search-results"></ul>
+    </div>
+  </section>
+</Base>
+
+<script>
+  const form = document.getElementById('search-form');
+  const input = document.getElementById('q');
+  const list = document.getElementById('search-results');
+  const status = document.getElementById('search-status');
+  let index = [];
+
+  const load = async () => {
+    if (index.length) return index;
+    const response = await fetch('/search-index.json');
+    index = await response.json();
+    return index;
+  };
+
+  const escapeHtml = (value) =>
+    value.replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
+
+  const run = async (term) => {
+    const query = term.trim().toLowerCase();
+    if (!query) {
+      list.innerHTML = '';
+      status.textContent = 'Type a term to search the whole journal.';
+      return;
+    }
+    const data = await load();
+    const words = query.split(/\s+/);
+    const results = data
+      .map((item) => {
+        const haystack = `${item.title} ${item.summary} ${item.body}`.toLowerCase();
+        const score = words.reduce((total, word) => (haystack.includes(word) ? total + 1 : total), 0);
+        return { item, score };
+      })
+      .filter((entry) => entry.score === words.length)
+      .slice(0, 40);
+
+    status.textContent = results.length
+      ? `${results.length} ${results.length === 1 ? 'result' : 'results'} for "${term.trim()}".`
+      : `Nothing matches "${term.trim()}". Try a single keyword, an author surname, or browse the archives.`;
+
+    list.innerHTML = results
+      .map(
+        ({ item }) => `
+        <li>
+          <p class="meta">${escapeHtml(item.type)}</p>
+          <h3><a href="${item.url}">${escapeHtml(item.title)}</a></h3>
+          <p>${escapeHtml(item.summary)}</p>
+        </li>`,
+      )
+      .join('');
+  };
+
+  form?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    run(input.value);
+  });
+  input?.addEventListener('input', () => run(input.value));
+
+  const initial = new URLSearchParams(window.location.search).get('q');
+  if (initial) {
+    input.value = initial;
+    run(initial);
+  }
+</script>

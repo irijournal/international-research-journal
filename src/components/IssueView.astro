@@ -1,0 +1,86 @@
+---
+import { render } from 'astro:content';
+import { site, mail } from '../lib/site';
+
+const { issue, articles } = Astro.props;
+const { Content } = await render(issue);
+---
+
+<section class="band">
+  <div class="wrap layout-split">
+    <div>
+      <p class="eyebrow">Editorial note</p>
+      <h2>{issue.data.editorialTitle}</h2>
+      <p class="meta" style="margin-bottom:1.5rem">{issue.data.editorialAuthor}</p>
+      <div class="prose">
+        <Content />
+      </div>
+
+      <h2 style="margin-top:3rem">Table of contents</h2>
+      {articles.length > 0 ? (
+        <ul class="toc">
+          {articles.map((article) => (
+            <li>
+              <span class="badge">{article.data.articleType}</span>
+              <h3><a href={`/articles/${article.id}`}>{article.data.title}</a></h3>
+              <p class="authors">{article.data.authors.join(', ')}</p>
+              <p class="meta">
+                {article.data.section}
+                {article.data.pageRange ? ` · Pages ${article.data.pageRange}` : ''}
+              </p>
+              <div class="links">
+                <a href={`/articles/${article.id}`}>Abstract and full text</a>
+                {article.data.pdf && <a href={article.data.pdf}>Download PDF</a>}
+              </div>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <div class="cite-box">
+          <p style="margin-bottom:0.6rem">
+            <strong>This issue is open for submissions.</strong>
+          </p>
+          <p style="margin-bottom:0.6rem">
+            The table of contents is published as soon as manuscripts complete double anonymous review. Accepted
+            articles appear here in the order fixed by the editorial board.
+          </p>
+          <p style="margin-bottom:0">
+            To be considered, read the <a href="/submission-guidelines">submission guidelines</a> and send your
+            manuscript to <a href={`mailto:${mail('submissions')}`}>{mail('submissions')}</a>.
+          </p>
+        </div>
+      )}
+    </div>
+
+    <aside class="sidebar">
+      <h2>Issue details</h2>
+      <dl>
+        <dt>Volume and number</dt>
+        <dd>Volume {issue.data.volume}, Number {issue.data.number}</dd>
+        <dt>Period</dt>
+        <dd>{issue.data.period} {issue.data.year}</dd>
+        <dt>Status</dt>
+        <dd>{issue.data.status}</dd>
+        {issue.data.submissionDeadline && (
+          <>
+            <dt>Submission deadline</dt>
+            <dd>{issue.data.submissionDeadline}</dd>
+          </>
+        )}
+        {issue.data.publicationDate && (
+          <>
+            <dt>Publication date</dt>
+            <dd>{issue.data.publicationDate}</dd>
+          </>
+        )}
+        <dt>Licence</dt>
+        <dd>{site.licence}</dd>
+        <dt>Articles listed</dt>
+        <dd>{articles.length}</dd>
+      </dl>
+      <p style="margin-top:1.2rem">
+        <a class="btn btn-outline" href="/submission-guidelines">Submission guidelines</a>
+      </p>
+    </aside>
+  </div>
+</section>

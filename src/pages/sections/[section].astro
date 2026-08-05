@@ -1,0 +1,74 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/PageHead.astro';
+import { getCollection, render } from 'astro:content';
+import { mail } from '../../lib/site';
+
+export async function getStaticPaths() {
+  const sections = await getCollection('sections');
+  const articles = await getCollection('articles');
+  return sections.map((section) => ({
+    params: { section: section.id },
+    props: {
+      section,
+      articles: articles.filter((a) => a.data.section === section.data.title),
+    },
+  }));
+}
+
+const { section, articles } = Astro.props;
+const { Content } = await render(section);
+---
+
+<Base title={section.data.title} description={section.data.summary}>
+  <PageHead
+    eyebrow="Research section"
+    title={section.data.title}
+    lede={section.data.summary}
+    crumbs={[{ label: 'Research sections', href: '/sections' }, { label: section.data.title }]}
+  />
+
+  <section class="band">
+    <div class="wrap layout-split">
+      <div>
+        <div class="prose">
+          <Content />
+        </div>
+
+        <h2 style="margin-top:2.5rem">Published in this section</h2>
+        {articles.length > 0 ? (
+          <ul class="toc">
+            {articles.map((article) => (
+              <li>
+                <span class="badge">{article.data.articleType}</span>
+                <h3><a href={`/articles/${article.id}`}>{article.data.title}</a></h3>
+                <p class="authors">{article.data.authors.join(', ')}</p>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <div class="cite-box">
+            <p style="margin-bottom:0">
+              No article has completed review in this section yet. The section opened with the founding issue and is
+              accepting manuscripts now. Send yours to <a href={`mailto:${mail('submissions')}`}>{mail('submissions')}</a>
+              with the section named in the subject line.
+            </p>
+          </div>
+        )}
+      </div>
+
+      <aside class="sidebar">
+        <h2>Writing for this section</h2>
+        <ul>
+          <li><a href="/submission-guidelines">Submission guidelines</a></li>
+          <li><a href="/peer-review-policy">How review works</a></li>
+          <li><a href="/publication-ethics">Publication ethics</a></li>
+          <li><a href="/for-reviewers">Join the reviewer panel</a></li>
+        </ul>
+        {section.data.editorNote && (
+          <p style="margin-top:1rem" class="form-note">{section.data.editorNote}</p>
+        )}
+      </aside>
+    </div>
+  </section>
+</Base>

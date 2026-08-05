@@ -1,0 +1,34 @@
+{
+  "journalTitle": "International Research Insights",
+  "journalSubtitle": "Multidisciplinary e-Journal",
+  "shortTitle": "Int. Res. Insights",
+  "tagline": "Peer reviewed research across law, health, humanities and public policy",
+  "domain": "internationalresearchinsights.com",
+  "emailLocalParts": {
+    "editorInChief": "editor",
+    "managingEditor": "managing.editor",
+    "submissions": "submissions",
+    "general": "info"
+  },
+  "issnOnline": "",
+  "issnNote": "The application for an electronic ISSN has been filed with the National Science Library, CSIR-NIScPR, New Delhi, the ISSN National Centre for India. The number will be displayed here and on every article page as soon as it is allotted.",
+  "publisher": "International Research Insights Editorial Board",
+  "placeOfPublication": "Greater Noida, Uttar Pradesh, India",
+  "editorialOfficeAddress": "Editorial Office, International Research Insights, Greater Noida, Gautam Buddh Nagar, Uttar Pradesh 201310, India",
+  "phone": "",
+  "frequency": "Quarterly, four issues a year (March, June, September, December)",
+  "languages": "English and Hindi",
+  "reviewModel": "Double anonymous peer review",
+  "accessModel": "Diamond open access, free to read and free to publish",
+  "licence": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+  "foundedYear": "2026",
+  "currentIssueSlug": "volume-1-issue-1",
+  "web3formsKey": "",
+  "googleFormUrl": "",
+  "footerNote": "International Research Insights is an independent, editorially governed, open access journal. It charges no fee to authors and no fee to readers.",
+  "social": {
+    "linkedin": "",
+    "instagram": "",
+    "x": ""
+  }
+}

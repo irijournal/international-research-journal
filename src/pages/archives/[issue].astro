@@ -1,0 +1,34 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/PageHead.astro';
+import IssueView from '../../components/IssueView.astro';
+import { getCollection } from 'astro:content';
+import { byOrder } from '../../lib/site';
+
+export async function getStaticPaths() {
+  const issues = await getCollection('issues');
+  const articles = await getCollection('articles');
+  return issues.map((issue) => ({
+    params: { issue: issue.id },
+    props: {
+      issue,
+      articles: articles.filter((a) => a.data.issue === issue.id).sort((a, b) => (a.data.order ?? 50) - (b.data.order ?? 50)),
+    },
+  }));
+}
+
+const { issue, articles } = Astro.props;
+---
+
+<Base
+  title={`Volume ${issue.data.volume}, Number ${issue.data.number}`}
+  description={issue.data.summary}
+>
+  <PageHead
+    eyebrow={`${issue.data.period} ${issue.data.year}`}
+    title={`Volume ${issue.data.volume}, Number ${issue.data.number}`}
+    lede={issue.data.summary}
+    crumbs={[{ label: 'Archives', href: '/archives' }, { label: `Volume ${issue.data.volume}, Number ${issue.data.number}` }]}
+  />
+  <IssueView issue={issue} articles={articles} />
+</Base>

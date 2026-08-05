@@ -1,0 +1,93 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import { getCollection } from 'astro:content';
+import { site, mail, byOrder } from '../lib/site';
+
+const board = (await getCollection('board')).sort(byOrder);
+const groups = ['Editorial Leadership', 'Editorial Board and Reviewers', 'Advisory Board'];
+const grouped = groups
+  .map((group) => ({ group, members: board.filter((m) => m.data.roleGroup === group) }))
+  .filter((entry) => entry.members.length > 0);
+---
+
+<Base
+  title="Editorial board"
+  description={`The editorial board of ${site.journalTitle}, with the role, qualification and institution of every member.`}
+>
+  <PageHead
+    eyebrow="Governance"
+    title="Editorial board"
+    lede="The board carries the journal. Every member is named in full with qualification, designation and institution, because a reader deserves to know who decided that a piece of research was fit to publish."
+    crumbs={[{ label: 'Editorial board' }]}
+  />
+
+  <section class="band">
+    <div class="wrap layout-split">
+      <div>
+        {grouped.map((entry) => (
+          <div style="margin-bottom:2.5rem">
+            <div class="section-head"><h2>{entry.group}</h2></div>
+            <div class="grid grid-2">
+              {entry.members.map((member) => (
+                <article class="person">
+                  <p class="role">{member.data.role}</p>
+                  <h3>{member.data.name}</h3>
+                  <p>{member.data.qualification}</p>
+                  <p>{member.data.designation}</p>
+                  {member.data.institution && <p>{member.data.institution}</p>}
+                  {member.data.email && <a href={`mailto:${member.data.email}`}>{member.data.email}</a>}
+                </article>
+              ))}
+            </div>
+          </div>
+        ))}
+
+        <div class="prose">
+          <h2>How the board works</h2>
+          <p>
+            The Editor in Chief holds final responsibility for what the journal publishes and for the conduct of its
+            review process. The Managing Editor runs the editorial calendar, assigns manuscripts to reviewers and keeps
+            the record of every decision. Board members and reviewers assess manuscripts against the published review
+            criteria and may not review work by a colleague from their own department, a co author from the last three
+            years, or a research student they have supervised.
+          </p>
+          <p>
+            Board members serve renewable terms of three years. A member who is unable to complete assigned reviews for
+            two consecutive issues steps down, and the vacancy is announced on this website. Members receive no payment
+            and hold no financial interest in the journal.
+          </p>
+          <p>
+            Editorial decisions are made on the manuscript alone. No member of the board can influence the outcome of a
+            submission by an author known to them, and any submission by a board member is handled by a different
+            editor with the author removed from all correspondence about it. This rule applies to the Editor in Chief
+            as much as to any other member.
+          </p>
+
+          <h2>Widening the board</h2>
+          <p>
+            The board is expanding as the journal grows. Scholars holding a doctorate, with a record of published
+            research and the willingness to return a review within three weeks, are invited to apply through the
+            <a href="/for-reviewers">reviewer panel page</a>. Applications from institutions outside India are
+            particularly welcome, since a journal that calls itself international ought to look like one.
+          </p>
+        </div>
+      </div>
+
+      <aside class="sidebar">
+        <h2>Editorial office</h2>
+        <dl>
+          <dt>Address</dt>
+          <dd>{site.editorialOfficeAddress}</dd>
+          <dt>General correspondence</dt>
+          <dd><a href={`mailto:${mail('general')}`}>{mail('general')}</a></dd>
+          <dt>Manuscripts</dt>
+          <dd><a href={`mailto:${mail('submissions')}`}>{mail('submissions')}</a></dd>
+          <dt>Complaints and appeals</dt>
+          <dd><a href={`mailto:${mail('editorInChief')}`}>{mail('editorInChief')}</a></dd>
+        </dl>
+        <p style="margin-top:1.2rem"><a class="btn btn-outline" href="/for-reviewers">Apply to review</a></p>
+      </aside>
+    </div>
+  </section>
+</Base>

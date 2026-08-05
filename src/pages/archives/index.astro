@@ -1,0 +1,52 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/PageHead.astro';
+import { getCollection } from 'astro:content';
+import { site, byOrder } from '../../lib/site';
+
+const issues = (await getCollection('issues')).sort(byOrder);
+const articles = await getCollection('articles');
+const countFor = (id) => articles.filter((a) => a.data.issue === id).length;
+---
+
+<Base
+  title="Archives"
+  description={`Every issue of ${site.journalTitle}, with tables of contents, editorial notes and full text articles.`}
+>
+  <PageHead
+    eyebrow="Complete run"
+    title="Archives"
+    lede="Every issue published by the journal, listed by volume. Each entry carries the editorial note, the table of contents and the full text of each article. Nothing is removed once published."
+    crumbs={[{ label: 'Archives' }]}
+  />
+
+  <section class="band">
+    <div class="wrap">
+      <div class="grid grid-2">
+        {issues.map((issue) => (
+          <article class="card">
+            <p class="meta">{issue.data.period} {issue.data.year}</p>
+            <h3>
+              <a href={`/archives/${issue.id}`}>Volume {issue.data.volume}, Number {issue.data.number}</a>
+            </h3>
+            <p>{issue.data.summary}</p>
+            <p>
+              <span class={issue.data.status === 'Published' ? 'badge' : 'badge badge-accent'}>{issue.data.status}</span>
+              <span class="badge">{countFor(issue.id)} articles listed</span>
+            </p>
+            <a class="card-link" href={`/archives/${issue.id}`}>Open issue</a>
+          </article>
+        ))}
+      </div>
+
+      <div class="cite-box" style="margin-top:2.5rem">
+        <p style="margin-bottom:0.5rem"><strong>Preservation</strong></p>
+        <p style="margin-bottom:0">
+          Published articles remain available at their original web addresses. Corrections are issued as separate,
+          linked notices rather than silent edits, and withdrawn work is retained with a retraction notice attached.
+          The full policy is set out in <a href="/indexing-and-preservation">indexing, abstracting and preservation</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+</Base>

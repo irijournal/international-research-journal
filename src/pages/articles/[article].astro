@@ -1,0 +1,136 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/PageHead.astro';
+import { getCollection, render } from 'astro:content';
+import { site, mail, issnLine } from '../../lib/site';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles');
+  const issues = await getCollection('issues');
+  return articles.map((article) => ({
+    params: { article: article.id },
+    props: { article, issue: issues.find((i) => i.id === article.data.issue) },
+  }));
+}
+
+const { article, issue } = Astro.props;
+const { Content } = await render(article);
+const year = issue?.data.year ?? new Date().getFullYear();
+const citation = `${article.data.authors.join(', ')} (${year}). ${article.data.title}. ${site.journalTitle}: ${site.journalSubtitle}, ${issue ? `${issue.data.volume}(${issue.data.number})` : ''}${article.data.pageRange ? `, ${article.data.pageRange}` : ''}.${article.data.doi ? ` https://doi.org/${article.data.doi}` : ''}`;
+---
+
+<Base title={article.data.title} description={article.data.abstract.slice(0, 180)} ogType="article">
+  <PageHead
+    eyebrow={article.data.articleType}
+    title={article.data.title}
+    crumbs={[
+      { label: 'Archives', href: '/archives' },
+      ...(issue
+        ? [{ label: `Volume ${issue.data.volume}, Number ${issue.data.number}`, href: `/archives/${issue.id}` }]
+        : []),
+      { label: 'Article' },
+    ]}
+  />
+
+  <section class="band">
+    <div class="wrap layout-split">
+      <article>
+        <p class="lede">{article.data.authors.join(', ')}</p>
+        {article.data.affiliations && (
+          <p class="meta">{article.data.affiliations.join(' · ')}</p>
+        )}
+
+        <div class="abstract">
+          <h2>Abstract</h2>
+          <p style="margin-bottom:0.8rem">{article.data.abstract}</p>
+          <p class="meta" style="margin-bottom:0">Keywords: {article.data.keywords.join(', ')}</p>
+        </div>
+
+        <div class="prose">
+          <Content />
+        </div>
+
+        {article.data.references && article.data.references.length > 0 && (
+          <section class="prose">
+            <h2>References</h2>
+            <ul>
+              {article.data.references.map((reference) => (
+                <li>{reference}</li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        <div class="cite-box" style="margin-top:2.5rem">
+          <p class="eyebrow eyebrow-dark">How to cite this article</p>
+          <p style="margin-bottom:0">{citation}</p>
+        </div>
+
+        <p style="margin-top:1.5rem" class="form-note">
+          This article is published under {site.licence}. You may share and adapt it for any purpose, including
+          commercially, provided you credit the author and the journal and indicate any changes.
+        </p>
+      </article>
+
+      <aside class="sidebar">
+        <h2>Article record</h2>
+        <dl>
+          <dt>Type</dt>
+          <dd>{article.data.articleType}</dd>
+          <dt>Section</dt>
+          <dd>{article.data.section}</dd>
+          {issue && (
+            <>
+              <dt>Issue</dt>
+              <dd>
+                <a href={`/archives/${issue.id}`}>
+                  Volume {issue.data.volume}, Number {issue.data.number}, {issue.data.period} {issue.data.year}
+                </a>
+              </dd>
+            </>
+          )}
+          {article.data.pageRange && (
+            <>
+              <dt>Pages</dt>
+              <dd>{article.data.pageRange}</dd>
+            </>
+          )}
+          {article.data.receivedDate && (
+            <>
+              <dt>Received</dt>
+              <dd>{article.data.receivedDate}</dd>
+            </>
+          )}
+          {article.data.acceptedDate && (
+            <>
+              <dt>Accepted</dt>
+              <dd>{article.data.acceptedDate}</dd>
+            </>
+          )}
+          {article.data.publishedDate && (
+            <>
+              <dt>Published</dt>
+              <dd>{article.data.publishedDate}</dd>
+            </>
+          )}
+          {article.data.doi && (
+            <>
+              <dt>DOI</dt>
+              <dd><a href={`https://doi.org/${article.data.doi}`}>{article.data.doi}</a></dd>
+            </>
+          )}
+          <dt>Journal</dt>
+          <dd>{issnLine()}</dd>
+        </dl>
+        {article.data.pdf && (
+          <p style="margin-top:1.2rem"><a class="btn btn-primary" href={article.data.pdf}>Download PDF</a></p>
+        )}
+        <p style="margin-top:1rem">
+          <a class="btn btn-outline" href={`mailto:${mail('general')}?subject=${encodeURIComponent(`Query about: ${article.data.title}`)}`}>
+            Contact the editors
+          </a>
+        </p>
+      </aside>
+    </div>
+  </section>
+</Base>

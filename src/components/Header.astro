@@ -1,0 +1,153 @@
+---
+import { getCollection } from 'astro:content';
+import { site, issnLine, byOrder } from '../lib/site';
+
+const pages = (await getCollection('pages')).sort(byOrder);
+const sections = (await getCollection('sections')).sort(byOrder);
+
+const aboutPages = pages.filter((p) => p.data.navGroup === 'About');
+const authorPages = pages.filter((p) => p.data.navGroup === 'For Authors');
+const standalonePages = pages.filter((p) => p.data.navGroup === 'Standalone');
+
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+const isCurrent = (href: string) => (href.replace(/\/$/, '') || '/') === currentPath;
+
+const groups = [
+  {
+    label: 'About',
+    items: [
+      { label: 'About the Journal', href: '/about' },
+      { label: 'Editorial Board', href: '/editorial-board' },
+      ...aboutPages
+        .filter((p) => p.id !== 'about')
+        .map((p) => ({ label: p.data.navLabel, href: `/${p.id}` })),
+    ],
+  },
+  {
+    label: 'Research Sections',
+    items: [
+      { label: 'All research sections', href: '/sections' },
+      ...sections.map((s) => ({ label: s.data.title, href: `/sections/${s.id}` })),
+    ],
+  },
+  {
+    label: 'For Authors',
+    items: authorPages.map((p) => ({ label: p.data.navLabel, href: `/${p.id}` })),
+  },
+];
+---
+
+<div class="utility">
+  <div class="wrap">
+    <ul>
+      <li>{issnLine()}</li>
+      <li>{site.reviewModel}</li>
+      <li>Open access, no author fees</li>
+    </ul>
+    <ul>
+      <li><a href="/submission-guidelines">Submit a manuscript</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="masthead-title" href="/">
+      <span class="name">{site.journalTitle}</span>
+      <span class="sub">{site.journalSubtitle}</span>
+    </a>
+    <p class="masthead-meta">
+      <strong>{site.frequency.split(',')[0]}</strong><br />
+      Published from {site.placeOfPublication}
+    </p>
+  </div>
+</header>
+
+<nav class="nav" id="site-nav" aria-label="Main">
+  <div class="wrap nav-inner">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-collapse">Menu</button>
+    <div class="nav-collapse" id="nav-collapse">
+      <ul class="nav-list">
+        <li><a href="/" aria-current={isCurrent('/') ? 'page' : undefined}>Home</a></li>
+        <li><a href="/current" aria-current={isCurrent('/current') ? 'page' : undefined}>Current Issue</a></li>
+        <li><a href="/archives" aria-current={isCurrent('/archives') ? 'page' : undefined}>Archives</a></li>
+        {groups.map((group) => (
+          <li data-dropdown>
+            <button type="button" aria-expanded="false">
+              {group.label}<span class="caret" aria-hidden="true"></span>
+            </button>
+            <ul class="submenu">
+              {group.items.map((item) => (
+                <li><a href={item.href}>{item.label}</a></li>
+              ))}
+            </ul>
+          </li>
+        ))}
+        <li><a href="/announcements" aria-current={isCurrent('/announcements') ? 'page' : undefined}>Announcements</a></li>
+        {standalonePages.map((p) => (
+          <li>
+            <a href={`/${p.id}`} aria-current={isCurrent(`/${p.id}`) ? 'page' : undefined}>{p.data.navLabel}</a>
+          </li>
+        ))}
+      </ul>
+      <form class="nav-search" action="/search" method="get" role="search">
+        <label class="sr-only" for="nav-q" style="position:absolute;left:-9999px">Search the journal</label>
+        <input type="search" id="nav-q" name="q" placeholder="Search articles" />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const nav = document.getElementById('site-nav');
+  if (nav) {
+    const toggle = nav.querySelector('.nav-toggle');
+    const dropdowns = Array.from(nav.querySelectorAll('[data-dropdown]'));
+
+    toggle?.addEventListener('click', () => {
+      const open = nav.getAttribute('data-menu') === 'open';
+      nav.setAttribute('data-menu', open ? 'closed' : 'open');
+      toggle.setAttribute('aria-expanded', String(!open));
+    });
+
+    const closeAll = (except) => {
+      dropdowns.forEach((item) => {
+        if (item === except) return;
+        item.setAttribute('data-open', 'false');
+        item.querySelector('button')?.setAttribute('aria-expanded', 'false');
+      });
+    };
+
+    dropdowns.forEach((item) => {
+      const button = item.querySelector('button');
+      button?.addEventListener('click', (event) => {
+        event.preventDefault();
+        const open = item.getAttribute('data-open') === 'true';
+        closeAll(item);
+        item.setAttribute('data-open', String(!open));
+        button.setAttribute('aria-expanded', String(!open));
+      });
+
+      if (window.matchMedia('(min-width: 951px)').matches) {
+        item.addEventListener('mouseenter', () => {
+          closeAll(item);
+          item.setAttribute('data-open', 'true');
+          button?.setAttribute('aria-expanded', 'true');
+        });
+        item.addEventListener('mouseleave', () => {
+          item.setAttribute('data-open', 'false');
+          button?.setAttribute('aria-expanded', 'false');
+        });
+      }
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!nav.contains(event.target)) closeAll(null);
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeAll(null);
+    });
+  }
+</script>

@@ -1,0 +1,37 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/PageHead.astro';
+import { getCollection } from 'astro:content';
+import { site } from '../../lib/site';
+
+const announcements = (await getCollection('announcements')).sort(
+  (a, b) => Number(b.data.pinned) - Number(a.data.pinned) || b.data.date.localeCompare(a.data.date),
+);
+---
+
+<Base
+  title="Announcements"
+  description={`Calls for papers, editorial notices and policy updates from ${site.journalTitle}.`}
+>
+  <PageHead
+    eyebrow="Notices"
+    title="Announcements"
+    lede="Calls for papers, changes to policy, reviewer invitations and editorial notices. Everything that affects authors is announced here first and dated."
+    crumbs={[{ label: 'Announcements' }]}
+  />
+
+  <section class="band">
+    <div class="wrap wrap-narrow" style="padding-left:0;padding-right:0">
+      <ul class="toc">
+        {announcements.map((item) => (
+          <li>
+            <p class="meta">{item.data.date}{item.data.pinned ? ' · Pinned' : ''}</p>
+            <h3><a href={`/announcements/${item.id}`}>{item.data.title}</a></h3>
+            <p>{item.data.summary}</p>
+            <div class="links"><a href={`/announcements/${item.id}`}>Read the notice</a></div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</Base>

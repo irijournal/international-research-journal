@@ -1,0 +1,42 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+---
+
+<Base title="Page not found" description="The page you asked for is not on this website.">
+  <PageHead
+    eyebrow="Error 404"
+    title="That page is not here"
+    lede="The address you followed does not match anything published by the journal. Published articles never move, so if you reached this page from a citation, the editorial office would like to know."
+  />
+  <section class="band">
+    <div class="wrap">
+      <div class="grid grid-3">
+        <article class="card">
+          <h3><a href="/current">Current issue</a></h3>
+          <p>The issue open now, with its editorial note and table of contents.</p>
+        </article>
+        <article class="card">
+          <h3><a href="/archives">Archives</a></h3>
+          <p>Every issue the journal has published, listed by volume.</p>
+        </article>
+        <article class="card">
+          <h3><a href="/search">Search</a></h3>
+          <p>Search titles, abstracts, authors, keywords and every editorial policy.</p>
+        </article>
+        <article class="card">
+          <h3><a href="/submission-guidelines">Submission guidelines</a></h3>
+          <p>How to prepare and send a manuscript to the journal.</p>
+        </article>
+        <article class="card">
+          <h3><a href="/editorial-board">Editorial board</a></h3>
+          <p>Who edits the journal and who reviews for it.</p>
+        </article>
+        <article class="card">
+          <h3><a href="/contact">Contact</a></h3>
+          <p>Report a broken link or write to the editorial office.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,43 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/PageHead.astro';
+import { getCollection, render } from 'astro:content';
+import { mail } from '../../lib/site';
+
+export async function getStaticPaths() {
+  const announcements = await getCollection('announcements');
+  return announcements.map((announcement) => ({
+    params: { announcement: announcement.id },
+    props: { announcement },
+  }));
+}
+
+const { announcement } = Astro.props;
+const { Content } = await render(announcement);
+---
+
+<Base title={announcement.data.title} description={announcement.data.summary} ogType="article">
+  <PageHead
+    eyebrow={announcement.data.date}
+    title={announcement.data.title}
+    lede={announcement.data.summary}
+    crumbs={[{ label: 'Announcements', href: '/announcements' }, { label: announcement.data.title }]}
+  />
+
+  <section class="band">
+    <div class="wrap layout-split">
+      <div class="prose">
+        <Content />
+      </div>
+      <aside class="sidebar">
+        <h2>Act on this notice</h2>
+        <ul>
+          <li><a href="/submission-guidelines">Submission guidelines</a></li>
+          <li><a href="/current">Current issue</a></li>
+          <li><a href="/for-reviewers">Join the reviewer panel</a></li>
+          <li><a href={`mailto:${mail('general')}`}>Write to the editors</a></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+</Base>
