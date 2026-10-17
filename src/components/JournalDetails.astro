@@ -1,0 +1,55 @@
+---
+import { getCollection } from 'astro:content';
+import { site, mail, issnLine, issueLabel, byOrder, fullJournalName } from '../lib/site';
+
+const board = await getCollection('board');
+const editorInChief = board.find((m) => m.data.role === 'Editor in Chief');
+const sections = (await getCollection('sections')).sort(byOrder);
+const issues = await getCollection('issues');
+const currentIssue = issues.find((i) => i.id === site.currentIssueSlug);
+
+const rows: { label: string; value: string; href?: string }[] = [
+  { label: 'Title', value: fullJournalName },
+  { label: 'Type of publication', value: site.publicationType },
+  { label: 'Starting year', value: site.foundedYear },
+  { label: 'Frequency', value: site.frequency },
+  { label: 'Format of publication', value: site.publicationFormat },
+  { label: 'Subject', value: site.subject },
+  { label: 'Subject areas', value: sections.map((s) => s.data.title).join('; ') },
+  { label: 'Language', value: site.languages },
+  { label: 'ISSN', value: issnLine() },
+  { label: 'Publisher', value: site.publisher },
+  { label: "Publisher's address", value: site.publisherAddress },
+  { label: 'Place of publication', value: site.placeOfPublication },
+  ...(editorInChief
+    ? [{ label: 'Editor in Chief', value: `${editorInChief.data.name}, ${editorInChief.data.designation}${editorInChief.data.institution ? `, ${editorInChief.data.institution}` : ''}` }]
+    : []),
+  ...(currentIssue
+    ? [{ label: 'Current issue', value: issueLabel(currentIssue.data), href: '/current' }]
+    : []),
+  { label: 'Review model', value: site.reviewModel },
+  { label: 'Access and charges', value: site.accessModel },
+  { label: 'Licence', value: site.licence },
+  { label: 'Email', value: mail('general'), href: `mailto:${mail('general')}` },
+  { label: 'Website', value: `https://${site.domain}`, href: `https://${site.domain}` },
+];
+---
+
+<section class="band" id="journal-details">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Journal details</h2>
+      <a href="/about">About the journal</a>
+    </div>
+    <table class="details-table">
+      <tbody>
+        {rows.map((row) => (
+          <tr>
+            <th scope="row">{row.label}</th>
+            <td>{row.href ? <a href={row.href}>{row.value}</a> : row.value}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</section>

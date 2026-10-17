@@ -21,14 +21,14 @@ const { issue, articles } = Astro.props;
 ---
 
 <Base
-  title={`Volume ${issue.data.volume}, Number ${issue.data.number}`}
+  title={`Volume ${issue.data.volume}, Issue ${issue.data.number}`}
   description={issue.data.summary}
 >
   <PageHead
     eyebrow={`${issue.data.period} ${issue.data.year}`}
-    title={`Volume ${issue.data.volume}, Number ${issue.data.number}`}
+    title={`Volume ${issue.data.volume}, Issue ${issue.data.number}`}
     lede={issue.data.summary}
-    crumbs={[{ label: 'Archives', href: '/archives' }, { label: `Volume ${issue.data.volume}, Number ${issue.data.number}` }]}
+    crumbs={[{ label: 'Archives', href: '/archives' }, { label: `Volume ${issue.data.volume}, Issue ${issue.data.number}` }]}
   />
   <IssueView issue={issue} articles={articles} />
 </Base>

@@ -27,7 +27,7 @@ const countFor = (id) => articles.filter((a) => a.data.issue === id).length;
           <article class="card">
             <p class="meta">{issue.data.period} {issue.data.year}</p>
             <h3>
-              <a href={`/archives/${issue.id}`}>Volume {issue.data.volume}, Number {issue.data.number}</a>
+              <a href={`/archives/${issue.id}`}>Volume {issue.data.volume}, Issue {issue.data.number}</a>
             </h3>
             <p>{issue.data.summary}</p>
             <p>

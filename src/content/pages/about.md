@@ -3,14 +3,14 @@ slug: about
 title: About the Journal
 navLabel: About the Journal
 navGroup: About
-summary: The purpose, scope, standards and governance of International Research Insights, a double anonymous peer reviewed, open access multidisciplinary e-journal.
+summary: The purpose, scope, standards and governance of International Research Insights, a double anonymous peer reviewed, open access multidisciplinary journal published quarterly in print and online.
 updated: 5 August 2026
 order: 10
 ---
 
 ## What the journal is
 
-International Research Insights is a peer reviewed, open access electronic journal that publishes original research across law, health and nursing sciences, language and literature, history and heritage, education, public policy, and science and environment studies. It is published four times a year and is free to read and free to publish in.
+International Research Insights is a peer reviewed, open access academic journal, published in both print and online editions, that publishes original research across law, health and nursing sciences, language and literature, history and heritage, education, public policy, and science and environment studies. It is published four times a year, in March, June, September and December, and is free to read and free to publish in.
 
 The journal was founded on a straightforward observation. A great deal of careful, useful research is produced in colleges, universities, hospitals, courts and classrooms that are not part of the small circle of institutions whose work travels easily. That research is often let down not by its quality but by the absence of an editorial process willing to read it properly, review it fairly and publish it to a standard that other scholars can cite with confidence. International Research Insights exists to provide that process.
 
@@ -20,7 +20,7 @@ The journal was founded on a straightforward observation. A great deal of carefu
 2. To give every author a substantive, written editorial response, so that even a rejection leaves the author better equipped than before.
 3. To hold a single standard of review across every discipline the journal covers, so that a multidisciplinary title never becomes an excuse for uneven rigour.
 4. To keep scholarship freely available to readers and free of cost to authors, so that neither a library budget nor a research grant decides who can read or publish.
-5. To publish in both English and Hindi, treating research written in Hindi as scholarship rather than as translation waiting to happen.
+5. To publish in both Hindi and English, treating research written in Hindi as scholarship rather than as translation waiting to happen.
 
 ## Scope
 

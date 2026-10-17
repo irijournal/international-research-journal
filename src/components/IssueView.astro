@@ -1,6 +1,6 @@
 ---
 import { render } from 'astro:content';
-import { site, mail } from '../lib/site';
+import { site, mail, issueLabel } from '../lib/site';
 
 const { issue, articles } = Astro.props;
 const { Content } = await render(issue);
@@ -25,8 +25,9 @@ const { Content } = await render(issue);
               <h3><a href={`/articles/${article.id}`}>{article.data.title}</a></h3>
               <p class="authors">{article.data.authors.join(', ')}</p>
               <p class="meta">
-                {article.data.section}
+                {issueLabel(issue.data)}
                 {article.data.pageRange ? ` · Pages ${article.data.pageRange}` : ''}
+                {` · ${article.data.section}`}
               </p>
               <div class="links">
                 <a href={`/articles/${article.id}`}>Abstract and full text</a>
@@ -55,9 +56,15 @@ const { Content } = await render(issue);
     <aside class="sidebar">
       <h2>Issue details</h2>
       <dl>
-        <dt>Volume and number</dt>
-        <dd>Volume {issue.data.volume}, Number {issue.data.number}</dd>
-        <dt>Period</dt>
+        <dt>Volume and issue</dt>
+        <dd>Volume {issue.data.volume}, Issue {issue.data.number}</dd>
+        {issue.data.month && (
+          <>
+            <dt>Month and year</dt>
+            <dd>{issue.data.month} {issue.data.year}</dd>
+          </>
+        )}
+        <dt>Period covered</dt>
         <dd>{issue.data.period} {issue.data.year}</dd>
         <dt>Status</dt>
         <dd>{issue.data.status}</dd>

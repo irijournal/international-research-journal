@@ -39,7 +39,7 @@ Any support the journal receives will be declared on this page, with the name of
 
 ## Printed copies
 
-The journal is published electronically. Authors who want a printed copy of an issue for a personal or institutional record may arrange printing themselves under the terms of the CC BY licence, which permits it without asking. The journal does not sell printed copies and does not offer paid reprints.
+The journal is published in two formats: an online edition on this website and a print edition. Both editions carry the same articles with the same volume, issue, month, year and page numbers, so a citation to one is a citation to the other. The online edition is free to every reader. Authors are never charged for publication in either edition, and anyone may print an article under the terms of the CC BY licence without asking.
 
 ## Why this model was chosen
 

@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import { site, mail, issnLine, byOrder } from '../lib/site';
+import { site, mail, issnLine, byOrder, fullJournalName } from '../lib/site';
 
 const pages = (await getCollection('pages')).sort(byOrder);
 const authorPages = pages.filter((p) => p.data.navGroup === 'For Authors');
@@ -13,8 +13,9 @@ const year = new Date().getFullYear();
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="name">{site.journalTitle}</div>
-        <p>{site.journalSubtitle}. {site.footerNote}</p>
+        <div class="name">{fullJournalName}</div>
+        <p>{site.footerNote}</p>
+        <p>Published by {site.publisher}, {site.publisherAddress}.</p>
         <p>{issnLine()}</p>
       </div>
 

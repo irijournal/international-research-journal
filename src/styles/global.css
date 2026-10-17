@@ -501,7 +501,7 @@ hr {
   color: var(--teal);
   margin-top: 0.9rem;
 }
-.sidebar dd { margin: 0.15rem 0 0; }
+.sidebar dd { margin: 0.15rem 0 0; overflow-wrap: anywhere; }
 
 .page-head {
   border-bottom: 1px solid var(--line);
@@ -553,6 +553,25 @@ hr {
   background: #fff;
 }
 
+.details-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; background: var(--paper); }
+.details-table th,
+.details-table td { border: 1px solid var(--line); padding: 0.7rem 0.9rem; text-align: left; vertical-align: top; }
+.details-table th {
+  width: 30%;
+  background: var(--tint);
+  font-family: var(--label);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+@media (max-width: 600px) {
+  .details-table th,
+  .details-table td { display: block; width: auto; }
+  .details-table td { border-top: 0; }
+}
+
 /* --------------------------------- People ------------------------------- */
 
 .person {
@@ -572,7 +591,18 @@ hr {
 }
 .person h3 { margin: 0 0 0.3rem; font-size: 1.1rem; }
 .person p { margin: 0 0 0.25rem; font-size: 0.93rem; color: var(--muted); }
-.person a { font-size: 0.9rem; }
+.person a { font-size: 0.9rem; overflow-wrap: anywhere; }
+.person dl { margin: 0.6rem 0 0; font-size: 0.9rem; }
+.person dt {
+  font-family: var(--label);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: var(--teal);
+  margin-top: 0.55rem;
+}
+.person dd { margin: 0.1rem 0 0; color: var(--body); }
 
 /* --------------------------------- Forms -------------------------------- */
 

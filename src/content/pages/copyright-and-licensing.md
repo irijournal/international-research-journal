@@ -12,7 +12,7 @@ order: 60
 
 Authors publishing in International Research Insights keep the copyright in their work. The journal does not ask for a transfer of copyright and never has. What the journal asks for is a licence to publish, which is a different thing and a far smaller one.
 
-By submitting, the author grants the journal a non exclusive right to publish the article, to distribute it worldwide in electronic form, to archive it permanently, and to deposit it with indexing and preservation services. The author remains free to do everything an owner may do with their own work.
+By submitting, the author grants the journal a non exclusive right to publish the article, to distribute it worldwide in print and electronic form, to archive it permanently, and to deposit it with indexing and preservation services. The author remains free to do everything an owner may do with their own work.
 
 ## The licence
 

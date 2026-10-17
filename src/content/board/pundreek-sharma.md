@@ -5,6 +5,7 @@ role: Editor and Reviewer
 roleGroup: Editorial Board and Reviewers
 qualification: ICSSR Postdoctoral Fellow
 designation: Associate Professor
-institution: School of Law, ITM University Gwalior
+department: School of Law
+institution: ITM University Gwalior, Madhya Pradesh
 order: 3
 ---

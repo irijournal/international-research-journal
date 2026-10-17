@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import { site, issnLine, byOrder } from '../lib/site';
+import { site, issnLine, byOrder, fullJournalName } from '../lib/site';
 
 const pages = (await getCollection('pages')).sort(byOrder);
 const sections = (await getCollection('sections')).sort(byOrder);
@@ -54,11 +54,11 @@ const groups = [
 <header class="masthead">
   <div class="wrap">
     <a class="masthead-title" href="/">
-      <span class="name">{site.journalTitle}</span>
-      <span class="sub">{site.journalSubtitle}</span>
+      <span class="name">{fullJournalName}</span>
+      <span class="sub">Peer reviewed academic {site.publicationType.toLowerCase()}</span>
     </a>
     <p class="masthead-meta">
-      <strong>{site.frequency.split(',')[0]}</strong><br />
+      <strong>{site.frequency.split(',')[0]} · {site.publicationFormat}</strong><br />
       Published from {site.placeOfPublication}
     </p>
   </div>

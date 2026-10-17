@@ -28,7 +28,7 @@ export async function GET() {
     })),
     ...issues.map((item) => ({
       type: 'Issue',
-      title: `Volume ${item.data.volume}, Number ${item.data.number}, ${item.data.period} ${item.data.year}`,
+      title: `Volume ${item.data.volume}, Issue ${item.data.number}, ${item.data.period} ${item.data.year}`,
       summary: item.data.summary,
       url: `/archives/${item.id}`,
       body: clean(`${item.data.editorialTitle} ${item.body}`),

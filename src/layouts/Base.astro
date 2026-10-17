@@ -11,7 +11,7 @@ interface Props {
 }
 
 const { title, description, ogType = 'website' } = Astro.props;
-const pageTitle = `${title} | ${site.journalTitle}`;
+const pageTitle = `${title} | ${fullJournalName}`;
 const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://example.org').toString();
 
 const structuredData = {
@@ -19,9 +19,9 @@ const structuredData = {
   '@type': 'Periodical',
   name: fullJournalName,
   alternateName: site.shortTitle,
-  publisher: { '@type': 'Organization', name: site.publisher },
-  inLanguage: ['en', 'hi'],
-  ...(site.issnOnline ? { issn: site.issnOnline } : {}),
+  publisher: { '@type': 'Organization', name: site.publisher, address: site.publisherAddress },
+  inLanguage: ['hi', 'en'],
+  ...(site.issnPrint || site.issnOnline ? { issn: [site.issnPrint, site.issnOnline].filter(Boolean) } : {}),
   url: canonical,
 };
 ---
@@ -37,7 +37,7 @@ const structuredData = {
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content={ogType} />
-    <meta property="og:site_name" content={site.journalTitle} />
+    <meta property="og:site_name" content={fullJournalName} />
     <meta name="twitter:card" content="summary" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />

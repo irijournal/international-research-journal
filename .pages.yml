@@ -9,8 +9,7 @@ content:
     type: file
     path: src/data/settings.json
     fields:
-      - { name: journalTitle, label: Journal title, type: string }
-      - { name: journalSubtitle, label: Subtitle, type: string }
+      - { name: journalTitle, label: Journal title, type: string, description: "Must match the title on the ISSN application exactly." }
       - { name: shortTitle, label: Abbreviated title, type: string }
       - { name: tagline, label: Tagline, type: string }
       - { name: domain, label: Domain name, type: string, description: "Used to build every email address on the site, for example editor@yourdomain.com" }
@@ -22,9 +21,14 @@ content:
           - { name: managingEditor, label: Managing Editor, type: string }
           - { name: submissions, label: Manuscript submissions, type: string }
           - { name: general, label: General enquiries, type: string }
+      - { name: issnPrint, label: ISSN (print), type: string, description: "Leave empty until the ISSN is allotted. The site then shows the number everywhere automatically." }
       - { name: issnOnline, label: ISSN (online), type: string, description: "Leave empty until the ISSN is allotted. The site then shows the number everywhere automatically." }
       - { name: issnNote, label: ISSN status note, type: text }
-      - { name: publisher, label: Publisher, type: string }
+      - { name: publicationType, label: Type of publication, type: string, description: "Journal, Magazine or Blog" }
+      - { name: publicationFormat, label: Format of publication, type: string, description: "Print, Online, or Both (print and online)" }
+      - { name: subject, label: Subject, type: string }
+      - { name: publisher, label: Publisher, type: string, description: "Must match the publisher name on the ISSN application exactly." }
+      - { name: publisherAddress, label: Publisher's address, type: text, description: "Complete address with PIN code. Must match the ISSN application exactly." }
       - { name: placeOfPublication, label: Place of publication, type: string }
       - { name: editorialOfficeAddress, label: Editorial office address, type: text }
       - { name: phone, label: Telephone, type: string }
@@ -102,6 +106,7 @@ content:
       - { name: volume, label: Volume, type: number, required: true }
       - { name: number, label: Number, type: number, required: true }
       - { name: year, label: Year, type: number, required: true }
+      - { name: month, label: Month of publication, type: string, description: "For example March. Shown on every article in this issue." }
       - { name: period, label: Period, type: string, required: true, description: "For example January to March" }
       - name: status
         label: Status
@@ -135,8 +140,11 @@ content:
           values: [Editorial Leadership, Editorial Board and Reviewers, Advisory Board]
       - { name: qualification, label: Qualification, type: string, required: true }
       - { name: designation, label: Designation, type: string, required: true }
+      - { name: department, label: Department, type: string }
       - { name: institution, label: Institution, type: string }
-      - { name: email, label: Official email, type: string }
+      - { name: address, label: Institutional address, type: text, description: "Full postal address of the institution, including city, PIN or postcode and country" }
+      - { name: email, label: Official email, type: string, description: "The institutional email address, not a personal Gmail or Yahoo address" }
+      - { name: profileUrl, label: Profile link, type: string, description: "Institutional web page, Google Scholar, ORCID or similar, starting with https://" }
       - { name: order, label: Sort order, type: number }
 
   - name: sections

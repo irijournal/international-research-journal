@@ -1,7 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
+import JournalDetails from '../components/JournalDetails.astro';
 import { getCollection } from 'astro:content';
-import { site, mail, issnLine, byOrder, fullJournalName } from '../lib/site';
+import { site, mail, issnLine, issueLabel, byOrder, fullJournalName } from '../lib/site';
 
 const sections = (await getCollection('sections')).sort(byOrder);
 const issues = (await getCollection('issues')).sort(byOrder);
@@ -21,7 +22,7 @@ const leadership = board.filter((m) => m.data.roleGroup === 'Editorial Leadershi
 >
   <section class="hero">
     <div class="wrap">
-      <p class="eyebrow">{site.accessModel}</p>
+      <p class="eyebrow">Peer reviewed academic {site.publicationType.toLowerCase()} · {site.publicationFormat}</p>
       <h1>{fullJournalName}</h1>
       <p class="lede">
         {site.journalTitle} publishes rigorous, peer reviewed scholarship across law, health sciences, humanities,
@@ -46,6 +47,10 @@ const leadership = board.filter((m) => m.data.roleGroup === 'Editorial Leadershi
           <dd>{site.frequency.split(',')[0]}, four issues a year</dd>
         </div>
         <div>
+          <dt>Format</dt>
+          <dd>{site.publicationFormat}</dd>
+        </div>
+        <div>
           <dt>Languages</dt>
           <dd>{site.languages}</dd>
         </div>
@@ -57,8 +62,10 @@ const leadership = board.filter((m) => m.data.roleGroup === 'Editorial Leadershi
     </div>
   </section>
 
+  <JournalDetails />
+
   {currentIssue && (
-    <section class="band">
+    <section class="band band-tint">
       <div class="wrap">
         <div class="section-head">
           <h2>Current issue</h2>
@@ -66,10 +73,7 @@ const leadership = board.filter((m) => m.data.roleGroup === 'Editorial Leadershi
         </div>
         <div class="layout-split">
           <div>
-            <p class="meta">
-              Volume {currentIssue.data.volume}, Number {currentIssue.data.number}, {currentIssue.data.period}{' '}
-              {currentIssue.data.year}
-            </p>
+            <p class="meta">{issueLabel(currentIssue.data)}</p>
             <h3 style="font-size:1.5rem;margin-top:0.5rem">{currentIssue.data.editorialTitle}</h3>
             <p>{currentIssue.data.summary}</p>
             <p>
@@ -113,7 +117,7 @@ const leadership = board.filter((m) => m.data.roleGroup === 'Editorial Leadershi
     </section>
   )}
 
-  <section class="band band-tint">
+  <section class="band">
     <div class="wrap">
       <div class="section-head">
         <h2>Research sections</h2>
@@ -131,7 +135,7 @@ const leadership = board.filter((m) => m.data.roleGroup === 'Editorial Leadershi
     </div>
   </section>
 
-  <section class="band">
+  <section class="band band-tint">
     <div class="wrap">
       <div class="layout-split">
         <div>
@@ -168,7 +172,7 @@ const leadership = board.filter((m) => m.data.roleGroup === 'Editorial Leadershi
     </div>
   </section>
 
-  <section class="band band-tint">
+  <section class="band">
     <div class="wrap">
       <div class="section-head">
         <h2>How publication works</h2>

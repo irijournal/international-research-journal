@@ -3,6 +3,7 @@ slug: volume-1-issue-1
 volume: 1
 number: 1
 year: 2026
+month: December
 period: October to December
 status: Open for submissions
 editorialTitle: Why another journal, and why this one

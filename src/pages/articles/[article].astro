@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import PageHead from '../../components/PageHead.astro';
 import { getCollection, render } from 'astro:content';
-import { site, mail, issnLine } from '../../lib/site';
+import { site, mail, issnLine, issueLabel, fullJournalName } from '../../lib/site';
 
 export async function getStaticPaths() {
   const articles = await getCollection('articles');
@@ -16,7 +16,7 @@ export async function getStaticPaths() {
 const { article, issue } = Astro.props;
 const { Content } = await render(article);
 const year = issue?.data.year ?? new Date().getFullYear();
-const citation = `${article.data.authors.join(', ')} (${year}). ${article.data.title}. ${site.journalTitle}: ${site.journalSubtitle}, ${issue ? `${issue.data.volume}(${issue.data.number})` : ''}${article.data.pageRange ? `, ${article.data.pageRange}` : ''}.${article.data.doi ? ` https://doi.org/${article.data.doi}` : ''}`;
+const citation = `${article.data.authors.join(', ')} (${year}). ${article.data.title}. ${fullJournalName}${issue ? `, ${issueLabel(issue.data)}` : ''}${article.data.pageRange ? `, pp. ${article.data.pageRange}` : ''}.${article.data.doi ? ` https://doi.org/${article.data.doi}` : ''}`;
 ---
 
 <Base title={article.data.title} description={article.data.abstract.slice(0, 180)} ogType="article">
@@ -26,7 +26,7 @@ const citation = `${article.data.authors.join(', ')} (${year}). ${article.data.t
     crumbs={[
       { label: 'Archives', href: '/archives' },
       ...(issue
-        ? [{ label: `Volume ${issue.data.volume}, Number ${issue.data.number}`, href: `/archives/${issue.id}` }]
+        ? [{ label: `Volume ${issue.data.volume}, Issue ${issue.data.number}`, href: `/archives/${issue.id}` }]
         : []),
       { label: 'Article' },
     ]}
@@ -39,6 +39,11 @@ const citation = `${article.data.authors.join(', ')} (${year}). ${article.data.t
         {article.data.affiliations && (
           <p class="meta">{article.data.affiliations.join(' · ')}</p>
         )}
+        <p class="meta">
+          {fullJournalName}
+          {issue ? ` · ${issueLabel(issue.data)}` : ''}
+          {article.data.pageRange ? ` · Pages ${article.data.pageRange}` : ''}
+        </p>
 
         <div class="abstract">
           <h2>Abstract</h2>
@@ -83,9 +88,7 @@ const citation = `${article.data.authors.join(', ')} (${year}). ${article.data.t
             <>
               <dt>Issue</dt>
               <dd>
-                <a href={`/archives/${issue.id}`}>
-                  Volume {issue.data.volume}, Number {issue.data.number}, {issue.data.period} {issue.data.year}
-                </a>
+                <a href={`/archives/${issue.id}`}>{issueLabel(issue.data)}</a>
               </dd>
             </>
           )}

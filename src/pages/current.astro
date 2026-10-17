@@ -13,12 +13,12 @@ const articles = (await getCollection('articles'))
 ---
 
 <Base
-  title={`Current issue: Volume ${issue.data.volume}, Number ${issue.data.number}`}
+  title={`Current issue: Volume ${issue.data.volume}, Issue ${issue.data.number}`}
   description={issue.data.summary}
 >
   <PageHead
     eyebrow={`${issue.data.period} ${issue.data.year}`}
-    title={`Volume ${issue.data.volume}, Number ${issue.data.number}`}
+    title={`Volume ${issue.data.volume}, Issue ${issue.data.number}`}
     lede={issue.data.summary}
     crumbs={[{ label: 'Current issue' }]}
   />

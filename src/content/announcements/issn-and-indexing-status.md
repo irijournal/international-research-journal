@@ -10,7 +10,7 @@ Authors deciding where to send a manuscript are entitled to know exactly what a 
 
 ## What is in progress
 
-**ISSN.** An application for an electronic ISSN has been filed with the National Science Library, CSIR-NIScPR, New Delhi, the ISSN National Centre for India. The number will appear in the site header, on every article page and in every citation block as soon as it is allotted.
+**ISSN.** The journal is published in print and online. Applications for an ISSN for each edition have been filed with the National Science Library, CSIR-NIScPR, New Delhi, the ISSN National Centre for India. The numbers will appear in the site header, on every article page and in every citation block as soon as they are allotted.
 
 **Google Scholar.** Article pages publish citation metadata in a form Scholar reads. Inclusion normally follows a few months after the first issue is published.
 

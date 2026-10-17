@@ -18,7 +18,7 @@ const grouped = groups
   <PageHead
     eyebrow="Governance"
     title="Editorial board"
-    lede="The board carries the journal. Every member is named in full with qualification, designation and institution, because a reader deserves to know who decided that a piece of research was fit to publish."
+    lede="The board carries the journal. Every member is named in full with designation, department, institutional address, official email and profile, because a reader deserves to know who decided that a piece of research was fit to publish."
     crumbs={[{ label: 'Editorial board' }]}
   />
 
@@ -34,9 +34,40 @@ const grouped = groups
                   <p class="role">{member.data.role}</p>
                   <h3>{member.data.name}</h3>
                   <p>{member.data.qualification}</p>
-                  <p>{member.data.designation}</p>
-                  {member.data.institution && <p>{member.data.institution}</p>}
-                  {member.data.email && <a href={`mailto:${member.data.email}`}>{member.data.email}</a>}
+                  <dl>
+                    <dt>Designation</dt>
+                    <dd>{member.data.designation}</dd>
+                    {member.data.department && (
+                      <>
+                        <dt>Department</dt>
+                        <dd>{member.data.department}</dd>
+                      </>
+                    )}
+                    {member.data.institution && (
+                      <>
+                        <dt>Institution</dt>
+                        <dd>{member.data.institution}</dd>
+                      </>
+                    )}
+                    {member.data.address && (
+                      <>
+                        <dt>Institutional address</dt>
+                        <dd>{member.data.address}</dd>
+                      </>
+                    )}
+                    {member.data.email && (
+                      <>
+                        <dt>Official email</dt>
+                        <dd><a href={`mailto:${member.data.email}`}>{member.data.email}</a></dd>
+                      </>
+                    )}
+                    {member.data.profileUrl && (
+                      <>
+                        <dt>Profile</dt>
+                        <dd><a href={member.data.profileUrl} rel="noopener">{member.data.profileUrl}</a></dd>
+                      </>
+                    )}
+                  </dl>
                 </article>
               ))}
             </div>
