@@ -8,8 +8,8 @@ authors:
   - name: "Dr. Ravi Kumar"
     affiliations: ["a"]
     corresponding: true
-    email: ""
-    orcid: ""
+    email: "dradvravityagi@gmail.com"
+    orcid: "https://orcid.org/0000-0002-4288-7928"
     degree: "Ph.D. (Law)"
 affiliations:
   - id: "a"

@@ -191,7 +191,8 @@ def front_html(page_ranges):
         if m.get('email'):
             lines.append(f"<div>E-mail: {E(m['email'])}</div>")
         if m.get('profileUrl'):
-            lines.append(f"<div>Profile: {E(m['profileUrl'])}</div>")
+            label = 'ORCID' if 'orcid.org' in m['profileUrl'] else 'Profile'
+            lines.append(f"<div>{label}: {E(m['profileUrl'])}</div>")
         return f"<div class='bm'>{''.join(lines)}</div>"
 
     groups = ''
@@ -252,6 +253,8 @@ def article_html(p, first=None, last=None):
     corr = next((a for a in m['authors'] if a.get('corresponding')), m['authors'][0])
     if corr.get('email'):
         contact = f"<b>*Corresponding author:</b> {E(corr['name'])}, e-mail: {E(corr['email'])}"
+        if corr.get('orcid'):
+            contact += f" · ORCID: {E(corr['orcid'])}"
     else:
         contact = (f"<b>*Corresponding author:</b> {E(corr['name'])}. Correspondence through the editorial office: "
                    f"{E(J['email_editor'])}")

@@ -8,8 +8,8 @@ authors:
   - name: "Dr. Ramavatar Singh Tyagi"
     affiliations: ["a"]
     corresponding: true
-    email: ""
-    orcid: ""
+    email: "ramtyagi05@gmail.com"
+    orcid: "https://orcid.org/0009-0006-5571-8345"
     degree: "Ph.D. (Nursing)"
 affiliations:
   - id: "a"

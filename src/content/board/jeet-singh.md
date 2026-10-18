@@ -7,5 +7,6 @@ qualification: Ph.D. (Hindi)
 designation: Professor (Retired)
 department: Department of Hindi
 institution: KMGG PG College, Badalpur, Greater Noida, Uttar Pradesh
+email: jeetsinghanand69@gmail.com
 order: 30
 ---
