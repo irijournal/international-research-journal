@@ -16,10 +16,43 @@ export async function getStaticPaths() {
 const { article, issue } = Astro.props;
 const { Content } = await render(article);
 const year = issue?.data.year ?? new Date().getFullYear();
-const citation = `${article.data.authors.join(', ')} (${year}). ${article.data.title}. ${fullJournalName}${issue ? `, ${issueLabel(issue.data)}` : ''}${article.data.pageRange ? `, pp. ${article.data.pageRange}` : ''}.${article.data.doi ? ` https://doi.org/${article.data.doi}` : ''}`;
+const names = article.data.authors;
+const authorLine = names.length > 1 ? `${names.slice(0, -1).join(', ')} & ${names[names.length - 1]}` : names[0];
+const pageUrl = new URL(`/articles/${article.id}`, Astro.site).toString();
+const citation = `${authorLine} (${year}). ${article.data.title}. ${fullJournalName}${issue ? `, ${issueLabel(issue.data)}` : ''}${article.data.pageRange ? `, pp. ${article.data.pageRange}` : ''}. ${article.data.doi ? `https://doi.org/${article.data.doi}` : pageUrl}`;
+const [firstPage, lastPage] = (article.data.pageRange ?? '').split(/\s*(?:–|-|to)\s*/);
+const published = article.data.publishedDate ? new Date(`${article.data.publishedDate} UTC`) : null;
+const citationDate = published && !Number.isNaN(published.getTime())
+  ? `${published.getUTCFullYear()}/${String(published.getUTCMonth() + 1).padStart(2, '0')}/${String(published.getUTCDate()).padStart(2, '0')}`
+  : String(year);
+const abstractParagraphs = article.data.abstract.split(/\n\s*\n/);
 ---
 
 <Base title={article.data.title} description={article.data.abstract.slice(0, 180)} ogType="article">
+  <Fragment slot="head">
+    <meta name="citation_title" content={article.data.title} />
+    {article.data.authors.map((author, index) => (
+      <>
+        <meta name="citation_author" content={author} />
+        {article.data.affiliations?.[index] && <meta name="citation_author_institution" content={article.data.affiliations[index]} />}
+      </>
+    ))}
+    <meta name="citation_publication_date" content={citationDate} />
+    <meta name="citation_journal_title" content={fullJournalName} />
+    <meta name="citation_journal_abbrev" content={site.shortTitle} />
+    <meta name="citation_publisher" content={site.publisher} />
+    {issue && <meta name="citation_volume" content={String(issue.data.volume)} />}
+    {issue && <meta name="citation_issue" content={String(issue.data.number)} />}
+    {firstPage && <meta name="citation_firstpage" content={firstPage} />}
+    {lastPage && <meta name="citation_lastpage" content={lastPage} />}
+    {article.data.pdf && <meta name="citation_pdf_url" content={new URL(article.data.pdf, Astro.site).toString()} />}
+    <meta name="citation_abstract_html_url" content={pageUrl} />
+    <meta name="citation_language" content="en" />
+    <meta name="citation_keywords" content={article.data.keywords.join('; ')} />
+    {site.issnOnline && <meta name="citation_issn" content={site.issnOnline} />}
+    <meta name="DC.title" content={article.data.title} />
+    {article.data.authors.map((author) => <meta name="DC.creator" content={author} />)}
+  </Fragment>
   <PageHead
     eyebrow={article.data.articleType}
     title={article.data.title}
@@ -47,7 +80,7 @@ const citation = `${article.data.authors.join(', ')} (${year}). ${article.data.t
 
         <div class="abstract">
           <h2>Abstract</h2>
-          <p style="margin-bottom:0.8rem">{article.data.abstract}</p>
+          {abstractParagraphs.map((paragraph) => <p style="margin-bottom:0.8rem">{paragraph}</p>)}
           <p class="meta" style="margin-bottom:0">Keywords: {article.data.keywords.join(', ')}</p>
         </div>
 

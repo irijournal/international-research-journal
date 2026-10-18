@@ -1,0 +1,110 @@
+@page { size: A4; margin: 17mm 16mm 18mm 16mm; }
+:root { --navy: #0a1f44; --blue: #0050a4; --grey: #5b6472; --tint: #eef3fa; --line: #c9d4e5; }
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { margin: 0; font-family: 'Liberation Serif', 'Times New Roman', serif; font-size: 10.3pt; line-height: 1.38; color: #111; }
+sup { font-size: 0.7em; line-height: 0; }
+a { color: inherit; text-decoration: none; }
+
+/* ---------------------------------------------------------------- article first page */
+.jhead { display: flex; align-items: center; gap: 4mm; }
+.jhead .emblem { width: 20mm; height: auto; }
+.jhead .thumb { width: 17mm; height: auto; border: 0.4pt solid var(--line); }
+.jbox { flex: 1; border: 1.2pt solid var(--navy); padding: 2mm 3mm; text-align: center; }
+.jname { font-family: 'Caladea', 'Liberation Serif', serif; font-weight: 700; font-size: 17pt; color: var(--navy); line-height: 1.1; }
+.jsub { font-family: 'Caladea', serif; font-size: 10.5pt; color: var(--navy); margin-top: 0.6mm; }
+.jmeta { font-size: 8.3pt; line-height: 1.3; color: #222; }
+.jissue { color: var(--blue); font-weight: 700; }
+.rule { border-top: 2.6pt solid var(--navy); border-bottom: 0.6pt solid var(--navy); height: 1.6pt; margin: 2.5mm 0 3mm; }
+.atype { font-size: 8.5pt; text-transform: uppercase; letter-spacing: 0.08em; color: var(--blue); font-weight: 700; text-align: center; }
+h1.title { font-family: 'Caladea', 'Liberation Serif', serif; font-size: 14.5pt; line-height: 1.22; text-transform: uppercase;
+  text-align: center; color: var(--navy); margin: 1.5mm 6mm 3mm; }
+.authors { font-weight: 700; font-size: 11pt; margin-bottom: 1mm; }
+.affs { font-style: italic; font-size: 9pt; margin-bottom: 2mm; }
+table.kwabs { width: 100%; border-collapse: collapse; font-size: 9pt; line-height: 1.4; margin-bottom: 2mm; }
+table.kwabs th { text-align: left; font-size: 8.5pt; letter-spacing: 0.06em; color: var(--navy); border-top: 1.2pt solid var(--navy);
+  border-bottom: 0.6pt solid var(--navy); padding: 0.8mm 1.5mm; }
+table.kwabs td { vertical-align: top; padding: 1.2mm 1.5mm; border-bottom: 1.2pt solid var(--navy); text-align: justify; }
+table.kwabs .kw { width: 27%; }
+table.kwabs td.kw { text-align: left; background: var(--tint); }
+table.kwabs .abs p { margin: 0 0 1.2mm; }
+.ainfo { font-size: 7.6pt; line-height: 1.35; color: var(--grey); border-bottom: 0.6pt solid var(--line); padding-bottom: 1.6mm; margin-bottom: 3mm; }
+
+/* ---------------------------------------------------------------- article body */
+.body { column-count: 2; column-gap: 7mm; text-align: justify; hyphens: auto; orphans: 2; widows: 2; }
+.body p { margin: 0 0 1.6mm; }
+.body h2 { font-size: 11pt; color: var(--navy); margin: 3.5mm 0 1.4mm; break-after: avoid; font-family: 'Caladea', serif; }
+.body h3 { font-size: 10.3pt; font-style: italic; color: var(--navy); margin: 2.6mm 0 1mm; break-after: avoid; }
+.body h4 { font-size: 10pt; font-style: italic; margin: 2mm 0 0.8mm; break-after: avoid; }
+.body section > h2:first-child, .body > section:first-child > h2 { margin-top: 0; }
+.body ul, .body ol { margin: 0 0 1.6mm; padding-left: 5mm; }
+.body li { margin-bottom: 0.6mm; }
+.body .tbl { margin: 2mm 0 3mm; break-inside: avoid; }
+.body .tbl.wide { column-span: all; }
+.body table { width: 100%; border-collapse: collapse; font-size: 8.3pt; line-height: 1.25; text-align: left; }
+.body caption { caption-side: top; text-align: left; font-size: 8.5pt; font-weight: 700; color: var(--navy); padding-bottom: 1mm; }
+.body thead th { background: var(--tint); border-top: 1pt solid var(--navy); border-bottom: 0.6pt solid var(--navy); padding: 0.8mm 1.2mm; }
+.body td { padding: 0.7mm 1.2mm; border-bottom: 0.3pt solid var(--line); vertical-align: top; }
+.body tbody tr:last-child td { border-bottom: 1pt solid var(--navy); }
+.body table:not(:has(thead)) tr:first-child td { border-top: 1pt solid var(--navy); }
+.body figure { margin: 2mm 0 3mm; break-inside: avoid; text-align: center; }
+.body figure img { max-width: 100%; max-height: 95mm; }
+.body figcaption { font-size: 8.3pt; text-align: center; color: #222; margin-top: 1mm; }
+.body figcaption::first-line { }
+.cite { column-span: all; font-size: 8.5pt; background: var(--tint); border-left: 2pt solid var(--blue); padding: 1.8mm 2.5mm;
+  margin: 3mm 0; text-align: left; break-inside: avoid; }
+#references { font-size: 7.9pt; line-height: 1.22; text-align: left; }
+#references h2 { font-size: 10.5pt; }
+#references ol, #references ul { padding-left: 5mm; }
+#references ul { list-style: none; padding-left: 4mm; }
+#references ul li { text-indent: -4mm; }
+#references li { margin-bottom: 0.5mm; overflow-wrap: anywhere; }
+.end { column-span: all; text-align: center; letter-spacing: 0.3em; color: var(--navy); margin-top: 3mm; }
+
+/* ---------------------------------------------------------------- front matter */
+.front { font-size: 10pt; }
+.fm-h { font-family: 'Caladea', serif; font-size: 20pt; color: var(--navy); border-bottom: 2.4pt solid var(--navy); padding-bottom: 1.5mm; margin: 0 0 4mm; }
+.fm-h2 { font-family: 'Caladea', serif; font-size: 12.5pt; color: var(--blue); margin: 5mm 0 2.5mm; }
+.fm-sub { color: var(--grey); margin: -2mm 0 4mm; }
+table.info { width: 100%; border-collapse: collapse; margin-bottom: 4mm; }
+table.info th { width: 32%; text-align: left; background: var(--tint); color: var(--navy); font-size: 9pt; padding: 1.4mm 2mm; border: 0.5pt solid var(--line); vertical-align: top; }
+table.info td { padding: 1.4mm 2mm; border: 0.5pt solid var(--line); font-size: 9.5pt; }
+.small { font-size: 8.8pt; color: #333; text-align: justify; }
+.bgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; }
+.bm { border: 0.5pt solid var(--line); border-left: 2pt solid var(--blue); padding: 2.2mm 3mm; font-size: 9pt; line-height: 1.35; break-inside: avoid; }
+.bm-role { font-size: 7.5pt; text-transform: uppercase; letter-spacing: 0.1em; color: var(--blue); font-weight: 700; }
+.bm-name { font-weight: 700; font-size: 10.5pt; color: var(--navy); }
+table.toc { width: 100%; border-collapse: collapse; font-size: 9.3pt; }
+table.toc th { background: var(--navy); color: #fff; padding: 1.6mm 2mm; text-align: left; }
+table.toc td { padding: 1.8mm 2mm; border-bottom: 0.5pt solid var(--line); vertical-align: top; }
+table.toc tr:nth-child(even) td { background: var(--tint); }
+table.toc .c { text-align: center; white-space: nowrap; }
+.editorial .ed-title { font-family: 'Caladea', serif; font-size: 15pt; color: var(--navy); margin: 0 0 1mm; }
+.editorial .ed-author { font-style: italic; color: var(--grey); margin: 0 0 4mm; }
+.ed-body { column-count: 2; column-gap: 7mm; text-align: justify; hyphens: auto; }
+.ed-body p { margin: 0 0 2mm; }
+.ed-body h2 { font-size: 11pt; color: var(--navy); }
+.cfp p { text-align: justify; }
+
+/* ---------------------------------------------------------------- covers */
+.cover-page { margin: 0; }
+.cover, .back { height: 262mm; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.cover-issn { align-self: flex-end; font-size: 9.5pt; font-weight: 700; color: var(--navy); border: 0.8pt solid var(--navy); padding: 1mm 2.5mm; }
+.cover-logo { width: 150mm; margin-top: 8mm; }
+.cover-title { font-family: 'Caladea', serif; font-size: 13pt; color: var(--navy); margin-top: 3mm; font-weight: 700; }
+.cover-desc { font-size: 10pt; color: var(--grey); letter-spacing: 0.06em; margin-top: 1.5mm; }
+.cover-band { width: 100%; background: var(--navy); color: #fff; margin-top: 8mm; padding: 5mm 0; border-top: 3pt solid var(--blue); border-bottom: 3pt solid var(--blue); }
+.cover-issue { font-family: 'Caladea', serif; font-size: 17pt; font-weight: 700; letter-spacing: 0.04em; }
+.cover-inside { width: 100%; text-align: left; margin-top: 8mm; padding: 0 6mm; flex: 1; }
+.cover-h { font-family: 'Caladea', serif; font-size: 13pt; color: var(--blue); font-weight: 700; border-bottom: 1pt solid var(--line); padding-bottom: 1.5mm; margin-bottom: 2mm; }
+.cover-inside ol { margin: 0; padding-left: 6mm; }
+.cover-inside li { margin-bottom: 3mm; }
+.cover-inside .ct { display: block; font-weight: 700; color: var(--navy); font-size: 10.5pt; line-height: 1.3; }
+.cover-inside .ca { display: block; font-style: italic; color: var(--grey); font-size: 9.5pt; }
+.cover-foot { width: 100%; border-top: 2pt solid var(--navy); padding-top: 3mm; font-size: 9.5pt; color: #222; }
+.cover-web { color: var(--blue); font-weight: 700; margin-top: 1mm; }
+.back { justify-content: center; }
+.back-logo { width: 120mm; }
+.back-title { font-family: 'Caladea', serif; font-size: 13pt; font-weight: 700; color: var(--navy); margin-top: 4mm; }
+.back-line { color: var(--grey); margin-top: 2mm; }
+.back-addr { margin-top: 10mm; font-size: 10pt; line-height: 1.5; }

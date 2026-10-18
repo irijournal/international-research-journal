@@ -1,12 +1,12 @@
 ---
-slug: call-for-papers-volume-1-issue-1
-title: "Call for papers: founding issue, Volume 1, Number 1"
-date: 5 August 2026
-summary: Manuscripts are invited across all seven research sections for the founding issue, with a submission deadline of 31 October 2026 and publication on 31 December 2026.
-pinned: true
+slug: call-for-papers-volume-1-issue-2
+title: "Call for papers: Volume 1, Issue 2 (October to December 2026)"
+date: 18 October 2026
+summary: Manuscripts are invited across all seven research sections for Volume 1, Issue 2, with a submission deadline of 31 October 2026 and publication on 31 December 2026.
+pinned: false
 ---
 
-The editorial board of International Research Insights invites original manuscripts for the founding issue of the journal, Volume 1, Number 1, to be published on 31 December 2026.
+The editorial board of International Research Insights invites original manuscripts for Volume 1, Issue 2 (October to December 2026), to be published on 31 December 2026.
 
 ## Sections open
 
@@ -24,7 +24,7 @@ Manuscripts are accepted in English and in Hindi. Hindi manuscripts are reviewed
 
 | Stage | Date |
 | --- | --- |
-| Submissions open | 5 August 2026 |
+| Submissions open | 18 October 2026 |
 | Submission deadline | 31 October 2026 |
 | Editorial screening outcome | Within 7 working days of receipt |
 | First decision to authors | Within 5 weeks of receipt |

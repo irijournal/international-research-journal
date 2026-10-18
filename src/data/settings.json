@@ -9,11 +9,10 @@
     "submissions": "submissions",
     "general": "info"
   },
-  "issnPrint": "",
   "issnOnline": "",
-  "issnNote": "Applications for ISSNs for the print and online editions have been filed with the National Science Library, CSIR-NIScPR, New Delhi, the ISSN National Centre for India. The numbers will be displayed here and on every article page as soon as they are allotted.",
+  "issnNote": "An application for an online ISSN has been filed with the ISSN National Centre for India. The number will be displayed here and on every article page as soon as it is allotted.",
   "publicationType": "Journal",
-  "publicationFormat": "Both (print and online)",
+  "publicationFormat": "Online",
   "subject": "Multidisciplinary",
   "publisher": "International Research Insights Editorial Board",
   "publisherAddress": "B1 FS Plaza, Jagat Farm, Greater Noida, Uttar Pradesh, India",

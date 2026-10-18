@@ -42,6 +42,7 @@ const issues = defineCollection({
     summary: z.string(),
     publicationDate: z.string().optional(),
     submissionDeadline: z.string().optional(),
+    cover: z.string().optional(),
     order: z.number().default(50),
   }),
 });

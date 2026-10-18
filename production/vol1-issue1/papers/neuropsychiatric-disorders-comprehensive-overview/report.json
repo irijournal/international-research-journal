@@ -1,0 +1,570 @@
+{
+ "slug": "neuropsychiatric-disorders-comprehensive-overview",
+ "title": "Neuropsychiatric Disorders: A Comprehensive Overview",
+ "authors": [
+  {
+   "name": "Akhileshar Prasad Mishra",
+   "affiliation": "Assistant Professor, Institute of Pharmaceutical Sciences, J.S. University, Shikohabad, Firozabad, Uttar Pradesh, India",
+   "email": "Amakhii578@gmail.com"
+  }
+ ],
+ "counts": {
+  "words_body": 5190,
+  "tables": 0,
+  "figures": 1,
+  "references": 31
+ },
+ "changes": [
+  {
+   "type": "heading",
+   "location": "Title",
+   "original": "Neuropsychiatric disorders: A comprehensive overview",
+   "revised": "Neuropsychiatric Disorders: A Comprehensive Overview"
+  },
+  {
+   "type": "heading",
+   "location": "All section headings",
+   "original": "Bold plain paragraphs (Introduction, Literature Review, Research Methodology ...); 'Abstract:' and 'References:' with colons",
+   "revised": "## headings in Title Case, ### sub-headings in sentence case; 'References:' -> '## References'; 'Abstract:' label moved to front matter"
+  },
+  {
+   "type": "heading",
+   "location": "Types of Neuropsychiatric Disorders; Underlying Causes and Risk Factors; Diagnostic Approaches; Treatment and Management Strategies",
+   "original": "Lettered plain-paragraph sub-headings 'A. Neurodegenerative Disorders', 'B. Mood Disorders', ... 'E. Multidisciplinary Approach'",
+   "revised": "Unnumbered ### sub-headings in sentence case (e.g. '### Neurodegenerative disorders'); citation numbers kept in the sub-headings as superscripts"
+  },
+  {
+   "type": "heading",
+   "location": "Research Methodology; Results",
+   "original": "Non-bold sub-headings 'Selection of Literature', 'Method of Analysis', 'Methodological Limitations' and the six Results sub-headings ('Diversity of Clinical Manifestations' ...) as plain paragraphs",
+   "revised": "### sub-headings at the same level as their bold siblings ('Research Design', 'Sources of Data')"
+  },
+  {
+   "type": "heading",
+   "location": "Hypothesis section",
+   "original": "Hypothesis",
+   "revised": "Hypotheses (the section states three hypotheses)"
+  },
+  {
+   "type": "structure",
+   "location": "End of Hypotheses section",
+   "original": "'... because no primary dataset has been collected. Scope, Significance and Relevance of the Study' (heading run into the paragraph)",
+   "revised": "'Scope, Significance and Relevance of the Study' made a ## heading; 'Scope of the Study', 'Significance of the Study', 'Relevance of the Study' made ### sub-headings under it"
+  },
+  {
+   "type": "heading",
+   "location": "Diagnostic Approaches",
+   "original": "'C. Implementing Genetic [26]' followed by paragraph 'Testing Genetic testing has gained importance ...'",
+   "revised": "'### Implementing genetic testing^25^' followed by 'Genetic testing has gained importance ...' (heading word that had slipped into the paragraph restored to the heading)"
+  },
+  {
+   "type": "heading",
+   "location": "Diagnostic Approaches > Neuropsychological assessments",
+   "original": "'Assessing Neuropsychological Functioning An all-encompassing evaluation of neuropsychological functioning ...'",
+   "revised": "'An all-encompassing evaluation of neuropsychological functioning ...' (duplicate run-in heading fragment removed; the sub-heading is 'Neuropsychological assessments')"
+  },
+  {
+   "type": "structure",
+   "location": "Author block",
+   "original": "Asst. Professor, Institute of Pharmaceutical Sciences, J. S. University, Shikohabad, Firozabad",
+   "revised": "Assistant Professor, Institute of Pharmaceutical Sciences, J.S. University, Shikohabad, Firozabad, Uttar Pradesh, India ('Uttar Pradesh, India' added; Shikohabad/Firozabad and J.S. University are in Uttar Pradesh)"
+  },
+  {
+   "type": "structure",
+   "location": "Keywords",
+   "original": "Anxiety, Neuropsychiatric disorders, Neurodegenerative diseases, Depression, Mood disorders, Psychotic disorders",
+   "revised": "Anxiety, Neuropsychiatric Disorders, Neurodegenerative Diseases, Depression, Mood Disorders, Psychotic Disorders (consistent capitalisation, same order)"
+  },
+  {
+   "type": "structure",
+   "location": "Lists throughout",
+   "original": "'•' bullet characters and typed '1.' numbering in plain paragraphs; list lead-ins plain ('Alzheimer's Disease:', '1. Heterogeneous disease patterns:')",
+   "revised": "Markdown bullet / numbered lists; lead-in labels bold, sentence case ('**Alzheimer's disease:**', '**Heterogeneous disease patterns:**')"
+  },
+  {
+   "type": "structure",
+   "location": "Hypotheses",
+   "original": "Primary hypothesis (H1): / Null hypothesis (H0): / Hypothesis: (plain)",
+   "revised": "**Primary hypothesis (H₁):** / **Null hypothesis (H₀):** / **Hypothesis:** (bold labels, subscripts; third label kept as given)"
+  },
+  {
+   "type": "figure",
+   "location": "Introduction",
+   "original": "Diagram drawn with three Word ellipse shapes and text boxes (lost in conversion), caption 'Figure: Structures of the clinical manifestations of cerebral disorders'",
+   "revised": "Re-drawn as fig/fig1.png (matplotlib, 2100 x 1200 px, same three-ellipse layout and identical labels: 'Neuropsychiatric Symptoms' - 'Cognition, Affects, Hallucinations, Delusion, Behaviour, Neurotic State, Apathy, Delirium etc'; 'Neuropsychological Symptoms' - 'Language, Behaviour, Cognition, High Brain Function Etc.'; 'Neurological Symptoms' - 'Motor & Sensory Functions Reflexes, Etc'); caption 'Figure 1. Structures of the clinical manifestations of cerebral disorders'"
+  },
+  {
+   "type": "reference",
+   "location": "In-text citations (whole paper)",
+   "original": "Bracketed numbers [1], [3& 4], [15-16]",
+   "revised": "Superscript numbers ^1^, ^3,4^, ^14,15^ (same style as the other articles in the issue)"
+  },
+  {
+   "type": "reference",
+   "location": "References 8 and 13",
+   "original": "8. and 13. both 'American Psychiatric Association. (2013). Diagnostic and statistical manual of mental disorders (5th ed.). Washington, DC: Author.' (exact duplicates)",
+   "revised": "Merged into reference 8; in-text [13] (schizophrenia, Psychotic disorders) -> ^8^"
+  },
+  {
+   "type": "reference",
+   "location": "References 14-32 and their in-text citations",
+   "original": "Old numbers 14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32",
+   "revised": "Renumbered 13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31 after the duplicate merge (e.g. [24] Neuropsychological assessments -> ^23^, [32] Multidisciplinary approach -> ^31^); 31 references in total"
+  },
+  {
+   "type": "reference",
+   "location": "Reference list formatting",
+   "original": "Journal names in sentence case and roman (e.g. 'Biological psychiatry', 'Archives of general psychiatry', 'Nature reviews. Neuroscience', 'Cambridge university press'), hyphens in page ranges, '?.' after question titles, only ref 1 italicised",
+   "revised": "APA-style: journal names in title case and italic with italic volume numbers ('Biological Psychiatry', 'Archives of General Psychiatry', 'Nature Reviews Neuroscience', 'Cambridge University Press'); book and web-page titles italic in sentence case; first word after a colon capitalised; en dashes in page ranges; '?.' -> '?'. No authors, years, volumes or pages changed"
+  },
+  {
+   "type": "reference",
+   "location": "Reference 2",
+   "original": "The Wiley Encyclopedia of Personality and Individual Differences, Models and Theories. Wiley.",
+   "revised": "*The Wiley encyclopedia of personality and individual differences: Models and theories*. Wiley."
+  },
+  {
+   "type": "reference",
+   "location": "Literature Review",
+   "original": "Meri kangas et al. (2011)",
+   "revised": "Merikangas et al. (2011) (spelling as in reference 9)"
+  },
+  {
+   "type": "reference",
+   "location": "Literature Review",
+   "original": "Miyoshi, Morimura and Maeda (2010) in Neuropsychiatric Disorders talked about",
+   "revised": "Miyoshi, Morimura and Maeda (2010), in *Neuropsychiatric Disorders*, talked about (book title italic)"
+  },
+  {
+   "type": "artifact",
+   "location": "Research Methodology > Methodological limitations",
+   "original": "If the paper is meant to be a review the methods should be updated with real search dates, search words, inclusion rules and screening steps.",
+   "revised": "(removed: this is an editorial/AI-assistant instruction to the author, not part of the author's text; see flags)"
+  },
+  {
+   "type": "artifact",
+   "location": "Whole paper",
+   "original": "Non-breaking hyphens (U+2011) in 'Peer‑reviewed', 'meta‑analysis', 'long‑term', 'evidence‑based' etc.; double full stops ('disorders..', 'mental disorders..', 'some cases..'); empty paragraphs; capitals after citation years ('(2011) Studied', '(2005) Looked', '(2008) Studied', '(2013) Studied', '(2012) Wrote', '(2012) Also', '(2011) Looked'); missing apostrophes ('Alzheimers', 'Parkinsons', 'Huntingtons', 'brains structure', 'patients condition')",
+   "revised": "Normal hyphens; single full stops; empty paragraphs dropped; lower-case verbs after the year; apostrophes restored (Alzheimer's, Parkinson's, Huntington's, brain's, patient's)"
+  },
+  {
+   "type": "language",
+   "location": "Later sections (Literature Review to Suggestions)",
+   "original": "Run-on sentences without commas, e.g. 'It pulls together existing work on how neuropsychiatric disorders show up in patients what causes them how to test for them ...', 'The study does not collect data run experiments talk to patients ...', 'Fourth the success of drugs talk therapy, ...'; stray commas ('Findings, from papers', 'additional value, for', 'strengthen access, to', 'caring for people, with', 'the not clear reasons, behind them', 'very different, in countries')",
+   "revised": "Commas added between list items and after introductory words (First, Second, However, Overall, Finally, In Europe, ...); stray commas removed. Wording unchanged except where listed separately"
+  },
+  {
+   "type": "language",
+   "location": "Abstract",
+   "original": "posture a multifaceted and complicated challenge",
+   "revised": "pose a multifaceted and complicated challenge"
+  },
+  {
+   "type": "language",
+   "location": "Abstract",
+   "original": "in present day medication and neuroscience",
+   "revised": "in present-day medicine and neuroscience"
+  },
+  {
+   "type": "language",
+   "location": "Abstract",
+   "original": "These complexes disarrange",
+   "revised": "These complex disorders"
+  },
+  {
+   "type": "language",
+   "location": "Abstract",
+   "original": "display a interesting set of impediments",
+   "revised": "present a unique set of challenges"
+  },
+  {
+   "type": "language",
+   "location": "Abstract",
+   "original": "in both clinical hone and inquire about",
+   "revised": "in both clinical practice and research"
+  },
+  {
+   "type": "language",
+   "location": "Abstract",
+   "original": "they display assorted indications",
+   "revised": "they display diverse symptoms"
+  },
+  {
+   "type": "language",
+   "location": "Abstract",
+   "original": "and basic causes",
+   "revised": "and underlying causes"
+  },
+  {
+   "type": "language",
+   "location": "Abstract",
+   "original": "To successfully care for those influenced",
+   "revised": "To successfully care for those affected"
+  },
+  {
+   "type": "language",
+   "location": "Abstract",
+   "original": "it is basic for healthcare experts and analysts",
+   "revised": "it is essential for healthcare professionals and researchers"
+  },
+  {
+   "type": "language",
+   "location": "Abstract",
+   "original": "This incorporates the different sorts of neuropsychiatric disorders",
+   "revised": "This includes the different types of neuropsychiatric disorders"
+  },
+  {
+   "type": "language",
+   "location": "Abstract",
+   "original": "their etiologies and hazard components",
+   "revised": "their etiologies and risk factors"
+  },
+  {
+   "type": "language",
+   "location": "Abstract",
+   "original": "current approaches to conclusion and administration",
+   "revised": "current approaches to diagnosis and management"
+  },
+  {
+   "type": "language",
+   "location": "Abstract",
+   "original": "The dialog starts by investigating the assorted categories",
+   "revised": "The discussion starts by investigating the diverse categories"
+  },
+  {
+   "type": "language",
+   "location": "Abstract",
+   "original": "maniacal clutters",
+   "revised": "psychotic disorders (the paper's own parallel list in the Introduction and section 'Psychotic disorders' confirm the intended term)"
+  },
+  {
+   "type": "language",
+   "location": "Abstract",
+   "original": "traumatic brain damage",
+   "revised": "traumatic brain injury"
+  },
+  {
+   "type": "language",
+   "location": "Abstract",
+   "original": "and affect on cognitive, enthusiastic, and behavioral working",
+   "revised": "and impact on cognitive, emotional, and behavioral functioning"
+  },
+  {
+   "type": "language",
+   "location": "Abstract",
+   "original": "The survey at that point dives into",
+   "revised": "The review then delves into"
+  },
+  {
+   "type": "language",
+   "location": "Abstract",
+   "original": "interaction of hereditary, natural, neurochemical, and vascular variables",
+   "revised": "interaction of genetic, environmental, neurochemical, and vascular factors"
+  },
+  {
+   "type": "language",
+   "location": "Abstract",
+   "original": "contribute to the improvement and movement of these disarranges",
+   "revised": "contribute to the development and progression of these disorders"
+  },
+  {
+   "type": "language",
+   "location": "Abstract",
+   "original": "With progressions in symptomatic procedures",
+   "revised": "With advances in diagnostic techniques"
+  },
+  {
+   "type": "language",
+   "location": "Abstract",
+   "original": "neuropsychological appraisals",
+   "revised": "neuropsychological assessments"
+  },
+  {
+   "type": "language",
+   "location": "Abstract",
+   "original": "hereditary testing, and biomarker investigation",
+   "revised": "genetic testing, and biomarker analysis"
+  },
+  {
+   "type": "language",
+   "location": "Abstract",
+   "original": "exact recognizable proof and characterization of these conditions have significantly progressed",
+   "revised": "accurate identification and characterization of these conditions have significantly improved"
+  },
+  {
+   "type": "language",
+   "location": "Abstract",
+   "original": "Besides, the article talks about the different treatment and administration techniques utilized",
+   "revised": "Furthermore, the article discusses the various treatment and management strategies utilized"
+  },
+  {
+   "type": "language",
+   "location": "Abstract",
+   "original": "counting pharmacological intercessions",
+   "revised": "including pharmacological interventions"
+  },
+  {
+   "type": "language",
+   "location": "Abstract",
+   "original": "mental treatments",
+   "revised": "psychological therapies"
+  },
+  {
+   "type": "language",
+   "location": "Abstract",
+   "original": "way of life alterations",
+   "revised": "lifestyle modifications"
+  },
+  {
+   "type": "language",
+   "location": "Abstract",
+   "original": "this survey looks for to help healthcare experts, analysts, and policymakers",
+   "revised": "this review seeks to help healthcare professionals, researchers, and policymakers"
+  },
+  {
+   "type": "language",
+   "location": "Abstract",
+   "original": "the quality of life and results for people influenced by the tremendous and complex range of neuropsychiatric clutters",
+   "revised": "the quality of life and outcomes for people affected by the vast and complex range of neuropsychiatric disorders"
+  },
+  {
+   "type": "language",
+   "location": "Literature Review",
+   "original": "Studies about brain-degenerating diseases",
+   "revised": "Studies about neurodegenerative diseases"
+  },
+  {
+   "type": "language",
+   "location": "Research Gap",
+   "original": "brain inflammation, brain flexibility, genetic risks",
+   "revised": "brain inflammation, neuroplasticity, genetic risks"
+  },
+  {
+   "type": "language",
+   "location": "Scope of the study",
+   "original": "advanced brain scans, genetic testing looking at body signs and changing brain activity",
+   "revised": "advanced brain scans, genetic testing, biomarker analysis and changing brain activity"
+  },
+  {
+   "type": "language",
+   "location": "Literature Review, para 1",
+   "original": "The study of disorders has changed a lot",
+   "revised": "The study of neuropsychiatric disorders has changed a lot"
+  },
+  {
+   "type": "language",
+   "location": "Literature Review",
+   "original": "Kessler et al. (2005) Looked at how common mental disordersre when they usually start.",
+   "revised": "Kessler et al. (2005) looked at how common mental disorders are and when they usually start."
+  },
+  {
+   "type": "language",
+   "location": "Literature Review",
+   "original": "looking at brain networks of just focusing on single chemicals",
+   "revised": "looking at brain networks instead of just focusing on single chemicals"
+  },
+  {
+   "type": "language",
+   "location": "Literature Review, last para",
+   "original": "the not clear reasons, behind them",
+   "revised": "the unclear reasons behind them"
+  },
+  {
+   "type": "language",
+   "location": "Selection of literature",
+   "original": "these themes: diseases, mood disorders, ... brain injury stroke-related neuropsychiatric conditions, genetic and environmental risk factors tests for diagnosis",
+   "revised": "these themes: neurodegenerative diseases, mood disorders, ... brain injury, stroke-related neuropsychiatric conditions, genetic and environmental risk factors, tests for diagnosis"
+  },
+  {
+   "type": "language",
+   "location": "Research Questions 1",
+   "original": "What are the major categories of disorders",
+   "revised": "What are the major categories of neuropsychiatric disorders"
+  },
+  {
+   "type": "language",
+   "location": "Research Questions 2",
+   "original": "What genetic environmental, neurochemical, ... progression of disorders?",
+   "revised": "What genetic, environmental, neurochemical, ... progression of these disorders?"
+  },
+  {
+   "type": "language",
+   "location": "Research Questions 4",
+   "original": "the respective roles of interventions, psychological therapies",
+   "revised": "the respective roles of pharmacological interventions, psychological therapies"
+  },
+  {
+   "type": "language",
+   "location": "Research Objectives",
+   "original": "an integrated understanding of disorders through",
+   "revised": "an integrated understanding of neuropsychiatric disorders through"
+  },
+  {
+   "type": "language",
+   "location": "Research Objectives 2",
+   "original": "To investigate the environmental neurochemical, inflammatory and vascular factors",
+   "revised": "To investigate the genetic, environmental, neurochemical, inflammatory and vascular factors (parallel to Research Question 2)"
+  },
+  {
+   "type": "language",
+   "location": "Research Objectives 6",
+   "original": "To identify existing knowledge gaps. Suggest directions for future research clinical practice and healthcare policy.",
+   "revised": "To identify existing knowledge gaps and suggest directions for future research, clinical practice and healthcare policy."
+  },
+  {
+   "type": "language",
+   "location": "Hypotheses",
+   "original": "based on a narrative review than primary statistical research",
+   "revised": "based on a narrative review rather than primary statistical research"
+  },
+  {
+   "type": "language",
+   "location": "Significance of the study",
+   "original": "disorders can have a big impact on thinking feelings",
+   "revised": "Neuropsychiatric disorders can have a big impact on thinking, feelings"
+  },
+  {
+   "type": "language",
+   "location": "International Perspective",
+   "original": "a way to understand health as part of general health",
+   "revised": "a way to understand mental health as part of general health"
+  },
+  {
+   "type": "language",
+   "location": "International Perspective",
+   "original": "care that's easy to get focused on the person and that helps prevent problems spot them early",
+   "revised": "care that is easy to get, focused on the person and that helps prevent problems, spot them early"
+  },
+  {
+   "type": "language",
+   "location": "International Perspective",
+   "original": "In low and middle income countries like India it can be hard to get help for disorders",
+   "revised": "In low- and middle-income countries like India, it can be hard to get help for neuropsychiatric disorders"
+  },
+  {
+   "type": "language",
+   "location": "International Perspective",
+   "original": "the treatments available are very different, in countries.",
+   "revised": "the treatments available are very different in different countries."
+  },
+  {
+   "type": "language",
+   "location": "International Perspective",
+   "original": "help them spot overlapping symptoms. Decide which tests or treatments might be most useful.",
+   "revised": "help them spot overlapping symptoms and decide which tests or treatments might be most useful."
+  },
+  {
+   "type": "language",
+   "location": "International Perspective, last para",
+   "original": "bringing together science from areas",
+   "revised": "bringing together science from different areas"
+  },
+  {
+   "type": "language",
+   "location": "Results > Diversity of clinical manifestations",
+   "original": "neuropsychiatric disorders can show up in ways.",
+   "revised": "neuropsychiatric disorders can show up in different ways."
+  },
+  {
+   "type": "language",
+   "location": "Results > Multifactorial etiology",
+   "original": "these disorders have causes.",
+   "revised": "these disorders have multiple causes."
+  },
+  {
+   "type": "language",
+   "location": "Results > Importance of accurate diagnosis",
+   "original": "thinking and behaviour well as clinical interviews",
+   "revised": "thinking and behaviour as well as clinical interviews"
+  },
+  {
+   "type": "language",
+   "location": "Results > Role of multimodal treatment",
+   "original": "Some people need medicine others benefit ... In cases techniques that change brain activity can help",
+   "revised": "Some people need medicine; others benefit ... In some cases, techniques that change brain activity can help"
+  },
+  {
+   "type": "language",
+   "location": "Results > Need for individualized care",
+   "original": "In term or worsening illnesses family members",
+   "revised": "In long-term or worsening illnesses, family members"
+  },
+  {
+   "type": "language",
+   "location": "Final Research Result",
+   "original": "Pharmacological treatment remains important for conditions while",
+   "revised": "Pharmacological treatment remains important for many conditions, while"
+  },
+  {
+   "type": "language",
+   "location": "Final Research Result",
+   "original": "requires a evidence-based and multidisciplinary approach",
+   "revised": "requires an evidence-based and multidisciplinary approach"
+  },
+  {
+   "type": "language",
+   "location": "Findings of the Study",
+   "original": "These findings represent themes identified from the literature than independently measured outcomes",
+   "revised": "These findings represent themes identified from the literature rather than independently measured outcomes"
+  },
+  {
+   "type": "language",
+   "location": "Conclusion, para 2",
+   "original": "Neuropsychiatric disorders represent an diverse group",
+   "revised": "Neuropsychiatric disorders represent a diverse group"
+  },
+  {
+   "type": "language",
+   "location": "Conclusion, last para",
+   "original": "Ultimately improving outcomes for individuals with disorders requires",
+   "revised": "Ultimately, improving outcomes for individuals with neuropsychiatric disorders requires"
+  }
+ ],
+ "flags": [
+  {
+   "severity": "high",
+   "category": "plagiarism_signal",
+   "detail": "Paraphrasing-tool ('tortured phrase') language: 32 corrections were needed (29 in the abstract and 3 in the body). Examples: 'posture a multifaceted ... challenge in present day medication' (pose ... present-day medicine), 'These complexes disarrange display a interesting set of impediments in both clinical hone and inquire about' (These complex disorders present a unique set of challenges in both clinical practice and research), 'hazard components' (risk factors), 'conclusion and administration' (diagnosis and management), 'maniacal clutters' (psychotic disorders), 'enthusiastic' (emotional), 'hereditary, natural ... variables' (genetic, environmental ... factors), 'improvement and movement of these disarranges' (development and progression of these disorders), 'exact recognizable proof' (accurate identification), 'pharmacological intercessions' (interventions), 'way of life alterations' (lifestyle modifications), 'brain-degenerating diseases' (neurodegenerative diseases), 'brain flexibility' (neuroplasticity), 'looking at body signs' (biomarker analysis). The abstract is the second Introduction paragraph ('It presents a diverse array of difficulties ... vast spectrum of neuropsychiatric disorders') sentence for sentence, run through a synonym-substitution tool. This is a typical way of hiding copied or AI-generated text from similarity checkers. All corrections are listed in 'changes'. Before publication: run a similarity check (iThenticate/Turnitin) on the original manuscript, ask the author to write a new abstract in their own words, and get a signed originality declaration."
+  },
+  {
+   "severity": "high",
+   "category": "plagiarism_signal",
+   "detail": "AI-generated or 'AI-humaniser' text with an editor's/assistant's instruction left in. The sections from Literature Review to Results, plus Final Research Result, Findings of the Study, Conclusion paragraphs 2-6 and Suggestions, are in a different, simplified register ('brain problems', 'talk therapy', 'how good life feels'). Key words are systematically deleted ('The study of disorders', 'show up in ways', 'have causes', 'In cases', 'In term or worsening illnesses', 'important for conditions'), which is the signature of an automated 'humaniser' tool. The Methodological limitations paragraph ended with an instruction to the author: 'If the paper is meant to be a review the methods should be updated with real search dates, search words, inclusion rules and screening steps.' It was removed. The same template sections (Research Gap, Research Questions, Hypotheses, Scope/Significance/Relevance, International Perspective) also appear in the case-pendency paper, so they may have been added by whoever prepared the manuscripts, not by the author. Words were restored only where the meaning was unambiguous (see 'changes'). These vague phrases are still in the text, worded as in the source, for the author to complete: Findings 'Importance of recognition', 'Clinical value of tools', 'Need for treatment' (the item says no single treatment suits every disorder), 'Value of care', 'Stigma, constraints', 'individuals experiencing injury'; Suggestions 'Promote screening', 'Improve capacity', 'Encourage treatment'; Objective 5 'the importance of healthcare'; H₁/H₀ 'psychological and environmental dimensions'; 'help in understanding disorders'; 'Studies on care that includes areas of health'; 'how to diagnose health issues'; 'The study also matters for health' (twice); 'people working in sciences'; 'just having advances'; 'help study problems'; 'combinations of susceptibility'; 'development of interventions'; 'health awareness'; 'selection of methods'. Ask the author to confirm these sections, fill in the missing words, and sign an AI-use declaration (COPE position on AI tools)."
+  },
+  {
+   "severity": "high",
+   "category": "figure",
+   "detail": "Figure 1 and the Introduction's opening sentences appear to be taken from Miyoshi & Morimura, 'Clinical Manifestations of Neuropsychiatric Disorders', Chapter 1 (pp. 1-14) of reference 1 (Miyoshi, Morimura & Maeda, Neuropsychiatric Disorders, Springer, 2010). That chapter's abstract recommends calling psychiatric symptoms or syndromes caused by organic cerebral disorders 'neuropsychiatric symptoms' or 'neuropsychiatric syndromes', and the three-domain diagram (neuropsychiatric / neuropsychological / neurological symptoms) appears to reproduce its figure. The manuscript's caption gives no source and there is no permission statement. No source line was added, because that would be added content. Before publication: the author should confirm the source and either obtain permission from Springer Nature or replace the figure with an original one. The caption should then read 'Adapted from Miyoshi and Morimura (2010)^1^'. The redrawn PNG keeps the labels exactly as in the manuscript ('Delusion', 'etc', 'Motor & Sensory Functions Reflexes, Etc')."
+  },
+  {
+   "severity": "high",
+   "category": "prior_publication",
+   "detail": "The .docx file was created on 11 April 2024 by 'shri hari computers' (a typing/DTP service), has 27 revisions and was last modified by 'DR RAVI TYAGI' on 18 October 2026. The core text appears to date from that 2024 version: the abstract, Introduction, Types / Causes / Diagnostic / Treatment sections, the first Conclusion paragraph and the reference list (latest reference 2022). The research-style sections appear to be later additions. A 2024 manuscript may already have been submitted to, or published in, another journal, conference volume or edited book between 2024 and 2026. A web search for the exact title and distinctive phrases found no earlier publication, but this is not conclusive because many regional journals are not indexed. Before publication: get a signed declaration from the author that the work is original, unpublished and not under consideration elsewhere, and run a similarity check."
+  },
+  {
+   "severity": "high",
+   "category": "citation",
+   "detail": "Reference 25 (reference 26 in the manuscript), 'Javed, A., & GetUsers, P. (2019). Genetics of neuropsychiatric disorders. Advances in Experimental Medicine and Biology, 1192, 589-601', looks corrupted or fabricated. 'GetUsers, P.' is not a plausible personal name (it looks like a software artefact), and a web search could not confirm such a chapter. The author must verify it, or replace it with a real source that supports the 'Implementing genetic testing' section. It is kept as given."
+  },
+  {
+   "severity": "medium",
+   "category": "citation",
+   "detail": "Other reference problems (all kept as given). (a) Ref 22 (Gorelick, 'Role of inflammation in cognitive impairment: results of observational epidemiological studies and clinical trials'): as far as I can tell (not confirmed online), this paper was published in Ann N Y Acad Sci 2010;1207:155-162, not '2019, 1443(1), 19-33'. Check the year, volume and pages. Ref 22 has no numeric citation in the text (cited only as 'Gorelick (2019)' in the Literature Review). (b) 'Vascular factors' cites ^21^ (Najjar 2013, neuroinflammation; [22] in the manuscript), the same source as 'Neuroinflammation'. [23] in the manuscript was probably intended, but Gorelick is about inflammation, so no cited source supports the vascular-factors paragraph. (c) Sources that do not match the claims: Malaspina 2001 (paternal age and schizophrenia, ref 13) is cited for schizoaffective disorder; Lefaucheur 2017 (tDCS guidelines, ref 29) for TMS and DBS; Ramos & Arnsten 2007 (adrenergic pharmacology and cognition, ref 11) for GABA/noradrenergic imbalance in anxiety. (d) Ref 1 is cited as a whole book but ends '1, 1-14' (the chapter pages). It should be cited as the chapter (Miyoshi & Morimura, Clinical manifestations of neuropsychiatric disorders, pp. 1-14). (e) Refs 29 and 30 shorten their author lists without an ellipsis. Refs 6 and 7 (web pages) have no access dates. (f) The Literature Review uses author-year citations while the rest of the paper uses numbers. The International Perspective, Research Gap, Scope/Significance/Relevance, Results and Findings sections (WHO and DSM claims included) have no citations. (g) Manuscript refs 8 and 13 were identical (DSM-5, 2013) and have been merged, so manuscript refs 14-32 are now numbered 13-31."
+  },
+  {
+   "severity": "medium",
+   "category": "structure",
+   "detail": "This is a narrative review (published as a Review Article) but uses research-article sections. Research Methodology reports no actual search: no dates, no databases actually searched (it says they 'can be used'), no search terms, no inclusion/exclusion counts. It states Hypotheses, including a null hypothesis (H₀), that are 'not statistically tested'; the third is labelled only 'Hypothesis:' (probably H₂). 'Results' comes before the review content (Types, Causes, Diagnostic Approaches, Treatment), and 'Results', 'Final Research Result' and 'Findings of the Study' repeat each other. The first Conclusion paragraph (2024 text) overlaps paragraphs 2-6, and its last sentence is ungrammatical ('it is crucial in enhancing the well-being of those impacted ...'; left unchanged). Kept as submitted, per the light-edit policy. Recommended restructure for the author: Introduction → Methods (search strategy) → thematic sections (Types, Causes, Diagnosis, Treatment) → Discussion (merge Results, Final Research Result, Findings) → Conclusion → Suggestions. Drop H₀/H₁ or recast them as review questions."
+  },
+  {
+   "severity": "low",
+   "category": "missing_info",
+   "detail": "Author details: no ORCID, no degree, and a personal Gmail address. The address is kept exactly as written in the manuscript, with its capital 'A': 'Amakhii578@gmail.com'. Consider asking for an institutional e-mail and ORCID. 'Uttar Pradesh, India' was added to the affiliation (J.S. University, Shikohabad, Firozabad). No received/accepted dates and no declarations (competing interests, funding, AI use). No ethics approval is needed for a literature review."
+  },
+  {
+   "severity": "low",
+   "category": "other",
+   "detail": "Minor content issues left unchanged. The 'Anxiety disorders' list item defines anxiety disorders twice in a row ('Another significant neuropsychiatric disorder is anxiety ...'). Anxiety disorders are listed under Mood disorders but treated as a separate category in the Scope. Some Figure 1 labels could be tidied with the author's consent ('Delusion' → 'Delusions'; 'Motor & Sensory Functions Reflexes, Etc' → 'Motor and sensory functions, reflexes, etc.')."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+  "slug": "stress-among-bsc-nursing-students-guwahati",
+  "title": "A Study to Assess the Level of Stress among B.Sc. Nursing Students in a Selected Nursing Institute of Guwahati, Assam",
+  "authors": [
+    {
+      "name": "Jaiprakash Tyagi",
+      "affiliation": "Post B.Sc. Nursing",
+      "email": ""
+    }
+  ],
+  "counts": {
+    "words_body": 4829,
+    "tables": 13,
+    "figures": 13,
+    "references": 12
+  },
+  "changes": [
+    {
+      "type": "heading",
+      "location": "Title",
+      "original": "A study to assess the level of stress among B.SC. Nursing students in Selected nursing institute of Guwahati, Assam",
+      "revised": "A Study to Assess the Level of Stress among B.Sc. Nursing Students in a Selected Nursing Institute of Guwahati, Assam"
+    },
+    {
+      "type": "heading",
+      "location": "Author block",
+      "original": "Post B. SC. Nursing",
+      "revised": "Post B.Sc. Nursing (kept as the affiliation line, as given)"
+    },
+    {
+      "type": "heading",
+      "location": "All section headings",
+      "original": "ALL-CAPS headings (INTRODUCTION, BACKGROUND OF THE STUDY, OBJECTIVES OF THE STUDY, ASSUMPTIONS, DELIMITATION, REVIEW OF LITERATURE, RESEARCH METHODOLOGY, SUMMARY AND CONCLUSION, REFERENCES ...)",
+      "revised": "Title Case for ## headings, sentence case for ### headings; DELIMITATION -> Delimitations; REFERENCES (plain paragraph) -> ## References"
+    },
+    {
+      "type": "structure",
+      "location": "Introduction",
+      "original": "BACKGROUND OF THE STUDY, OBJECTIVES OF THE STUDY, OPERATIONAL DEFINITIONS, ASSUMPTIONS, RESEARCH HYPOTHESES, DELIMITATION as top-level headings; NEED OF THE STUDY and PROBLEM STATEMENT as plain paragraphs",
+      "revised": "All grouped as ### subsections under ## Introduction (Background of the study, Need of the study, Problem statement, Objectives of the study, Operational definitions, Assumptions, Research hypotheses, Delimitations)"
+    },
+    {
+      "type": "structure",
+      "location": "After Review of Literature",
+      "original": "Background / Aim of the Study / Objectives / Methodology / Results sub-headings nested inside REVIEW OF LITERATURE",
+      "revised": "Same text, same position, grouped under a new neutral heading '## Study Overview' so it is no longer presented as part of the literature review (see structure flag)"
+    },
+    {
+      "type": "heading",
+      "location": "Review of Literature, end",
+      "original": "'... supportive interventions. Summary of Review of Literature' (run-in) + bold line 'Relevance to present study' + list items with merged columns, e.g. 'Stress among nursing students: Nursing students experience substantial stress Establishes the importance of the problem'",
+      "revised": "### Summary of review of literature and relevance to the present study; items split with an em dash, e.g. '**Stress among nursing students:** Nursing students experience substantial stress — establishes the importance of the problem.'"
+    },
+    {
+      "type": "heading",
+      "location": "Results section",
+      "original": "'CONCLUSION ANALYSIS AND INTERPRETATION' (last box of the flow chart run into the chapter title)",
+      "revised": "Flow-chart box 'Conclusion' kept in Figure 1; '## Analysis and Interpretation' made a section heading; added sub-heading '### Socio-demographic data' before Table 1"
+    },
+    {
+      "type": "heading",
+      "location": "Analysis and Interpretation",
+      "original": "Bold paragraphs 'Overall Socio-demographic finding' and 'Summary of the main finding'; headings 'PSS-10 Analysis-', 'Interpretation-', 'Inclusion Criteria:'",
+      "revised": "#### Overall socio-demographic findings; ### Summary of the main finding; ### PSS-10 analysis; inline '*Interpretation:*' label (as for all other interpretations); ### Inclusion criteria"
+    },
+    {
+      "type": "heading",
+      "location": "Discussion",
+      "original": "DISCUSSION ON ANALYSIS",
+      "revised": "Discussion"
+    },
+    {
+      "type": "table",
+      "location": "Tables 11-13",
+      "original": "PSS table captioned 'Table 2. Distribution of students according to level of perceived stress12-' (formatted as a heading); Low/Moderate/High percentage table and descriptive-statistics table untitled",
+      "revised": "Table 11. Distribution of students according to level of perceived stress (N = 45)^12^; Table 12. Percentage distribution of students according to PSS-10 stress level (N = 45); Table 13. Descriptive statistics of PSS-10 scores"
+    },
+    {
+      "type": "table",
+      "location": "Tables 1-10 captions",
+      "original": "e.g. 'Table 1: Distribution according to age', 'Table 10: Current financial support for education'",
+      "revised": "e.g. 'Table 1. Distribution of students according to age (N = 45)', 'Table 10. Distribution of students according to current financial support for education (N = 45)'"
+    },
+    {
+      "type": "table",
+      "location": "Tables 8 and 9",
+      "original": "Caption inside the first table row ('Table 8: Father's educational status', 'Table 9: Mother's educational status')",
+      "revised": "Caption moved out of the table into a proper caption line; table starts with the header row"
+    },
+    {
+      "type": "table",
+      "location": "Tables 2-10 headers",
+      "original": "Frequency | Percentage",
+      "revised": "Frequency (f) | Percentage (%) (as in Table 1)"
+    },
+    {
+      "type": "table",
+      "location": "Table 11",
+      "original": "Cells '13.33%', '73.33%', '13.33%', '100%'; extra rows 'Mean = 19.16' and 'SD = 5.65'",
+      "revised": "Cells 13.33, 73.33, 13.33, 100 (header 'Percentage (%)'); 'Mean = 19.16; SD = 5.65' given as a note directly below the table"
+    },
+    {
+      "type": "table",
+      "location": "Table 12 (source: untitled table under the Figure 2 caption)",
+      "original": "Low | Moderate | High / 13.33% | 13.33% | 73.33% / N = 45",
+      "revised": "Low | Moderate | High / 13.33% | 73.33% | 13.33%; 'N = 45' moved into the caption (Moderate and High values swapped to match Table 11, the pie chart and the text; see data_inconsistency flag)"
+    },
+    {
+      "type": "artifact",
+      "location": "Above Table 13",
+      "original": "Statistic Value",
+      "revised": "Removed (stray header of an earlier two-column layout of the table)"
+    },
+    {
+      "type": "figure",
+      "location": "Research Methodology, Schematic diagram",
+      "original": "Text-only flow chart (boxes as plain paragraphs separated by '𝗍' arrow glyphs)",
+      "revised": "Re-created as Figure 1 (fig/fig1.png) with the same box texts; 'Convenient Sampling' -> 'Convenience sampling'"
+    },
+    {
+      "type": "figure",
+      "location": "Figures 2-13 (12 chart images)",
+      "original": "Source charts image1-image12 (1264-1568 px, two of them WhatsApp images) with embedded titles 'Figure 1: Age Distribution' ... 'Figure 10: Financial Support for Education', 'Figure 1. Distribution of Students According to Level of Perceived Stress', 'Figure 2. Percentage Distribution ...'",
+      "revised": "All 12 charts redrawn at >= 1600 px in journal colours from exactly the values printed on them (bar values 10/19/10/5/1 ... 6/33/6; pie labels 13.33%/73.34%/13.33%); embedded titles dropped because their numbers clashed with the article numbering; numbered Figures 2-13"
+    },
+    {
+      "type": "artifact",
+      "location": "Figure alt text",
+      "original": "C:\\Users\\Personal\\Downloads\\ilovepdf_pages-to-jpg (1)\\Demographic_Data_Analysis_Figures_page-0001.jpg ... ; C:\\Users\\Personal\\Downloads\\WhatsApp Image 2026-08-21 at 4.51.54 PM.jpeg",
+      "revised": "Removed; replaced by figure captions"
+    },
+    {
+      "type": "figure",
+      "location": "Figure 2 caption",
+      "original": "Age distribution of students Age distribution among 45 8th-semester B.Sc. Nursing students. N = 45",
+      "revised": "Figure 2. Age distribution of 8th-semester B.Sc. Nursing students (N = 45)"
+    },
+    {
+      "type": "figure",
+      "location": "Figure 12 caption",
+      "original": "Figure 1. Distribution of students according to level of perceived stress- / Level of perceived stress among B.Sc. Nursing students / Distribution of 45 B.Sc. Nursing students according to PSS-10 stress category. N = 45",
+      "revised": "Figure 12. Level of perceived stress among B.Sc. Nursing students: distribution of 45 students according to PSS-10 stress category (low 0–13, moderate 14–26, high 27–40; N = 45)"
+    },
+    {
+      "type": "figure",
+      "location": "Figure 13 caption",
+      "original": "Figure 2. Percentage distribution of perceived stress Percentage distribution of perceived stress Percentage distribution of students according to PSS-10 stress level.",
+      "revised": "Figure 13. Percentage distribution of students according to PSS-10 stress level (N = 45)"
+    },
+    {
+      "type": "figure",
+      "location": "Figures 3-11 captions",
+      "original": "(none; charts only had embedded titles)",
+      "revised": "Captions 'Figure n. Distribution of students according to <variable> (N = 45)' from the matching table titles"
+    },
+    {
+      "type": "structure",
+      "location": "PSS-10 interpretation",
+      "original": "Table 2 and Figures 1 and 2 show that ...",
+      "revised": "Table 11 and Figures 12 and 13 show that ..."
+    },
+    {
+      "type": "structure",
+      "location": "Tables 7-8",
+      "original": "Interpretation of Table 7 (academic failure/backlog) printed after Table 8 (father's education)",
+      "revised": "Moved to directly after Table 7 / Figure 8"
+    },
+    {
+      "type": "artifact",
+      "location": "Overall socio-demographic findings",
+      "original": "This gives you a complete Q1–Q9 Socio-demographic result based on the handwritten data provided.",
+      "revised": "Removed (AI-assistant reply text, not part of the paper; see plagiarism_signal flag)"
+    },
+    {
+      "type": "artifact",
+      "location": "Reference 4",
+      "original": "... Sage Publications. Note: Please verify the second author's surname. Your original reference lists “Hasiamson,” which may be a misspelling of “Williamson.”",
+      "revised": "... Sage Publications. (note removed; Williamson is the correct surname of the second author of this chapter)"
+    },
+    {
+      "type": "artifact",
+      "location": "Ethical considerations",
+      "original": "... Regional College of Nursing, Guwahati (Letter enclosed) / ... details of the study. (Consent form enclosed).",
+      "revised": "Parenthetical references to thesis enclosures removed (enclosures are not part of the article; see ethics flag)"
+    },
+    {
+      "type": "artifact",
+      "location": "Quoted study title (abstract, Need of the study, Assumptions, Delimitations, Review of Literature, Study Overview)",
+      "original": "—A Study to Assess the Level of Stress Among B.Sc. Nursing Students In Selected Nursing Institute of Guwahati, Assam‖ (mis-encoded quotes; variant wordings)",
+      "revised": "“A Study to Assess the Level of Stress among B.Sc. Nursing Students in a Selected Nursing Institute of Guwahati, Assam” (same wording as the article title everywhere)"
+    },
+    {
+      "type": "language",
+      "location": "Abstract, 3rd paragraph",
+      "original": "Therefore, I intends to conduct a study entitled",
+      "revised": "Therefore, I intend to conduct a study entitled"
+    },
+    {
+      "type": "language",
+      "location": "Research Methodology, Data collection tool/procedure, Validity",
+      "original": "has adopted / has used / has conducted / has consist of / has comprise B.Sc. Nursing students who fulfill ... and are available / has determined / It was found to the 45 / Students has included / Students has excluded / Data has collected / has established / researcher has collect data / has explained / has administered / has provided / has maintained",
+      "revised": "was adopted / was used / was conducted / consisted of / comprised B.Sc. Nursing students who fulfilled ... and were available / was determined / It was found to be 45 / Students were included / Students were excluded / Data were collected / was established / the researcher collected data / was explained / was administered / was provided / were maintained"
+    },
+    {
+      "type": "language",
+      "location": "Plan for data analysis",
+      "original": "The collected data has organized, coded, tabulated, and analysed ... Appropriate statistical tests, such as the chi-square test, has used to determine the association",
+      "revised": "The collected data were organized, coded, tabulated, and analysed ... Appropriate statistical tests, such as the chi-square test, were used to determine the association (author's claim kept; no such results are reported, see flag)"
+    },
+    {
+      "type": "language",
+      "location": "Expected outcome",
+      "original": "The study has determine the level of stress ... and identify whether the stress level is low, moderate, or high",
+      "revised": "The study determined the level of stress ... and identified whether the stress level was low, moderate, or high"
+    },
+    {
+      "type": "language",
+      "location": "Need of the study, 2nd paragraph",
+      "original": "These challenges may become more significant nearing completion of their course and facing final examinations",
+      "revised": "These challenges may become more significant as students near the completion of their course and face final examinations"
+    },
+    {
+      "type": "language",
+      "location": "Review of literature (North India study)",
+      "original": "which is also the instrument shown in the questionnaire provided for the present study",
+      "revised": "which is also the instrument used in the present study"
+    },
+    {
+      "type": "language",
+      "location": "Assumptions, Delimitations, Review of literature introductions",
+      "original": "the following assumptions can be included: / the following delimitations can be included: / the review of literature can be organized into the following sections",
+      "revised": "the following assumptions were made: / the following delimitations were set: / the review of literature is organized into the following sections"
+    },
+    {
+      "type": "language",
+      "location": "Research gap",
+      "original": "The present study has help determine",
+      "revised": "The present study has helped determine"
+    },
+    {
+      "type": "language",
+      "location": "Objectives, Hypotheses, Variables, Data collection tool",
+      "original": "association between stress levels with selected Socio-demographic variables such as ... previous Academic performance, Number of Family members, birth order, History of Academic failure, parents Education and Current financial support; socio-Socio-demographic; no of family members; Parents education",
+      "revised": "association between stress levels and selected socio-demographic variables such as ... previous academic performance, number of family members, birth order, history of academic failure, parents' education and current financial support; socio-demographic; number of family members; parents' education"
+    },
+    {
+      "type": "language",
+      "location": "Operational definitions",
+      "original": "Stress: ... experienced by 8th semester B.Sc. [line break] Nursing students ... measured by a standardized stress scale. That is Stress assessment tool (Perceived Stress Scale - 10)",
+      "revised": "Stress: ... experienced by 8th-semester B.Sc. Nursing students ... measured by a standardized stress scale, that is, the stress assessment tool Perceived Stress Scale (PSS-10)."
+    },
+    {
+      "type": "language",
+      "location": "Running text (assumptions, objectives, aim, discussion)",
+      "original": "in Selected Nursing Institute of Guwahati, Assam / of selected nursing institute",
+      "revised": "in the selected nursing institute of Guwahati, Assam / of a selected nursing institute"
+    },
+    {
+      "type": "language",
+      "location": "Various",
+      "original": "themesand; 97.78%n students reported; 8thsemester; he findings emphasize; B.Sc. Nursing.at Regional College; students's; Regional College of Nursing. Guwahati; 4-6; reliable and Adequate; undergraduate / Post Graduate; I (Researcher)",
+      "revised": "themes and; 97.78% of students reported; 8th-semester; The findings emphasize; B.Sc. Nursing at Regional College; students'; Regional College of Nursing, Guwahati; 4–6; reliable and adequate; undergraduate/postgraduate; I (the researcher)"
+    },
+    {
+      "type": "structure",
+      "location": "Plan for data analysis; Data collection tool; Variables; Inclusion/exclusion criteria; Discussion of PSS-10 data",
+      "original": "Label lines and items as separate plain paragraphs (e.g. 'Descriptive statistics:' / 'Frequency and percentage ...  Inferential statistics:' / 'Appropriate statistical tests ...')",
+      "revised": "Markdown lists with bold run-in labels (e.g. '- **Descriptive statistics:** ...', '- **Inferential statistics:** ...'); text unchanged"
+    },
+    {
+      "type": "reference",
+      "location": "References 1-12",
+      "original": "Plain text",
+      "revised": "APA styling: journal names, volume numbers and book titles in italics; numbered list kept in the author's order; no details added or removed"
+    }
+  ],
+  "flags": [
+    {
+      "severity": "high",
+      "category": "data_inconsistency",
+      "detail": "Two different sets of PSS-10 results. 'Study Overview > Results' (source: Results sub-section inside the Review of Literature) says low 8 (17.78%), moderate 35 (77.78%), high 2 (4.44%), SD 6.31, median 21. Table 11, Table 13, Figures 12-13, the Interpretation, Discussion and Summary say low 6 (13.33%), moderate 33 (73.33%), high 6 (13.33%), SD 5.65, median 19 (mean 19.16 in both). Both versions are kept verbatim. The author must confirm which is correct. The Study Overview block looks like it comes from an earlier draft and should be corrected or deleted before publication."
+    },
+    {
+      "severity": "high",
+      "category": "data_inconsistency",
+      "detail": "Financial support: Table 10 and Figure 11 show 44 (97.78%) parents/family and 1 (2.22%) scholarship. Three statements say 100%: the Table 10 interpretation ('All 45 (100%) students ...'), the overall socio-demographic findings ('(100%)') and Summary and Conclusion ('for 100% of the students'). The Discussion and Study Overview correctly give 97.78%. Recommended correction: '44 (97.78%)' in all three places, after the author confirms."
+    },
+    {
+      "severity": "high",
+      "category": "plagiarism_signal",
+      "detail": "AI-chatbot residue in the manuscript: 'This gives you a complete Q1–Q9 Socio-demographic result based on the handwritten data provided.' and, in reference 4, 'Note: Please verify the second author's surname. Your original reference lists “Hasiamson,” ...' (both removed). The text also contains 'the instrument shown in the questionnaire provided for the present study' (reworded) and template phrasing ('the following assumptions can be included'). This means substantial parts of the text, and possibly the data analysis and charts, were produced by an AI assistant from the author's handwritten data. Ask the author for a signed AI-use declaration and for confirmation that every statement, number and reference has been checked (COPE/ICMJE position). Consider publishing an AI-use policy on the website."
+    },
+    {
+      "severity": "high",
+      "category": "citation",
+      "detail": "The literature review describes studies without citing them, or cites the wrong source: the 2022 systematic review (9,202 participants) is cited as ref 8 (Sharma 2021, a research-methods textbook); the North India cross-sectional study (n = 282, mean PSS 28.67 ± 5.32), the 2021 instrument-development study (430 students) and the 2026 PSS systematic review have no reference at all. The 2023 systematic review and the 2024 umbrella review match refs 7 (Welch 2023) and 1 (Labrague 2024) but are not cited where they are described. Other doubtful placements: ^6^ (Edwards & Burnard 2003, about mental-health nurses) is attached to the author's own study title; ^9^ (Cohen et al. 1983, the PSS paper) is attached to 'research approach' instead of to the PSS description; ^12^ (Basavanthappa, a textbook) is attached to the Table 11 caption; ^1^ (a 2024 umbrella review) supports the definition of stress. The author should supply the missing references and fix the citation numbers."
+    },
+    {
+      "severity": "high",
+      "category": "structure",
+      "detail": "The manuscript is a converted thesis/proposal. The abstract has no methods or results and says 'I intend to conduct a study'. Background and Delimitations are in the future tense ('The study will be conducted ...'). There are 'Plan for Data Analysis', 'Expected Outcome' and schematic-diagram sections. A second mini-paper (Background/Aim/Objectives/Methodology/Results, now 'Study Overview') repeats the Introduction, Methods and Results. Summary and Conclusion is followed by a separate Conclusion. All of this content was kept, with headings fixed. Recommendation to the author: (1) replace the abstract with a structured abstract (Background, Aim, Methods, Results, Conclusion; <= 250 words) that reports N = 45 and the Table 11/13 results; (2) delete the Study Overview block after reconciling its numbers; (3) turn Plan for Data Analysis and Expected Outcome into a short past-tense 'Statistical analysis' paragraph; (4) merge Summary and Conclusion with Conclusion; (5) put Background and Delimitations in the past tense; (6) consider dropping the schematic diagram or the chart duplicates (see figure flag)."
+    },
+    {
+      "severity": "high",
+      "category": "data_inconsistency",
+      "detail": "Objective 2 and hypothesis H2 (association between stress and socio-demographic variables) are never tested. The Plan for Data Analysis says chi-square tests 'were used', but no association table, test statistics or p-values are reported. The Overall discussion itself says 'the present frequency and percentage analysis does not establish a statistically significant relationship ... would require inferential statistical tests such as the chi-square test'. H1 ('a significant level of stress') is not testable as written and is not tested. The author should either supply the chi-square results (stress level x each variable, with chi-square, df and p) or remove Objective 2, H1/H2 and the chi-square claim."
+    },
+    {
+      "severity": "medium",
+      "category": "data_inconsistency",
+      "detail": "In the source, the untitled percentage table under the Figure 2 caption (now Table 12) read Low 13.33% | Moderate 13.33% | High 73.33%, which puts the Moderate and High values in each other's columns. It was corrected to Low 13.33% | Moderate 73.33% | High 13.33% to match Table 11, the pie chart and all text. The table also repeats Table 11 and Figure 13; consider deleting it."
+    },
+    {
+      "severity": "medium",
+      "category": "missing_info",
+      "detail": "No author affiliation (institution, department, city), e-mail or ORCID. The line under the name, 'Post B.Sc. Nursing', is a qualification or programme, not an affiliation, and was kept as given. A corresponding-author e-mail is needed for the first-page footnote and the website. Ask the author for the full affiliation, e-mail and (optionally) ORCID."
+    },
+    {
+      "severity": "medium",
+      "category": "ethics",
+      "detail": "Ethical approval is stated ('Institutional Ethical Committee, Regional College of Nursing, Guwahati') but without an approval number or date. The approval letter and consent form were 'enclosed' in the thesis but not supplied to the journal. Before publication, obtain the approval letter and add the reference number and date to the Ethical considerations section."
+    },
+    {
+      "severity": "medium",
+      "category": "conflict_of_interest",
+      "detail": "The author's surname matches that of the journal's Managing Editor (Dr. Ramavatar Singh Tyagi), who also authors another article in this issue from the same institution (Regional College of Nursing, Guwahati). If the two are related, COPE expects a competing-interest declaration and peer review handled by an independent editor. The paper has no competing-interest, funding, acknowledgement or AI-use declarations."
+    },
+    {
+      "severity": "medium",
+      "category": "other",
+      "detail": "Methods details that are missing or contradictory: the sampling technique is given as 'total enumeration sampling or convenience sampling' in the text but 'Convenient Sampling' in the schematic diagram; the number of eligible 8th-semester students (response rate) and the data-collection period are not reported; the reliability coefficient 0.79 is given without the method (Cronbach's alpha? test-retest?) or the sample used; and the PSS-10 cut-offs (0–13 / 14–26 / 27–40) are not referenced. Ask the author to clarify."
+    },
+    {
+      "severity": "low",
+      "category": "other",
+      "detail": "Inconsistent anonymisation: the title and much of the text say 'a selected nursing institute of Guwahati', but the institution is named (Regional College of Nursing, Guwahati, under SSUHS) in the operational definitions, delimitations, setting, inclusion criteria and ethics. Recommend naming it consistently, or anonymising it everywhere. SSUHS (Srimanta Sankaradeva University of Health Sciences) is not expanded."
+    },
+    {
+      "severity": "low",
+      "category": "data_inconsistency",
+      "detail": "Figure 13 (the author's pie chart, redrawn with its own labels) shows moderate stress as 73.34%, whereas Table 11 and the text give 73.33%. The pie was rounded so that it sums to 100%. Kept as printed in the source chart."
+    },
+    {
+      "severity": "low",
+      "category": "citation",
+      "detail": "References to verify: ref 8 (Sharma, Nursing research and statistics, 4th ed., Elsevier, 2021) and ref 12 (Basavanthappa, Nursing research, 2nd ed., 2014): check the edition/year pairs. Ref 7 (Welch 2023, J Nurs Educ 62(1), 36–41): check the pages. In ref 4 the author's own draft had 'Hasiamson'; 'Williamson' is correct for Cohen & Williamson (1988). Some sources are old or off-topic (Beck & Srivastava 1991; Edwards & Burnard 2003 is about mental-health nurses, not students)."
+    },
+    {
+      "severity": "low",
+      "category": "figure",
+      "detail": "All 12 source charts (screenshot/WhatsApp exports, 1264–1568 px, with embedded 'Figure n' titles that clashed with the article numbering) were redrawn from the values printed on them. The text-only schematic diagram was redrawn as Figure 1. Original images are kept at /tmp/claude-0/-home-user-international-research-journal/55c29a40-3aee-5b96-9c75-9672107bc1f3/scratchpad/work_p2/orig_figs. Each socio-demographic table is also shown as a bar chart (Figures 2–11 duplicate Tables 1–10, and Figures 12–13 duplicate Tables 11–12), which adds about 6 pages. Most journals ask for either a table or a figure for the same data; consider keeping only the tables."
+    },
+    {
+      "severity": "low",
+      "category": "missing_info",
+      "detail": "No received/accepted dates are given in the source (left empty). No data-availability statement."
+    }
+  ]
+}

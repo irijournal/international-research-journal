@@ -10,7 +10,7 @@ order: 20
 
 ## Identification
 
-The journal is published in both print and online editions, and has applied for an ISSN for each edition to the National Science Library, CSIR-NIScPR, New Delhi, which is the ISSN National Centre for India. The numbers will be displayed in the header of this website, on every article page and in the citation block of every article as soon as they are allotted.
+The journal is published online only and has applied for an online ISSN to the ISSN National Centre for India. The number will be displayed in the header of this website, on every article page and in the citation block of every article as soon as it is allotted.
 
 The journal states its status plainly here because the alternative is what a great many new journals do, which is to imply accreditation they do not hold. This journal will claim an index only after that index has accepted it, and will name the date of acceptance when it does.
 
@@ -28,7 +28,7 @@ The journal does not purchase indexing, does not display purchased impact metric
 
 ## Preservation of digital content
 
-A journal whose archive disappears has published nothing. The journal's preservation arrangements are:
+An electronic journal that disappears has published nothing. The journal's preservation arrangements are:
 
 - **Permanent addresses.** Every article keeps the web address at which it was first published. Articles are never removed, and retracted articles remain in place with a retraction notice attached.
 - **Version control.** The entire journal, including every article and every editorial page, is stored in a version controlled repository. Each change is recorded with its date, so that the state of the journal at any past moment can be reconstructed.

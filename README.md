@@ -39,7 +39,7 @@ The navigation, the footer, the search index and the sitemap all build themselve
 
 ## Design
 
-Deep teal `#134e4a`, dark teal `#042f2e`, bright teal accent `#14b8a6`, soft tint `#f0f7f6` on white. Playfair Display for headings, Inter for body text, Lato for labels. The palette and type follow the INSIGHTS house identity.
+Navy `#0a1f44`, deep blue `#0f2f63`, bright blue accent `#3d8ef0`, soft tint `#eef3fa` on white, matching the journal logo (`public/images`). Playfair Display for headings, Inter for body text, Lato for labels.
 
 Change any token in `src/styles/global.css` and the whole site follows.
 

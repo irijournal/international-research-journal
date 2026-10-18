@@ -1,0 +1,81 @@
+# Issue metadata. Single source of truth for the typesetter and the website.
+journal:
+  title: "International Research Insights: Multidisciplinary e-Journal"
+  title_main: "International Research Insights"
+  subtitle: "Multidisciplinary e-Journal"
+  short_title: "Int. Res. Insights"
+  descriptor: "Peer-reviewed · Open Access · Online"
+  format: "Online"
+  frequency: "Quarterly (March, June, September, December)"
+  languages: "Hindi and English"
+  subject: "Multidisciplinary"
+  starting_year: 2026
+  website: "https://internationalresearchinsights.com"
+  website_display: "www.internationalresearchinsights.com"
+  email_general: "info@internationalresearchinsights.com"
+  email_submissions: "submissions@internationalresearchinsights.com"
+  email_editor: "editor@internationalresearchinsights.com"
+  publisher: "International Research Insights Editorial Board"
+  publisher_address: "B1 FS Plaza, Jagat Farm, Greater Noida, Uttar Pradesh, India"
+  place_of_publication: "Greater Noida, Uttar Pradesh, India"
+  licence: "Creative Commons Attribution 4.0 International (CC BY 4.0)"
+  licence_url: "https://creativecommons.org/licenses/by/4.0/"
+  review_model: "Double anonymous peer review"
+  access_model: "Diamond open access: free to read, free to publish"
+  # The ISSN has not been allotted. Never print a made-up number.
+  issn_online: ""
+  issn_display_when_empty: "ISSN (Online): Applied for"   # research phase may change this wording or set it to "" (omit)
+
+issue:
+  volume: 1
+  number: 1
+  month: "September"
+  year: 2026
+  period: "July to September"
+  label: "Vol. 1, Issue 1, September 2026"
+  label_long: "Volume 1, Issue 1, July–September 2026"
+  slug: "volume-1-issue-1"
+  # Actual date the issue is released online. Do not backdate.
+  published_online: "18 October 2026"
+  full_issue_pdf_name: "IRI-Vol-1-Issue-1-September-2026.pdf"
+  uploads_dir: "/uploads/vol1-issue1"   # public URL prefix on the website
+
+next_issue:
+  volume: 1
+  number: 2
+  month: "December"
+  year: 2026
+  period: "October to December"
+  slug: "volume-1-issue-2"
+  submission_deadline: "31 October 2026"
+  publication_date: "31 December 2026"
+
+# Order of articles in the issue. Page numbers are assigned by the typesetter in this order.
+articles:
+  - slug: case-pendency-indian-high-courts
+    source: p1_case_pendency
+    article_type: Research Article
+    section: Law and Constitutional Studies
+  - slug: stress-among-bsc-nursing-students-guwahati
+    source: p2_stress_nursing
+    article_type: Research Article
+    section: Health and Nursing Sciences
+  - slug: patient-safety-knowledge-skills-practice-nursing-students
+    source: p3_patient_safety
+    article_type: Research Article
+    section: Health and Nursing Sciences
+  - slug: neuropsychiatric-disorders-comprehensive-overview
+    source: p4_neuropsychiatric
+    article_type: Review Article
+    section: Health and Nursing Sciences
+
+brand:
+  navy: "#0a1f44"
+  blue: "#0050a4"
+  grey: "#5b6472"
+  tint: "#eef3fa"
+  line: "#c9d4e5"
+  emblem: "brand/emblem.png"
+  emblem_transparent: "brand/emblem-transparent.png"
+  logo_full: "brand/logo-full.png"
+  logo_full_transparent: "brand/logo-full-transparent.png"

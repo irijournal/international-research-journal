@@ -19,9 +19,9 @@ const structuredData = {
   '@type': 'Periodical',
   name: fullJournalName,
   alternateName: site.shortTitle,
-  publisher: { '@type': 'Organization', name: site.publisher, address: site.publisherAddress },
+  publisher: { '@type': 'Organization', name: site.publisher, address: site.publisherAddress, logo: new URL('/images/logo-full.png', Astro.site ?? 'https://example.org').toString() },
   inLanguage: ['hi', 'en'],
-  ...(site.issnPrint || site.issnOnline ? { issn: [site.issnPrint, site.issnOnline].filter(Boolean) } : {}),
+  ...(site.issnOnline ? { issn: site.issnOnline } : {}),
   url: canonical,
 };
 ---
@@ -38,8 +38,11 @@ const structuredData = {
     <meta property="og:description" content={description} />
     <meta property="og:type" content={ogType} />
     <meta property="og:site_name" content={fullJournalName} />
+    <meta property="og:image" content={new URL('/images/logo-full.png', Astro.site ?? 'https://example.org').toString()} />
     <meta name="twitter:card" content="summary" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -47,6 +50,7 @@ const structuredData = {
       rel="stylesheet"
     />
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    <slot name="head" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>

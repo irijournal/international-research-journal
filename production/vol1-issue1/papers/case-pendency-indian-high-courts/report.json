@@ -1,0 +1,552 @@
+{
+ "slug": "case-pendency-indian-high-courts",
+ "title": "A Quinquennial Empirical Analysis of Case Pendency in Indian High Courts and the Imperative for Expedited Adjudication",
+ "authors": [
+  {
+   "name": "Dr. Ravi Kumar",
+   "affiliation": "Head of Department, Indraprastha Law College, Greater Noida, Uttar Pradesh, India",
+   "email": ""
+  }
+ ],
+ "counts": {
+  "words_body": 9605,
+  "tables": 1,
+  "figures": 26,
+  "references": 8
+ },
+ "changes": [
+  {
+   "type": "heading",
+   "location": "Title",
+   "original": "A quinquennial empirical analysis of case pendency in Indian high courts and the imperative for expedited adjudication",
+   "revised": "A Quinquennial Empirical Analysis of Case Pendency in Indian High Courts and the Imperative for Expedited Adjudication"
+  },
+  {
+   "type": "structure",
+   "location": "Front matter",
+   "original": "Byline 'Dr. Ravi Kumar' / 'Ph.D. Law'; 'Abstract' heading; 'Keywords:' paragraph in body",
+   "revised": "Moved to YAML front matter (author, degree 'Ph.D. (Law)', abstract, keywords). Affiliation 'Head of Department, Indraprastha Law College, Greater Noida, Uttar Pradesh, India' taken from the journal's editorial-board records because the manuscript gives none"
+  },
+  {
+   "type": "heading",
+   "location": "Main headings",
+   "original": "Literature review; Research gap; Indian judicial context; Research Question; Hypothesis; Scope, Significance and Relevance of the Study-; Discussion (plain text); Implications for Judicial Reform (plain text)",
+   "revised": "Literature Review; Research Gap; Indian Judicial Context; Research questions; Hypotheses; Scope, Significance and Relevance of the Study; Discussion; Implications for Judicial Reform (all as ## or ### headings, unnumbered)"
+  },
+  {
+   "type": "heading",
+   "location": "Heading hierarchy",
+   "original": "Mixed bold/plain paragraph headings at one level; numbered pseudo-headings '1. Hussainara Khatoon ...' to '5. Contemporary Judicial Context', 'A. Major Findings of the Study' with '1.'-'10.' findings, Suggestions '1.'-'12.'",
+   "revised": "## for main sections; ### (sentence case) for Problem statement (under Introduction), Purpose of the study / Research questions / Research objectives / Hypotheses (under Research Methodology), the four case headings (italic case names, numbers removed), Contemporary judicial context, Overall relevance, Results sub-sections, the ten findings under '## Major Findings of the Study' and the twelve suggestions under '## Suggestions'. Numbers dropped from headings per journal style"
+  },
+  {
+   "type": "structure",
+   "location": "Results, paragraph 2",
+   "original": "This shows that the problem of growing litigation stays strong.2. High Courts with the Highest Pendency",
+   "revised": "Paragraph ends '...stays strong.' followed by heading '### High Courts with the highest pendency'"
+  },
+  {
+   "type": "structure",
+   "location": "Indian Judicial Context > Contemporary judicial context",
+   "original": "**This study uses those numbers** (bold pseudo-heading) / Connects them with past court decisions.",
+   "revised": "This study uses those numbers and connects them with past court decisions."
+  },
+  {
+   "type": "structure",
+   "location": "Discussion",
+   "original": "Continuous paragraphs with an untitled chart before each court's text; several paragraphs (Telangana, Delhi, Gujarat, Jammu and Kashmir) never name the court",
+   "revised": "Added 26 sub-headings (### Allahabad High Court ... ### All High Courts), one per chart, using the court names stored in each chart's embedded workbook; text order and chart placement unchanged"
+  },
+  {
+   "type": "structure",
+   "location": "Hypotheses",
+   "original": "Null Hypothesis (H₀) / H₀: ...; Alternative Hypothesis (H₁) / H₁: ...; Additional Hypotheses / H₂: ... H₃: ... H₄: ...",
+   "revised": "**Null hypothesis (H₀):** ...; **Alternative hypothesis (H₁):** ...; **Additional hypotheses:** bullet list H₂-H₄"
+  },
+  {
+   "type": "structure",
+   "location": "Purpose of the study; Research questions; Research objectives; Comparative Analysis",
+   "original": "Manually typed numbers '1\\.' in separate paragraphs; item 7 'And suggest ...'; item 2 'Try to identify ...'",
+   "revised": "Markdown numbered lists; 'Suggest ...', 'Identify ...' (stem 'The study tries to:')"
+  },
+  {
+   "type": "structure",
+   "location": "Suggestions > Strengthen data-based judicial administration",
+   "original": "Bullet: 'This would give a picture than raw pendency numbers alone.'",
+   "revised": "Moved out of the indicator list as a closing paragraph: 'This would give a better picture than raw pendency numbers alone.'"
+  },
+  {
+   "type": "structure",
+   "location": "Suggestions > Balance speed with fairness",
+   "original": "Right to be heard. Legal representation + natural justice + evidentiary. Reasoned judgment + timely disposal.",
+   "revised": "Bullet list: the right to be heard; legal representation; natural justice; evidentiary safeguards; reasoned judgment; and timely disposal. ('safeguards' supplied - author to confirm)"
+  },
+  {
+   "type": "artifact",
+   "location": "After Research Gap; end of Purpose list",
+   "original": "Top of Form / Bottom of Form (two paragraphs); '...fairness of the trial.Top of Form'",
+   "revised": "Removed"
+  },
+  {
+   "type": "artifact",
+   "location": "Throughout",
+   "original": "Empty paragraphs; double full stops ('cases..', '12.38%..', '2023..', 'carefully..')",
+   "revised": "Removed / single full stop"
+  },
+  {
+   "type": "figure",
+   "location": "Discussion, Figures 1-26",
+   "original": "26 native Word charts titled with the placeholder 'Chart Title', a spurious zero-value series ('High Court'/'Series 1'/'Court'), the serial number as the only category, leftover Excel sample categories 'Category 2-4' (charts 2-12), years shown only as legend colours, no axis titles",
+   "revised": "Redrawn with matplotlib from the cached chart data (verified identical to the embedded workbooks): one navy bar per year 2021-2025, value labels in Indian digit grouping, axis titles 'Year' / 'Number of pending cases', placeholder title, spurious series and sample data removed; captions 'Figure n. Year-wise pending cases in the <court>, 2021-2025' (Figure 26: total of all 25 High Courts)"
+  },
+  {
+   "type": "table",
+   "location": "Major Findings > Some High Courts demonstrated successful reduction",
+   "original": "Untitled two-column table (High Court | Overall Change)",
+   "revised": "Table 1 with caption 'Table 1. High Courts that reduced their pending cases between 2021 and 2025'; text now cites '(Table 1)'; all cell values and row order unchanged"
+  },
+  {
+   "type": "reference",
+   "location": "References 1-8",
+   "original": "Case names in roman; report title in roman; missing terminal full stops on 1, 3, 4",
+   "revised": "Case names and report title italicised; terminal full stops added. Entries 3/6 and 4/7 cite the same cases but are not exact duplicates, so both kept (flagged)"
+  },
+  {
+   "type": "language",
+   "location": "Throughout (case names in text)",
+   "original": "\\*Hussainara Khatoon v. Home Secretary, State of Bihar\\* (literal asterisks), other case names in roman",
+   "revised": "All case names italicised"
+  },
+  {
+   "type": "language",
+   "location": "Throughout",
+   "original": "high courts / constitution / article 21 / article 214 to 231 / Indias constitution",
+   "revised": "High Courts / Constitution / Article 21 / Articles 214 to 231 / India's Constitution"
+  },
+  {
+   "type": "language",
+   "location": "Throughout (digit grouping)",
+   "original": "522,107 (x2); 452,548; 423,466; 102,361; '20 907'; '25.17 %', '4.35 %' etc.",
+   "revised": "5,22,107; 4,52,548; 4,23,466; 1,02,361; 20,907 (Indian grouping used elsewhere in the paper); '%' without space. Values unchanged"
+  },
+  {
+   "type": "language",
+   "location": "Throughout",
+   "original": "which's (6x); don't; can't; isn't; what's; That's; There's",
+   "revised": "which is; do not; cannot; is not; what is; That is; There is"
+  },
+  {
+   "type": "language",
+   "location": "Throughout",
+   "original": "realization, minimize, maximize, analyze, specialized, digitalization, emphasizing, focussing",
+   "revised": "British spelling standardised: realisation, minimise, maximise, analyse, specialised, digitalisation, emphasising, focusing"
+  },
+  {
+   "type": "language",
+   "location": "Throughout",
+   "original": "Stray commas and run-ons, e.g. 'rise, in pendency', 'the need, for a', 'grew from, around', 'public confidence, in the system', 'support, from the institutions', missing list commas ('managing cases actively having digital courts using electronic filing ...')",
+   "revised": "Commas removed or added for grammatical lists; no wording change"
+  },
+  {
+   "type": "language",
+   "location": "Throughout (articles)",
+   "original": "an significant / an steady / an timely / an fair / an public",
+   "revised": "a significant / a steady / a timely / a fair / a speedy and public (see International Perspective)"
+  },
+  {
+   "type": "language",
+   "location": "Abstract, paragraph 2",
+   "original": "creates doubts about the ability of the court to provide for fair justice",
+   "revised": "creates doubts about the ability of the court to provide fair justice"
+  },
+  {
+   "type": "language",
+   "location": "Introduction, paragraph 1",
+   "original": "They are the constitutional courts which means that they are established by the constitution of India under article 214 to 231.",
+   "revised": "They are constitutional courts, which means that they are established by the Constitution of India under Articles 214 to 231."
+  },
+  {
+   "type": "language",
+   "location": "Introduction, paragraphs 2-4",
+   "original": "the issue of case pending in various matters; A significant number of cases get pending; The report also compares; can also be done by exploring alternate dispute resolution mechanism",
+   "revised": "the issue of pending cases in various matters; A significant number of cases remain pending; The study also compares; can also be achieved by exploring alternate dispute resolution mechanisms"
+  },
+  {
+   "type": "language",
+   "location": "Problem statement",
+   "original": "still continues to haunt the judiciary system ... is not limited to simply the number of pending cases, but also because of the cost",
+   "revised": "still continues to haunt the judicial system ... is not limited simply to the number of pending cases, but also extends to the cost"
+  },
+  {
+   "type": "language",
+   "location": "Literature Review, paragraph 3",
+   "original": "In the way the Law Commission of India's 245th Report (2014)",
+   "revised": "In the same way, the Law Commission of India's 245th Report (2014) (report title italicised)"
+  },
+  {
+   "type": "language",
+   "location": "Research Gap, paragraph 1",
+   "original": "But there is a lacuna in the research literature pertains to the pendency in High Courts on yearly basis for the span of five years.",
+   "revised": "But there is a lacuna in the research literature pertaining to pendency in High Courts on a yearly basis over a span of five years."
+  },
+  {
+   "type": "language",
+   "location": "Research objectives 1, 2, 4",
+   "original": "To examine how case pendency changes every five years in High Courts. / To analyse how the number of pending cases shifts each year. By what percentage during the chosen period. / To find patterns where pendency goes up goes down. Swings around in the High Courts.",
+   "revised": "To examine how case pendency changes over five years in High Courts. / To analyse how the number of pending cases shifts each year, and by what percentage, during the chosen period. / To find patterns where pendency goes up, goes down or swings around in the High Courts."
+  },
+  {
+   "type": "language",
+   "location": "Hypotheses, H₁",
+   "original": "There is an significant change ... Overall the number is going up which means we need changes in how the courts work. Including procedures, technology, administration and structure. To speed up the justice process.",
+   "revised": "There is a significant change ... Overall, the number is going up, which means we need changes in how the courts work, including procedures, technology, administration and structure, to speed up the justice process."
+  },
+  {
+   "type": "language",
+   "location": "Scope, Significance and Relevance, paragraph 2",
+   "original": "Case pendency is not a matter of court records. It touches the core of the rule of law the rights of people who go to court and how much trust the places in the judiciary.",
+   "revised": "Case pendency is not merely a matter of court records. It touches the core of the rule of law, the rights of people who go to court and how much trust the public places in the judiciary."
+  },
+  {
+   "type": "language",
+   "location": "Scope, Significance and Relevance, paragraph 3",
+   "original": "The Supreme Court has said this article includes the right to a trial. ... It checks whether the current systems, in courts and administration are working enough",
+   "revised": "The Supreme Court has said this article includes the right to a speedy trial. ... It checks whether the current systems in courts and administration are working well enough"
+  },
+  {
+   "type": "language",
+   "location": "International Perspective, paragraph 1",
+   "original": "the Sixth Amendment clearly says that people accused of crimes have the right to an public trial. Because of this American courts have created rules about what counts as much delay",
+   "revised": "the Sixth Amendment clearly says that people accused of crimes have the right to a speedy and public trial. Because of this, American courts have created rules about what counts as too much delay"
+  },
+  {
+   "type": "language",
+   "location": "International Perspective, paragraph 3",
+   "original": "These examples from countries show that reducing delays, in courts needs a mix of things",
+   "revised": "These examples from other countries show that reducing delays in courts needs a mix of things,"
+  },
+  {
+   "type": "language",
+   "location": "Comparative Analysis",
+   "original": "I think a comparison of High Courts is essential ... he study looks at High Courts ... a High Court that has a number of cases at once ... gives a meaningful picture than ... which High Courts need judges",
+   "revised": "A comparison of High Courts is essential ... The study looks at High Courts ... a High Court that has a large number of cases at once ... gives a more meaningful picture than ... which High Courts need more judges"
+  },
+  {
+   "type": "language",
+   "location": "Indian Judicial Context, paragraph 1",
+   "original": "examined the right to a trial in detail ... Speed must be balanced against the need, for a trial",
+   "revised": "examined the right to a speedy trial in detail ... Speed must be balanced against the need for a fair trial"
+  },
+  {
+   "type": "language",
+   "location": "Hussainara Khatoon",
+   "original": "set the foundation for the right to a trial under Article 21 ... keeping someone in jail for a time without a trial",
+   "revised": "set the foundation for the right to a speedy trial under Article 21 ... keeping someone in jail for a long time without a trial"
+  },
+  {
+   "type": "language",
+   "location": "Abdul Rehman Antulay",
+   "original": "judges must look at how the delay is",
+   "revised": "judges must look at how long the delay is"
+  },
+  {
+   "type": "language",
+   "location": "P. Ramachandra Rao",
+   "original": "The Supreme Court said no we can't set a fixed time limit ... The right to a trial must work with the need",
+   "revised": "The Supreme Court said that we cannot set a fixed time limit ... The right to a speedy trial must work with the need"
+  },
+  {
+   "type": "language",
+   "location": "Vakil Prasad Singh",
+   "original": "the right to a trial isn't just about what happens in court ... People have a right to an fair investigation too. / Relevance: This means we must fix delays not during trial but also earlier. In police work and evidence collection.",
+   "revised": "the right to a speedy trial is not just about what happens in court ... People have a right to a fair investigation too. / Relevance: This means we must fix delays not only during trial but also earlier, in police work and evidence collection."
+  },
+  {
+   "type": "language",
+   "location": "Contemporary judicial context",
+   "original": "The National Judicial Data Grid gives information, about each court. How many cases are waiting ... Together this helps plan fixes. Like hiring more judges building better court facilities ...",
+   "revised": "The National Judicial Data Grid gives information about each court: how many cases are waiting ... Together, this helps plan fixes, like hiring more judges, building better court facilities, ..."
+  },
+  {
+   "type": "language",
+   "location": "Overall relevance",
+   "original": "I feel that the objective of expedited adjudication should not be to maximize disposal figures",
+   "revised": "The objective of expedited adjudication should not be to maximise disposal figures"
+  },
+  {
+   "type": "language",
+   "location": "Discussion > Allahabad",
+   "original": "The growth was slow at first. 0.95% In 2022.",
+   "revised": "The growth was slow at first: 0.95% in 2022."
+  },
+  {
+   "type": "language",
+   "location": "Discussion > Bombay",
+   "original": "I notice the year-by-year study ... shows a rise from 2021 to 2024 then a drop in 2025 ... with the yearly jump of 7.67% seen in 2022 ... 2025 Saw a 4.40% fall ... After this recent cut pendency, in 2025 stayed ... might point to court disposal and case-management yet ... procedural, tech and institutional changes",
+   "revised": "The year-by-year study ... shows a rise from 2021 to 2024 and then a drop in 2025 ... with the largest yearly jump of 7.67% seen in 2022 ... The year 2025 saw a 4.40% fall ... After this recent cut, pendency in 2025 stayed ... might point to court disposal and case-management efforts, yet ... procedural, technological and institutional changes"
+  },
+  {
+   "type": "language",
+   "location": "Discussion > Calcutta",
+   "original": "Pendency dropped by 6.39 percent in 2022. By another 6.24 percent in 2023 ... In 2024. 2025 The trend turned a little upward ... I see that the Calcutta High Court is doing a job yet the recent rise, in pendency",
+   "revised": "Pendency dropped by 6.39 percent in 2022 and by another 6.24 percent in 2023, ... In 2024 and 2025 the trend turned a little upward, ... The Calcutta High Court is doing a good job, yet the recent rise in pendency"
+  },
+  {
+   "type": "language",
+   "location": "Discussion > Gauhati",
+   "original": "This steady increase, in pendency keeps the court busy. Shows that we need",
+   "revised": "This steady increase in pendency keeps the court busy and shows that we need"
+  },
+  {
+   "type": "language",
+   "location": "Discussion > Telangana",
+   "original": "went down for the four years ... The number of cases was the smallest in the year ... Even though there was an increase in the year the total, over five years",
+   "revised": "went down for the first four years ... The number of cases was the smallest in the fourth year ... Even though there was an increase in the fifth year, the total over five years (ordinals restored from the chart data)"
+  },
+  {
+   "type": "language",
+   "location": "Discussion > Andhra Pradesh",
+   "original": "I see that the data shows that case pendency, in the High Court of Andhra Pradesh grew a lot during the three years ... reaching the level of the five years 2,49,088 cases",
+   "revised": "The data shows that case pendency in the High Court of Andhra Pradesh grew a lot during the first three years ... reaching the highest level of the five years, 2,49,088 cases"
+  },
+  {
+   "type": "language",
+   "location": "Discussion > Delhi",
+   "original": "Pendency grew by 3.94 percent in the year ... The growth slowed to 4.67 percent in the year",
+   "revised": "Pendency grew by 3.94 percent in the second year ... The growth slowed to 4.67 percent in the fourth year"
+  },
+  {
+   "type": "language",
+   "location": "Discussion > Himachal Pradesh",
+   "original": "grew from 76,218 in the year to 102,361 ... The largest yearly rise happened in the year at 9.03 percent ... underlines the need, for a judicial capacity",
+   "revised": "grew from 76,218 in the first year to 1,02,361 ... The largest yearly rise happened in the fifth year at 9.03 percent ... underlines the need for greater judicial capacity"
+  },
+  {
+   "type": "language",
+   "location": "Discussion > Jammu and Kashmir",
+   "original": "Overall the High Court of Jammu and Kashmir shows a trend, with case pendency going down over time.",
+   "revised": "Overall, the High Court of Jammu and Kashmir shows a trend of case pendency going down over time."
+  },
+  {
+   "type": "language",
+   "location": "Discussion > Chhattisgarh",
+   "original": "In the year the number of pending cases went up sharply by 12.38%.. ... the court is moving in the direction",
+   "revised": "In the second year the number of pending cases went up sharply by 12.38%. ... the court is moving in the right direction"
+  },
+  {
+   "type": "language",
+   "location": "Discussion > Jharkhand",
+   "original": "Then in the year there was a bigger drop of 2.47%. In the year the drop was much larger ... This was the drop in one year ... In the year there was another drop",
+   "revised": "Then in the third year ... In the fourth year the drop was much larger ... This was the largest drop in one year ... In the fifth year there was another drop"
+  },
+  {
+   "type": "language",
+   "location": "Discussion > Karnataka",
+   "original": "In the year the pendency went up by 7.25%. The increase continued in the year ... slowed a bit in the year to 4.91% ... not been able to clear cases enough. The number of cases has kept building up than they can be resolved.",
+   "revised": "In the second year ... in the third year ... in the fourth year ... not been able to clear cases fast enough. The number of cases has kept building up faster than they can be resolved."
+  },
+  {
+   "type": "language",
+   "location": "Discussion > Kerala",
+   "original": "went up by 6.09% in the year ... built up during the part of the study period. The pattern changed in the fourth year. Pendency went down by 1.46% then. In the year it went down a little more",
+   "revised": "went up by 6.09% in the second year ... built up during the first part of the study period. The pattern changed in the fourth year, when pendency went down by 1.46%. In the fifth year it went down a little more"
+  },
+  {
+   "type": "language",
+   "location": "Discussion > Madhya Pradesh",
+   "original": "In the year the number of pending cases went up by 5.23%. Then in the years it went up ... got smaller after the year",
+   "revised": "In the second year ... Then in the following years ... got smaller after the second year"
+  },
+  {
+   "type": "language",
+   "location": "Discussion > Manipur",
+   "original": "In the year the rise was small at 0.57% ... In the year ... 9.62%. In the year the highest increase happened with 13.27%. In the year ... 9.67% ... can handle and settle cases enough",
+   "revised": "In the second year ... In the third year ... In the fourth year the highest increase happened, at 13.27%. In the fifth year ... can handle and settle cases fast enough"
+  },
+  {
+   "type": "language",
+   "location": "Discussion > Meghalaya",
+   "original": "in the year (x3) ... The rise in the year is especially important",
+   "revised": "in the second / third / fourth year ... The rise in the final year is especially important"
+  },
+  {
+   "type": "language",
+   "location": "Discussion > Punjab and Haryana (second paragraph after Figure 18)",
+   "original": "The High Court of Meghalaya shows an uneven pattern of case backlog over five years. Backlog fell sharply by 25.17 % at first then dropped each year. In the year it fell by 0.59 % in the third by 1.26 % in the fourth by 2.15 % and in the fifth by 2.57 %. ... went from 452,548 to 423,466 ... The larger yearly drops, in years show",
+   "revised": "The High Court of Punjab and Haryana shows an uneven pattern of case backlog over five years. Backlog dropped each year: in the second year it fell by 0.59%, in the third by 1.26%, in the fourth by 2.15% and in the fifth by 2.57%. ... went from 4,52,548 to 4,23,466 ... The larger yearly drops in later years show (court name and the erroneous '25.17%' clause corrected from the chart data; see flag)"
+  },
+  {
+   "type": "language",
+   "location": "Discussion > Rajasthan",
+   "original": "The last year had the rise of 10.77% ... That was the number during the whole study period ... The big rise in the year stands out",
+   "revised": "The last year had a rise of 10.77%, ... That was the highest number during the whole study period ... The big rise in the final year stands out"
+  },
+  {
+   "type": "language",
+   "location": "Discussion > Sikkim",
+   "original": "In the year pendency fell by 8.89% ... went up by 15.00% in the year ... the High Court had a proportional growth, in its pending caseload",
+   "revised": "In the second year ... in the fourth year ... the High Court had a large proportional growth in its pending caseload"
+  },
+  {
+   "type": "language",
+   "location": "Discussion > Uttarakhand",
+   "original": "grew by 8.77 percent in the year ... a 10.38 percent rise in the year ... Although the yearly growth rate fell in the year",
+   "revised": "grew by 8.77 percent in the second year ... a 10.38 percent rise in the fourth year ... Although the yearly growth rate fell in the later years"
+  },
+  {
+   "type": "language",
+   "location": "Discussion > Madras",
+   "original": "Pendency fell by two point one four percent in 2022. Then fell again by two point one six percent in 2023. The fall grew to two point five six percent in 2024 before easing to two point three eight percent in 2025 ... reduced by fifty-three thousand five hundred forty cases, a drop of eight point nine three percent ... started this period with six lakh pending cases",
+   "revised": "Pendency fell by 2.14% in 2022, then fell again by 2.16% in 2023. The fall grew to 2.56% in 2024 before easing to 2.38% in 2025 ... reduced by 53,540 cases, a drop of 8.93% ... started this period with nearly six lakh pending cases (5,99,825)"
+  },
+  {
+   "type": "language",
+   "location": "Discussion > Orissa",
+   "original": "Consequently pendency reached a point of 1,45,205 cases ... the drop, in pendency was not kept.",
+   "revised": "Consequently, pendency reached a low point of 1,45,205 cases ... the drop in pendency was not sustained."
+  },
+  {
+   "type": "language",
+   "location": "Discussion > Patna",
+   "original": "shows a pattern. In the two years there was a big drop ... Then by another 7.24% in 2023 which was the smallest number of cases ever recorded at 1,97,465 ... Even though there was an increase in the two years",
+   "revised": "shows a mixed pattern. In the first two years there was a big drop ... then by another 7.24% in 2023, when it reached the smallest number of cases recorded in the study period, 1,97,465 ... Even though there was an increase in the last two years"
+  },
+  {
+   "type": "language",
+   "location": "Discussion > All High Courts",
+   "original": "Pendency grew by 2.14% in 2022 then by a 1.34% in 2023. Pendency grew again to 2.08% in 2024. Reached 3.07% in 2025 ... keeps growing with many reforms and new technology",
+   "revised": "Pendency grew by 2.14% in 2022, then by 1.34% in 2023. Pendency grew again, by 2.08%, in 2024 and by 3.07% in 2025 ... keeps growing despite many reforms and new technology"
+  },
+  {
+   "type": "language",
+   "location": "Results, paragraph 2",
+   "original": "pendency then picked up again to 2.08% in 2024. 3.07% In 2025.",
+   "revised": "pendency then picked up again, to 2.08% in 2024 and 3.07% in 2025."
+  },
+  {
+   "type": "language",
+   "location": "Results > Implications for speedy and fair trial",
+   "original": "At the time speedy adjudication cannot be the same as disposing cases at any cost.",
+   "revised": "At the same time, speedy adjudication cannot be the same as disposing of cases at any cost."
+  },
+  {
+   "type": "language",
+   "location": "Results > Final research result",
+   "original": "\"The five-year empirical analysis ... a speedy and fair trial needs more, than disposal ... we must keep steps to get expedited adjudication ... quality of justice.\"",
+   "revised": "Quotation marks removed; '... needs more than disposal ... we must take steps to achieve expedited adjudication ...'"
+  },
+  {
+   "type": "language",
+   "location": "Major Findings > Allahabad High Court has the highest pendency",
+   "original": "The Allahabad High Court has recorded the pending caseload among all High Courts in the dataset over the period studied and I think this shows a real challenge. ... That is an increase of cases or 18.93 percent, which is a lot.",
+   "revised": "The Allahabad High Court has recorded the highest pending caseload among all High Courts in the dataset over the period studied, and this shows a real challenge. ... That is an increase of 18.93 percent, which is a lot. (absolute figure missing in source; see flag)"
+  },
+  {
+   "type": "language",
+   "location": "Major Findings > Rajasthan also witnessed growth",
+   "original": "25.82 percent and we see that the numbers are climbing fast.",
+   "revised": "25.82 percent, and the numbers are climbing fast."
+  },
+  {
+   "type": "language",
+   "location": "Major Findings > Madras / Orissa and Tripura",
+   "original": "I notice the lack of a rise in cases for Madras High Court, which shows that ... / I see that both saw case numbers rise again in the year.",
+   "revised": "The lack of a rise in cases for the Madras High Court shows that ... / Both saw case numbers rise again in the final year."
+  },
+  {
+   "type": "language",
+   "location": "Conclusion",
+   "original": "The findings show a picture. ... not the same over India ... Jammu & Kashmir, Punjab, Haryana and other High Courts ... At the time the continuing rise ... is not enough, for reform",
+   "revised": "The findings show a mixed picture. ... not the same across India ... Jammu & Kashmir, Punjab and Haryana and other High Courts (one High Court) ... At the same time, the continuing rise ... is not enough for reform"
+  },
+  {
+   "type": "language",
+   "location": "Suggestions",
+   "original": "Having judges compared to the number of cases ... cases that have been delayed for a time ... These studies can spot practices",
+   "revised": "Having enough judges compared to the number of cases ... cases that have been delayed for a long time ... These studies can spot good practices"
+  },
+  {
+   "type": "language",
+   "location": "Research Methodology, paragraph 3",
+   "original": "It calculates an increase/decrease in % pendency ... by taking the ratio of the number of cases pending from the current to the previous year",
+   "revised": "It calculates the increase or decrease in percentage pendency ... by taking the ratio of the number of cases pending in the current year to the previous year (method description otherwise unchanged; see flag)"
+  }
+ ],
+ "flags": [
+  {
+   "severity": "high",
+   "category": "conflict_of_interest",
+   "detail": "The sole author, Dr. Ravi Kumar, is this journal's own Editor in Chief. Under the journal's policy a manuscript submitted by an editorial-board member must be handled by a different editor (for example the Managing Editor or an independent guest editor), with the author excluded from all decisions on it and from access to reviewer identities. Please record who handled the review. The published article should also carry a competing-interests statement disclosing the author's editorial role. The manuscript contains no such statement and none was added (no invented declarations)."
+  },
+  {
+   "severity": "high",
+   "category": "data_inconsistency",
+   "detail": "Discussion: the paragraph that follows the Punjab and Haryana chart (Figure 18) was headed 'The High Court of Meghalaya shows an uneven pattern ... Backlog fell sharply by 25.17 % at first then dropped each year', but every other number in it (452,548 -> 423,466; -0.59%, -1.26%, -2.15%, -2.57%; -29,082 = -6.43%) is the Punjab and Haryana data. The court name and the '25.17%' clause had been copied from the Meghalaya paragraph. Corrected to 'The High Court of Punjab and Haryana ...' and 'Backlog dropped each year: in the second year it fell by 0.59%, ...'. The original text is recorded in changes. The author should confirm the correction. The phrase 'uneven pattern' was kept although the data show a steady decline every year."
+  },
+  {
+   "severity": "medium",
+   "category": "plagiarism_signal",
+   "detail": "The text shows strong signs of being run through an automated paraphrasing / 'AI-humaniser' tool. Ordinals and adjectives are systematically deleted: 'in the year' appears about 30 times for 'in the second/third/fourth/fifth year'; 'the right to a trial' stands for 'the right to a speedy trial' (6x); 'the right to an public trial' for the Sixth Amendment's 'speedy and public trial'; 'The findings show a picture' for 'a mixed picture'; 'At the time' for 'At the same time'. First-person fillers are inserted ('I notice', 'I see that', 'I think', 'I feel that'). Commas are misplaced ('rise, in pendency'), the Madras figures are spelled out ('two point one four percent', 'fifty-three thousand five hundred forty cases') and 'which's' is used. Where the chart data or legal context made the meaning unambiguous, the words were restored and each edit is recorded in changes. Supplied words that the author should confirm: 'evidentiary safeguards', 'a good job', 'greater judicial capacity', 'large proportional growth', 'nearly six lakh', 'recorded in the study period'. Recommendation: run a similarity / AI-text check and have the author approve the copy-edited text."
+  },
+  {
+   "severity": "medium",
+   "category": "data_inconsistency",
+   "detail": "Rajasthan: the text says 'The biggest jump happened between Year 1 and Year 2 when the cases increased by 9.39%', but the final-year rise (10.77%, 616,341 -> 682,725) is larger. The final-year rise is also called 'the big rise ... [that] stands out'. Left unchanged for the author to correct."
+  },
+  {
+   "severity": "medium",
+   "category": "data_inconsistency",
+   "detail": "Calcutta High Court's 10.44% reduction (2,29,563 -> 2,05,591) is the fourth largest of the 10 reductions, but it is missing from the 'High Courts Showing Reduction in Pendency' list, from Table 1, and from the Final research result and Conclusion lists of successful courts. Patna (-3.14%) appears in Table 1 but not in the bullet list. Table 1 is not in descending order (Telangana -2.70% comes before Patna -3.14%). The '15 increased / 10 decreased' count is correct (verified from the chart data). Not changed. The author should add Calcutta and reorder the table."
+  },
+  {
+   "severity": "medium",
+   "category": "citation",
+   "detail": "The study's main data source (year-wise pendency of 25 High Courts, 2021-2025, said to come from the NJDG and Department of Justice) has no reference entry, URL, access date or reference date (for example 'as on 31 December'). The 'Government of India parliamentary answer' reporting 63,63,406 cases pending as of 8 December 2025 is also uncited. That figure differs from the paper's own 2025 total of 63,90,530, which is likely a different snapshot date that is not stated. Add full data-source citations and the reference date of each annual figure."
+  },
+  {
+   "severity": "medium",
+   "category": "citation",
+   "detail": "The Literature Review and International Perspective make many claims with no citation: the Law Commission's 'several reports', 'Several researchers have stressed ...', 'Articles related to vacancies ...', 'Research using data has also found big differences ...', and the US, UK and Australian practice. The reference list has only 8 entries: 7 case citations (two cases listed twice) and 1 Law Commission report, with no scholarly literature. This is thin for a research article. Recommend that the author add the sources relied on."
+  },
+  {
+   "severity": "medium",
+   "category": "missing_info",
+   "detail": "The manuscript gives no affiliation, e-mail address or ORCID for the author, only 'Dr. Ravi Kumar, Ph.D. Law'. The affiliation used (Head of Department, Indraprastha Law College, Greater Noida) comes from the journal's editorial-board records. No corresponding-author e-mail is printed because none is known. Please supply one for the first-page footnote. The Word file's document properties name the author as 'DR RAVI TYAGI', so please confirm the name to be published."
+  },
+  {
+   "severity": "low",
+   "category": "missing_info",
+   "detail": "No declarations: no competing interests (see the conflict_of_interest flag), funding, or data-availability statement. Received/accepted dates are not stated. Ethics approval is not needed (the study uses only published secondary data on court pendency)."
+  },
+  {
+   "severity": "low",
+   "category": "citation",
+   "detail": "References 3 and 6 (Abdul Rehman Antulay v. R.S. Nayak) and 4 and 7 (P. Ramachandra Rao v. State of Karnataka) cite the same judgments. 3 and 4 add AIR citations, so they are not exact duplicates and all were kept. Recommend merging and renumbering (3->3, 6->3, 4->4, 7->4). Hussainara Khatoon is first discussed without a citation number. It is dated (1979) in the text and reported as (1980) 1 SCC 81 in reference 5. This is consistent (decision year vs report year) but could be harmonised. All 8 references are cited in the text, and every in-text number has an entry."
+  },
+  {
+   "severity": "low",
+   "category": "data_inconsistency",
+   "detail": "Small rounding differences between the text and percentages recomputed from the chart data (left unchanged): Allahabad 2024 6.84% (computed 6.85%); Bombay overall 12.41% (12.42%); Delhi 2022 3.94% (3.95%); Gujarat 2023 3.63% (3.62%) and overall 13.52% (13.51%); Chhattisgarh 2024 6.50% (6.51%); Jharkhand 2024 13.27% (13.28%); Manipur 2023 9.62% (9.61%); Rajasthan overall 25.82% (25.81%); Uttarakhand 2025 7.28% (7.29%); Patna 2022 6.13% (6.12%). All other figures (absolute changes, totals, overall percentages, 25-court total = sum of courts) match exactly."
+  },
+  {
+   "severity": "low",
+   "category": "data_inconsistency",
+   "detail": "Major Findings, Allahabad: the source sentence 'That is an increase of cases or 18.93 percent' is missing the absolute increase. 'cases or' was removed. From the paper's own figures the increase is 1,94,053 cases (12,18,984 - 10,24,931). The author may add it."
+  },
+  {
+   "severity": "low",
+   "category": "other",
+   "detail": "Methodology says the year-to-year % change is computed 'by taking the ratio of the number of cases pending in the current year to the previous year, and multiplying it by 100'. That formula gives an index (e.g. 100.95), not a % change. The figures actually reported are correct percentage changes, ((current - previous) / previous) x 100. Recommend that the author correct the description."
+  },
+  {
+   "severity": "low",
+   "category": "structure",
+   "detail": "H₀-H₄ are stated but never formally tested or explicitly accepted or rejected. There are no statistical tests, only descriptive percentages. The section called 'Discussion' is really the court-by-court presentation of results and comes before 'Results'. The same aggregate figures are repeated in Results, Final research result, Major Findings and Conclusion, and Purpose / Research questions / Research objectives overlap heavily. All of this is kept as submitted. Recommend that the author condense it and state the outcome of each hypothesis. The editor added 26 court-name sub-headings in the Discussion (taken from the chart workbooks) for navigation."
+  },
+  {
+   "severity": "low",
+   "category": "figure",
+   "detail": "All 26 Word charts were redrawn from their cached data (values verified identical to the embedded Excel workbooks and to the LibreOffice render). The originals had a placeholder title 'Chart Title', a spurious zero-value series, leftover Excel sample data and no court names. Court names now appear in the captions. 26 near-identical single-court charts take a lot of space. Consider replacing them (or supplementing them) with one consolidated table of year-wise pendency for all 25 High Courts, using the same data."
+  }
+ ]
+}

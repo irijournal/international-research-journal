@@ -3,14 +3,14 @@ slug: about
 title: About the Journal
 navLabel: About the Journal
 navGroup: About
-summary: The purpose, scope, standards and governance of International Research Insights, a double anonymous peer reviewed, open access multidisciplinary journal published quarterly in print and online.
+summary: The purpose, scope, standards and governance of International Research Insights, a double anonymous peer reviewed, open access multidisciplinary e-journal published quarterly online.
 updated: 5 August 2026
 order: 10
 ---
 
 ## What the journal is
 
-International Research Insights is a peer reviewed, open access academic journal, published in both print and online editions, that publishes original research across law, health and nursing sciences, language and literature, history and heritage, education, public policy, and science and environment studies. It is published four times a year, in March, June, September and December, and is free to read and free to publish in.
+International Research Insights is a peer reviewed, open access electronic journal, published online only, that publishes original research across law, health and nursing sciences, language and literature, history and heritage, education, public policy, and science and environment studies. It is published four times a year, in March, June, September and December, and is free to read and free to publish in.
 
 The journal was founded on a straightforward observation. A great deal of careful, useful research is produced in colleges, universities, hospitals, courts and classrooms that are not part of the small circle of institutions whose work travels easily. That research is often let down not by its quality but by the absence of an editorial process willing to read it properly, review it fairly and publish it to a standard that other scholars can cite with confidence. International Research Insights exists to provide that process.
 
@@ -55,4 +55,4 @@ The journal is published from Greater Noida, Uttar Pradesh, India, and is edited
 
 ## History
 
-The journal was established in 2026. Its founding issue is open for submissions, and its editorial policies were adopted by the board before the first call for papers was issued, in the order a serious journal ought to do things.
+The journal was established in 2026. Its founding issue, Volume 1, Issue 1, was published in September 2026, and its editorial policies were adopted by the board before the first call for papers was issued, in the order a serious journal ought to do things.

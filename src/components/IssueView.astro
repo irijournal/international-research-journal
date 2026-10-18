@@ -16,26 +16,27 @@ const { Content } = await render(issue);
         <Content />
       </div>
 
-      <h2 style="margin-top:3rem">Table of contents</h2>
+      <h2 style="margin-top:3rem">Contents</h2>
       {articles.length > 0 ? (
-        <ul class="toc">
-          {articles.map((article) => (
-            <li>
-              <span class="badge">{article.data.articleType}</span>
-              <h3><a href={`/articles/${article.id}`}>{article.data.title}</a></h3>
-              <p class="authors">{article.data.authors.join(', ')}</p>
-              <p class="meta">
-                {issueLabel(issue.data)}
-                {article.data.pageRange ? ` · Pages ${article.data.pageRange}` : ''}
-                {` · ${article.data.section}`}
-              </p>
-              <div class="links">
-                <a href={`/articles/${article.id}`}>Abstract and full text</a>
-                {article.data.pdf && <a href={article.data.pdf}>Download PDF</a>}
-              </div>
-            </li>
-          ))}
-        </ul>
+        <table class="index-table">
+          <thead>
+            <tr><th>S.No.</th><th>Title and author(s)</th><th>Section / type</th><th>Pages</th><th>PDF</th></tr>
+          </thead>
+          <tbody>
+            {articles.map((article, index) => (
+              <tr>
+                <td data-label="S.No.">{String(index + 1).padStart(2, '0')}</td>
+                <td data-label="Title">
+                  <a class="index-title" href={`/articles/${article.id}`}>{article.data.title}</a>
+                  <span class="index-authors">{article.data.authors.join(', ')}</span>
+                </td>
+                <td data-label="Section">{article.data.section}<br /><em>{article.data.articleType}</em></td>
+                <td data-label="Pages">{article.data.pageRange ?? ''}</td>
+                <td data-label="PDF">{article.data.pdf && <a href={article.data.pdf}>Download</a>}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       ) : (
         <div class="cite-box">
           <p style="margin-bottom:0.6rem">
@@ -54,6 +55,9 @@ const { Content } = await render(issue);
     </div>
 
     <aside class="sidebar">
+      {issue.data.cover && (
+        <img class="issue-cover" src={issue.data.cover} alt={`Cover of ${issueLabel(issue.data)}`} />
+      )}
       <h2>Issue details</h2>
       <dl>
         <dt>Volume and issue</dt>
@@ -76,7 +80,7 @@ const { Content } = await render(issue);
         )}
         {issue.data.publicationDate && (
           <>
-            <dt>Publication date</dt>
+            <dt>Published online</dt>
             <dd>{issue.data.publicationDate}</dd>
           </>
         )}

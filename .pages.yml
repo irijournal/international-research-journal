@@ -21,11 +21,10 @@ content:
           - { name: managingEditor, label: Managing Editor, type: string }
           - { name: submissions, label: Manuscript submissions, type: string }
           - { name: general, label: General enquiries, type: string }
-      - { name: issnPrint, label: ISSN (print), type: string, description: "Leave empty until the ISSN is allotted. The site then shows the number everywhere automatically." }
       - { name: issnOnline, label: ISSN (online), type: string, description: "Leave empty until the ISSN is allotted. The site then shows the number everywhere automatically." }
       - { name: issnNote, label: ISSN status note, type: text }
       - { name: publicationType, label: Type of publication, type: string, description: "Journal, Magazine or Blog" }
-      - { name: publicationFormat, label: Format of publication, type: string, description: "Print, Online, or Both (print and online)" }
+      - { name: publicationFormat, label: Format of publication, type: string, description: "Online" }
       - { name: subject, label: Subject, type: string }
       - { name: publisher, label: Publisher, type: string, description: "Must match the publisher name on the ISSN application exactly." }
       - { name: publisherAddress, label: Publisher's address, type: text, description: "Complete address with PIN code. Must match the ISSN application exactly." }
@@ -118,6 +117,7 @@ content:
       - { name: summary, label: Issue summary, type: text, required: true }
       - { name: submissionDeadline, label: Submission deadline, type: string }
       - { name: publicationDate, label: Publication date, type: string }
+      - { name: cover, label: Cover image path, type: string, description: "For example /uploads/vol1-issue1/cover-thumb.png" }
       - { name: order, label: Sort order, type: number }
       - { name: body, label: Editorial note, type: rich-text }
 

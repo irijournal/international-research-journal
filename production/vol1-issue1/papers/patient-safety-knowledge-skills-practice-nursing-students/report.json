@@ -1,0 +1,255 @@
+{
+  "slug": "patient-safety-knowledge-skills-practice-nursing-students",
+  "title": "A Study to Assess Knowledge, Skills and Practice Regarding Patient Safety among B.Sc. Nursing Students of Regional College of Nursing, Guwahati, Assam",
+  "authors": [
+    {
+      "name": "Dr. Ramavatar Singh Tyagi",
+      "affiliation": "Vice Principal, Department of Nursing, J.S. University, Shikohabad, Uttar Pradesh, India (from the journal's editorial-board records; not stated in the manuscript)",
+      "email": ""
+    }
+  ],
+  "counts": {
+    "words_body": 3303,
+    "tables": 8,
+    "figures": 9,
+    "references": 11
+  },
+  "changes": [
+    {
+      "type": "heading",
+      "location": "Title",
+      "original": "A study to assess knowledge, skills and practice regarding patient safety among B.SC. nursing students of regional college of nursing, Guwahati, Assam (bold body paragraph, not marked as a heading)",
+      "revised": "A Study to Assess Knowledge, Skills and Practice Regarding Patient Safety among B.Sc. Nursing Students of Regional College of Nursing, Guwahati, Assam (front matter)"
+    },
+    {
+      "type": "structure",
+      "location": "Author block",
+      "original": "'Dr. Ramavatar Singh Tyagi' and 'Ph.D. Nursing' formatted as Heading 1; no affiliation, e-mail or ORCID",
+      "revised": "Author 'Dr. Ramavatar Singh Tyagi', degree 'Ph.D. (Nursing)', corresponding author; affiliation 'Vice Principal, Department of Nursing, J.S. University, Shikohabad, Uttar Pradesh, India' taken from the journal's editorial-board records (SPEC 'Known author details') because the manuscript gives none; e-mail and ORCID left empty"
+    },
+    {
+      "type": "structure",
+      "location": "Abstract and keywords",
+      "original": "Plain labels 'Background:', 'Objective:', 'Methodology:', 'Results:', 'Conclusion:'; 'Keywords: Patient safety, knowledge, skills, practice, B.Sc. Nursing students, clinical practice, nursing education.' in the body",
+      "revised": "Bold labels in the front-matter abstract; keywords moved to front matter in Title Case: Patient Safety, Knowledge, Skills, Practice, B.Sc. Nursing Students, Clinical Practice, Nursing Education"
+    },
+    {
+      "type": "language",
+      "location": "Abstract, Methodology",
+      "original": "The study was conducted among 42 2nd semester B.Sc. Nursing students.",
+      "revised": "The study was conducted among 42 second-semester B.Sc. Nursing students."
+    },
+    {
+      "type": "heading",
+      "location": "All section headings",
+      "original": "INTRODUCTION; NEED OF THE STUDY; METHODOLOGY; DATA COLLECTION TOOLS; PROBLEM STATEMENT; SSUMPTIONS (plain paragraph, first letter missing); DELIMITATION; REVIEW OF LITERATURE; 'Literature Related to ...' (Heading 2, two of them only bold paragraphs); 'Recent Evidence on Patient-Safety Competency' and 'Need for the present study' (bold paragraphs); ANALYSIS OF DEMOGRAPHIC DATA; DATA ANALYSIS FOR PATIENT SAFETY SCORE; 'Overall demographic interpretation-'; DISCUSSION ON ANALYSIS; 'CONCLUSION:'; REFERANCES",
+      "revised": "## Introduction; ### Need for the study; ## Methodology; ### Data collection tools; ### Problem statement; ### Assumptions; ### Delimitation; ## Review of Literature; ### Literature related to ... (sentence case, all as headings); ### Recent evidence on patient-safety competency; ### Need for the present study; ### Analysis of demographic data; ### Data analysis for patient-safety scores; #### Overall demographic interpretation; ## Discussion; ## Conclusion; ## References"
+    },
+    {
+      "type": "heading",
+      "location": "Results section",
+      "original": "RESULTS DATA ANALYSIS (bold paragraph)",
+      "revised": "## Results"
+    },
+    {
+      "type": "heading",
+      "location": "Section after Discussion",
+      "original": "RESULT",
+      "revised": "## Summary (the section recapitulates the whole study after the Discussion; renamed so that the paper does not have two 'Results' sections; text unchanged)"
+    },
+    {
+      "type": "heading",
+      "location": "Methodology, flow chart",
+      "original": "RESEARCH METHODOLOGY (Heading 1 directly after METHODOLOGY)",
+      "revised": "### Schematic diagram of the research methodology"
+    },
+    {
+      "type": "structure",
+      "location": "Whole paper, section order",
+      "original": "Introduction; Need of the Study; Methodology; Research Methodology (flow chart); Data Collection Tools (with 'Research Gap' and 'Need for the present study' nested under it); Problem Statement; Assumptions; Delimitation; Review of Literature; Results; Discussion; Result; Conclusion; References",
+      "revised": "Introduction (### Need for the study, Problem statement, Assumptions, Delimitation); Review of Literature (… ### Research gap, ### Need for the present study, which conclude the review); Methodology (list, ### Schematic diagram, ### Data collection tools); Results; Discussion; Summary; Conclusion; References. Text of every section unchanged; only its position changed so that the paper follows the standard Introduction - Review - Methods - Results - Discussion - Conclusion order"
+    },
+    {
+      "type": "structure",
+      "location": "Review of Literature, Research gap",
+      "original": "The reviewed literature indicates that: Patient safety should be incorporated into undergraduate nursing education Students generally acquires patient-safety knowledge through classroom and clinical education. Clinical safety knowledge may be stronger ... (list run together as one paragraph)",
+      "revised": "'The reviewed literature indicates that:' followed by a six-item bulleted list; missing full stop added after 'undergraduate nursing education'; 'Students generally acquires' -> 'Students generally acquire'"
+    },
+    {
+      "type": "language",
+      "location": "Need for the present study",
+      "original": "The present study is needed because:",
+      "revised": "The present study is needed for the following purposes: (the list items all begin 'To assess ...', 'To identify ...')"
+    },
+    {
+      "type": "structure",
+      "location": "Methodology list",
+      "original": "'Research Approach – Quantitative', 'Research Design – Descriptive', ... dash-separated items; sub-items 'Study variables- ...', 'Demographic variables- ...'",
+      "revised": "Numbered list with bold run-in labels ('**Research approach:** Quantitative', ...); lettered sub-lists (a, b, c) for variables and ethical considerations; content unchanged"
+    },
+    {
+      "type": "language",
+      "location": "Methodology list",
+      "original": "2nd semester B.Sc Nursing Students; whom were willing to participate; whom were Absent or not willing; Valuable of the Study-; Study variables- Patient safety in clinical practices, Knowledge, Skill & practice; Sampling Technique – Consecutive Technique; Permission was obtain from concerned authority; witnessed patient safety incidents",
+      "revised": "2nd-semester B.Sc. Nursing students; who were willing to participate; who were absent or not willing; Variables of the study; Study variables: Patient safety in clinical practices; knowledge, skill and practice.; Sampling technique: Consecutive sampling technique; Permission was obtained from the concerned authority.; witnessed patient-safety incidents"
+    },
+    {
+      "type": "language",
+      "location": "Data collection tools",
+      "original": "Self Administered questionnaire; Interview Schedule",
+      "revised": "Self-administered questionnaire; Interview schedule"
+    },
+    {
+      "type": "language",
+      "location": "Delimitation",
+      "original": "The study is Delimited to Government Nursing Colleges of Assam.",
+      "revised": "The study is delimited to government nursing colleges of Assam. (meaning kept; see data_inconsistency flag)"
+    },
+    {
+      "type": "language",
+      "location": "Objective (abstract), Research gap, Methodology",
+      "original": "2nd semester B.Sc. Nursing students; B.Sc Nursing; B.SC.",
+      "revised": "2nd-semester B.Sc. Nursing students (adjectival hyphen); B.Sc. throughout. The quoted problem statement was left verbatim"
+    },
+    {
+      "type": "figure",
+      "location": "Methodology, flow chart",
+      "original": "Text-only flow chart: separate paragraphs with '▼' arrows and box-drawing lines '┌────┐ / └────┘' ('Research Approach - Quantitative descriptive approach' ... 'Sampling Technique As per study protocol', 'Data Collection Structured tools / checklist', 'Knowledge Skills Practice', 'Data Analysis Frequency, Percentage & Graphical presentation', 'Interpretation of Findings', 'Conclusion & Recommendations')",
+      "revised": "Re-created as Figure 1 (fig/fig1.png) with the same box texts, including the three-way split into Knowledge / Skills / Practice"
+    },
+    {
+      "type": "figure",
+      "location": "Figures 2-9 (8 chart images)",
+      "original": "Source charts image1-image8 (matplotlib default style; 1568 px wide, image8 only 976 px) with embedded titles 'Figure 1: Distribution of Students According to Age (N=42)', 'Figure 2: Previous Exposure to Patient-Safety Training (N=42)', 'Figure 3: Source of Information on Patient Safety (N=42)', 'Figure 4: Previous Witnessing of a Patient-Safety Incident (N=42)', 'Knowledge Regarding Patient Safety (n=42)', 'Skill Regarding Patient Safety (n=42)', 'Practice Regarding Patient Safety (n=42)', 'Level of Patient Safety among 42 B.Sc. Nursing Students', and score-range footers 'Score: Adequate 17–20 | Moderate 13–16 | Inadequate 0–12' / 'Score: Adequate 7–10 | Moderate 4–6 | Inadequate 0–3'",
+      "revised": "All 8 charts redrawn at 1760 px in journal colours with exactly the values and value labels printed on them (e.g. '12 (28.6%)', '37 (88.10%)', '2 (4.76%)'); embedded titles dropped (their numbers clashed with the article numbering) and used for the captions; score ranges moved into the x-axis labels and the captions of Figures 6-8; numbered Figures 2-9 (Figure 1 is the flow chart). Originals kept at /tmp/claude-0/-home-user-international-research-journal/55c29a40-3aee-5b96-9c75-9672107bc1f3/scratchpad/work_p3/orig_figs"
+    },
+    {
+      "type": "table",
+      "location": "Table captions",
+      "original": "'1. Age distribution' in a merged first row inside the table; numbered Heading 2 lines 'Previous exposure to patient-safety training', 'Source of information regarding patient safety', 'Previous witnessing of a patient-safety incident'; numbered bold list items '1./2./3. Distribution of students according to level of ... (N = 42)'; heading 'Overall analysis'",
+      "revised": "Caption lines 'Table 1. Age distribution (N = 42)' ... 'Table 7. Distribution of students according to level of patient-safety practice (N = 42)', 'Table 8. Overall analysis of knowledge, skill and practice regarding patient safety (N = 42)'; caption row removed from inside Table 1"
+    },
+    {
+      "type": "table",
+      "location": "Tables 1-4 and 8 headers and cells",
+      "original": "Frequency | Percentage; cells '28.6%', '54.8%', ..., '100%'; Table 8 'Percentage'; bold on Table 5 'Adequate' row",
+      "revised": "Frequency (f) | Percentage (%) (as in Tables 5-7); cells 28.6, 54.8, ..., 100 (numbers unchanged, % sign moved to the header); Table 8 'Percentage (%)'; bold removed"
+    },
+    {
+      "type": "table",
+      "location": "Table 7 (level of patient-safety practice)",
+      "original": "Adequate 0 | 0.0; Moderate 2 | 4.8; Inadequate 17 | 40.5; Total 42 | 100.0 (rows sum to 19, not 42)",
+      "revised": "Adequate 2 | 4.76; Moderate 17 | 40.48; Inadequate 23 | 54.76; Total 42 | 100.0 - the values stated in the Interpretation, Discussion, Summary, Table 8 and the author's own chart (see high data_inconsistency flag; author to confirm)"
+    },
+    {
+      "type": "heading",
+      "location": "Interpretation paragraphs under Tables 1-7",
+      "original": "'Interpretation:' as Heading 2 (Tables 5-7), as a separate paragraph (Table 4) or run-in (Tables 1-3), mostly in indented block quotes",
+      "revised": "Uniform inline italic label '*Interpretation:*' at the start of the first paragraph; block-quote indentation removed"
+    },
+    {
+      "type": "structure",
+      "location": "Overall analysis, Overall interpretation",
+      "original": "Plain paragraphs 'Overall interpretation', 'Major finding', 'The data show a clear difference between the three domains:', 'Knowledge → High (88.10% adequate)', '↓', 'Skill → Mainly moderate (59.52% moderate)', '↓', 'Practice → Mainly inadequate (54.76% inadequate)'",
+      "revised": "#### Overall interpretation; '**Major finding:** The data show a clear difference between the three domains:' followed by a three-item bulleted list (the '↓' arrow paragraphs dropped)"
+    },
+    {
+      "type": "artifact",
+      "location": "Literature related to patient-safety education among nursing students",
+      "original": "Paragraph broken in the middle of a value: 'The mean overall scores were 3.50 ±' / '0.55 in classroom settings ...'",
+      "revised": "One paragraph: 'The mean overall scores were 3.50 ± 0.55 in classroom settings ...'"
+    },
+    {
+      "type": "language",
+      "location": "Literature related to learning from errors and incident reporting",
+      "original": "Incident reporting can help health-care organizations identify system weaknesses and develop preventive measures require repeated demonstration, return-demonstration, supervision and feedback before consistently performing it safely.",
+      "revised": "Incident reporting can help health-care organizations identify system weaknesses and develop preventive measures. (the trailing fragment is a stray copy of the last sentence of 'Literature related to the gap between knowledge and clinical practice', where it remains)"
+    },
+    {
+      "type": "language",
+      "location": "Conclusion",
+      "original": "the study entitled “Patients safety in clinical practices among B.Sc. Nursing Students of Regional College of Nursing, Guwahati, Assam” The study may provide",
+      "revised": "the study entitled “Patient safety in clinical practices among B.Sc. Nursing Students of Regional College of Nursing, Guwahati, Assam”. The study may provide"
+    },
+    {
+      "type": "reference",
+      "location": "Reference 4",
+      "original": "Wood, M. J., Ross-Kerr, J. C., & Polit, D. F. Ross-Kerr, J. C., & Polit, D. F. (2021). Nursing research: Generating and assessing evidence for nursing practice (11th ed.). Wolters Kluwer. Note: The author details in your original reference list combine two separate books. The correct APA 7 references are listed separately below.",
+      "revised": "Wood, M. J., Ross-Kerr, J. C., & Polit, D. F. (2021). *Nursing research: Generating and assessing evidence for nursing practice* (11th ed.). Wolters Kluwer. (repeated author string and AI-assistant note removed; entry otherwise kept because it is cited as ^4^; see citation and plagiarism_signal flags)"
+    },
+    {
+      "type": "reference",
+      "location": "References 8-10",
+      "original": "Hyperlink targets https://www.who.int/publications/i/item/9789240032705?utm_source=chatgpt.com (and ...9789240095458?utm_source=chatgpt.com, ...9789241597906?utm_source=chatgpt.com); ref 9 ends with a stray 'World Health Organization' after the URL",
+      "revised": "Plain links without the '?utm_source=chatgpt.com' tracking parameter (the displayed URLs are unchanged); stray trailing 'World Health Organization' removed from ref 9"
+    },
+    {
+      "type": "reference",
+      "location": "References 1-11",
+      "original": "Plain text, heading 'REFERANCES'",
+      "revised": "'## References'; numbered list in the author's order; book and report titles in italics (APA); no details added or removed"
+    }
+  ],
+  "flags": [
+    {
+      "severity": "high",
+      "category": "conflict_of_interest",
+      "detail": "The sole author, Dr. Ramavatar Singh Tyagi, is this journal's Managing Editor. COPE guidance on editors' own submissions (and the checks made by indexers such as DOAJ/UGC-CARE) expects such a paper to be handled by an independent editor with independent peer review and to carry a competing-interest statement. The manuscript has no competing-interest, funding or acknowledgement statement, and none was added. Suggested statement, to be used only if true: 'Dr. Ramavatar Singh Tyagi is the Managing Editor of International Research Insights: Multidisciplinary e-Journal. He was not involved in the editorial handling of, or the decision on, this article.' Note also that the issue's other nursing paper (Jaiprakash Tyagi, stress among B.Sc. Nursing students) comes from the same institution and uses the same template, and its author has the same surname. Two of the four papers in the founding issue are then linked to the editorial team, which reviewers of the journal may question."
+    },
+    {
+      "severity": "high",
+      "category": "data_inconsistency",
+      "detail": "Table 7 (level of patient-safety practice) in the source read Adequate 0 (0.0%), Moderate 2 (4.8%), Inadequate 17 (40.5%), Total 42 (100.0%). These rows add up to 19 students, not 42, and the Inadequate row is missing 23 students. The Interpretation, the Discussion, the Summary (former 'Result'), Table 8 (Practice: Inadequate 54.76%) and the author's own bar chart all give Adequate 2 (4.76%), Moderate 17 (40.48%), Inadequate 23 (54.76%), so the source table appears to have been shifted down by one row. The table was corrected to 2 / 4.76, 17 / 40.48, 23 / 54.76 (Total 42 / 100.0) to match. The author must confirm this correction before publication."
+    },
+    {
+      "severity": "high",
+      "category": "plagiarism_signal",
+      "detail": "There are signs that an AI chatbot was used. Reference 4 ended with the chatbot reply 'Note: The author details in your original reference list combine two separate books. The correct APA 7 references are listed separately below.' (removed). The hyperlinks of references 8-10 carried '?utm_source=chatgpt.com' (removed). The chart images are default-style matplotlib output, and the text follows the same template as the issue's other nursing paper ('DISCUSSION ON ANALYSIS', 'Hence, the investigator felt the need to conduct the study entitled ...'). No copied web text or paraphrasing-tool 'tortured phrases' were found. Ask the author for an AI-use declaration and for written confirmation that every statement, number and reference has been checked (COPE/ICMJE position). Consider publishing an AI-use policy on the website."
+    },
+    {
+      "severity": "high",
+      "category": "citation",
+      "detail": "(1) Several sources discussed in the text have no reference entry: Farokhzadian et al. (2024), cited twice by author-year; the WHO Multi-professional Patient Safety Curriculum Guide (described in six places: Need for the study and five literature sub-sections); 'A 2025 systematic review' of educational interventions; and 'A 2026 analysis of 30 cross-sectional studies from 13 countries'. (2) None of the 11 listed references is a study of patient safety among nursing students. The numeric citations ^1^-^11^ appear once each, in strict order, at points they do not support. Examples: ^4^ (a textbook) is attached to a finding of Farokhzadian et al.; ^5^ sits mid-sentence after 'planning'; ^6^, ^7^ and ^9^-^11^ are attached to the study's own results and summary (age distribution, demographic summary, data-collection statement). (3) Reference 4 conflates two books: the 11th-edition 'Nursing research: Generating and assessing evidence for nursing practice' (Wolters Kluwer, 2021) is by Polit & Beck, which is reference 6, and Wood & Ross-Kerr wrote reference 5. The chatbot note in the source said so. The author should add the missing references (Farokhzadian et al. 2024; WHO 2011 Multi-professional Patient Safety Curriculum Guide; the 2025 review; the 2026 analysis), cite each source where it is used, and replace or delete reference 4."
+    },
+    {
+      "severity": "medium",
+      "category": "ethics",
+      "detail": "This is a study on human participants (students), but the only ethics statements are 'Permission was obtained from the concerned authority', 'Voluntary participation' and 'Confidentiality and anonymity were maintained'. No Institutional Ethics Committee approval is reported (no committee name, reference number or date; ICMR 2017 guidelines). Informed consent is not stated explicitly. Before publication, ask the author for the IEC approval details and a statement that written informed consent was obtained. The study was done at Regional College of Nursing, Guwahati, while the author's listed affiliation is J.S. University, Shikohabad. The author should also state his role at the study site; if the participants were his own students, that should be declared."
+    },
+    {
+      "severity": "medium",
+      "category": "other",
+      "detail": "The methods are vague and contradict each other. Sampling technique: 'Consecutive Technique' in the Methodology list, 'As per study protocol' in the flow chart (Figure 1); the sample (42) appears to be the whole 2nd-semester class. Data collection tools: 'Self-administered questionnaire' and 'Interview schedule' (Data collection tools), 'Structured tools / checklist' (Figure 1), 'a knowledge questionnaire together with recorded skill and practice scores' (Research gap). The paper does not say how skills and practice were measured (observation checklist? self-report? existing records?). It gives no number of items, scoring or validity/reliability, and no data-collection period. The cut-offs for adequate/moderate/inadequate appear only on the charts (knowledge: 17-20 / 13-16 / 0-12 out of 20; skill and practice: 7-10 / 4-6 / 0-3 out of 10), not in the methods. The demographic variable 'previous clinical experience' is listed but never reported. Ask the author to clarify these points."
+    },
+    {
+      "severity": "medium",
+      "category": "structure",
+      "detail": "The paper keeps a thesis/proposal structure (Need for the study, Problem statement, Assumptions, Delimitation, Research gap, Need for the present study, plus a list and a flow chart for the same methodology). The text was kept, sections were reordered into the standard order, and headings were fixed. Points for the author: (1) the 'Conclusion' section ('Hence, the investigator felt the need to conduct the study entitled ...') is a proposal-style statement of need, not a conclusion; the real conclusions are in the 'Summary' (source 'RESULT'). Recommend merging Summary and Conclusion into one 'Conclusion' and moving or deleting the 'Hence ...' sentence. (2) The abstract's Results give no numbers; it should report N = 42 and the 88.10% / 59.52% / 54.76% findings and stay within 250 words. (3) There is no explicit 'Objectives' section; the 'Need for the present study' list reads like objectives. (4) The Discussion does not compare the findings with any other study (e.g. Farokhzadian et al. 2024). (5) The Summary largely repeats the Discussion. (6) There are no Limitations or Recommendations sections, although the flow chart ends with 'Conclusion & Recommendations'."
+    },
+    {
+      "severity": "medium",
+      "category": "missing_info",
+      "detail": "The manuscript gives no affiliation, e-mail or ORCID. The affiliation 'Vice Principal, Department of Nursing, J.S. University, Shikohabad, Uttar Pradesh, India' and the degree 'Ph.D. (Nursing)' were taken from the journal's editorial-board records. The author should confirm this is the correct affiliation for this work, or give his affiliation at the time of the study if he was then at Regional College of Nursing, Guwahati. A corresponding-author e-mail is needed for the first-page footnote and the website. There are no received/accepted dates (left empty), no data-availability statement and no acknowledgement/funding statement."
+    },
+    {
+      "severity": "low",
+      "category": "data_inconsistency",
+      "detail": "Minor inconsistencies, kept as in the source. (1) Delimitation: 'The study is delimited to government nursing colleges of Assam', but the study was done in one college only (Regional College of Nursing, Guwahati). (2) The study title varies: the article title; the problem statement ('... regarding patient safety in clinical practices among 2nd semester ...'); and the Conclusion ('Patient safety in clinical practices among B.Sc. Nursing Students of Regional College of Nursing ...'). (3) Rounding: Table 1 percentages add up to 100.1% and Table 6 to 99.99%, against stated totals of 100%. This is acceptable rounding. All counts add up to N = 42 in Tables 1-6, and every percentage matches its count (n/42)."
+    },
+    {
+      "severity": "low",
+      "category": "citation",
+      "detail": "References to verify. Ref 3, Basavanthappa, Nursing research (2nd ed., 2007): the issue's other nursing paper cites the same 2nd edition as 2014, so one year is wrong. Ref 11, MoHFW National Quality Assurance Standards for District Hospitals: no year (n.d.) and no URL. Ref 4 duplicates the title, edition, year and publisher of ref 6 (see the high citation flag). Refs 8-10 (WHO publications, item URLs) look genuine."
+    },
+    {
+      "severity": "low",
+      "category": "figure",
+      "detail": "The 8 source charts were redrawn from the values printed on them, because image8 was only 976 px wide and the embedded titles 'Figure 1-4' clashed with the article numbering. The text-only flow chart was redrawn as Figure 1. Originals are kept at /tmp/claude-0/-home-user-international-research-journal/55c29a40-3aee-5b96-9c75-9672107bc1f3/scratchpad/work_p3/orig_figs. Every table is also shown as a bar chart (Figures 2-9 repeat Tables 1-8), which adds about 3-4 printed pages. Most journals ask for either a table or a figure for the same data; consider keeping only the tables, or only Figure 9."
+    },
+    {
+      "severity": "low",
+      "category": "prior_publication",
+      "detail": "No sign of prior publication was found: no journal header, DOI, 'published in' note, volume/issue or old dates. The Word file was converted from a PDF (SolidFramework converter; PDF created 14 August 2026). As a routine step, ask the author for a declaration that the work is original and not under consideration elsewhere."
+    }
+  ]
+}
