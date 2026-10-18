@@ -8,7 +8,7 @@ period: July to September
 status: Published
 editorialTitle: Why another journal, and why this one
 editorialAuthor: Dr. Ravi Kumar, Editor in Chief
-summary: The founding issue of International Research Insights, with four articles on case pendency in the High Courts, stress among nursing students, patient safety in nursing education, and neuropsychiatric disorders.
+summary: The founding issue of International Research Insights, with five articles on case pendency in the High Courts, M. N. Roy's theory of organised democracy, stress among nursing students, patient safety in nursing education, and neuropsychiatric disorders.
 publicationDate: 18 October 2026
 cover: /uploads/vol1-issue1/cover-thumb.png
 order: 10
@@ -30,7 +30,7 @@ This journal exists for that manuscript. Three commitments follow from it, and t
 
 ## In this issue
 
-This founding issue brings together four articles from law and the health sciences. The first offers a five-year empirical analysis of case pendency in the High Courts of India and argues for measures that would make adjudication faster without making it less fair. Two studies from nursing education follow: one measures the level of stress among B.Sc. Nursing students in Guwahati, Assam, and the other assesses their knowledge, skills and practice regarding patient safety. The issue closes with a review of neuropsychiatric disorders, their causes, diagnosis and management.
+This founding issue brings together five articles from law, political thought and the health sciences. The first offers a five-year empirical analysis of case pendency in the High Courts of India and argues for measures that would make adjudication faster without making it less fair. The second examines M. N. Roy's theory of organised democracy and asks whether periodic elections are enough to secure popular sovereignty in India. Two studies from nursing education follow: one measures the level of stress among B.Sc. Nursing students in Guwahati, Assam, and the other assesses their knowledge, skills and practice regarding patient safety. The issue closes with a review of neuropsychiatric disorders, their causes, diagnosis and management.
 
 We are not indexed yet, and we say so plainly on the [indexing and preservation](/indexing-and-preservation) page rather than implying accreditation we do not hold. We do not have an impact factor, and we will not display a purchased one. We are new, and the only honest response to that is to do the work well from the first issue and let the record accumulate.
 

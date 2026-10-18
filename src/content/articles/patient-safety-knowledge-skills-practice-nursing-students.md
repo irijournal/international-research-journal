@@ -28,10 +28,10 @@ keywords:
 articleType: Research Article
 section: Health and Nursing Sciences
 issue: volume-1-issue-1
-pageRange: 29–36
+pageRange: 36–43
 pdf: /uploads/vol1-issue1/patient-safety-knowledge-skills-practice-nursing-students.pdf
 publishedDate: 18 October 2026
-order: 30
+order: 40
 ---
 
 <h2 id="introduction">Introduction</h2>

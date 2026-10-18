@@ -16,10 +16,10 @@ keywords:
 articleType: Review Article
 section: Health and Nursing Sciences
 issue: volume-1-issue-1
-pageRange: 37–46
+pageRange: 44–53
 pdf: /uploads/vol1-issue1/neuropsychiatric-disorders-comprehensive-overview.pdf
 publishedDate: 18 October 2026
-order: 40
+order: 50
 ---
 
 <h2 id="introduction">Introduction</h2>

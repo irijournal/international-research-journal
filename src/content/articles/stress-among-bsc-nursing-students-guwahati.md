@@ -21,10 +21,10 @@ keywords:
 articleType: Research Article
 section: Health and Nursing Sciences
 issue: volume-1-issue-1
-pageRange: 18–28
+pageRange: 25–35
 pdf: /uploads/vol1-issue1/stress-among-bsc-nursing-students-guwahati.pdf
 publishedDate: 18 October 2026
-order: 20
+order: 30
 ---
 
 <h2 id="introduction">Introduction</h2>
