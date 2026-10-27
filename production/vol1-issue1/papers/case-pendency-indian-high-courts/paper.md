@@ -8,7 +8,7 @@ authors:
   - name: "Dr. Ravi Kumar"
     affiliations: ["a"]
     corresponding: true
-    email: "dradvravityagi@gmail.com"
+    email: "drravi.tyagi@internationalresearchinsights.com"
     orcid: "https://orcid.org/0000-0002-4288-7928"
     degree: "Ph.D. (Law)"
 affiliations:

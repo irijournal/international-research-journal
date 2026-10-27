@@ -8,7 +8,7 @@ authors:
   - name: "Jaiprakash Tyagi"
     affiliations: ["a"]
     corresponding: true
-    email: ""
+    email: "jaiprakash@internationalresearchinsights.com"
     orcid: ""
     degree: ""
 affiliations:
