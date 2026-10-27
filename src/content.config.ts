@@ -6,14 +6,16 @@ const board = defineCollection({
   schema: z.object({
     name: z.string(),
     role: z.string(),
-    roleGroup: z.enum(['Editorial Leadership', 'Editorial Board and Reviewers', 'Advisory Board']),
-    qualification: z.string(),
+    roleGroup: z.enum(['Editorial Leadership', 'Editorial Board Members', 'Advisory Board']),
+    qualification: z.string().optional(),
     designation: z.string(),
     department: z.string().optional(),
     institution: z.string().optional(),
     address: z.string().optional(),
+    country: z.string().optional(),
     email: z.string().optional(),
     profileUrl: z.string().optional(),
+    orcid: z.string().optional(),
     order: z.number().default(50),
   }),
 });

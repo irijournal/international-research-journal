@@ -137,14 +137,16 @@ content:
         label: Group
         type: select
         options:
-          values: [Editorial Leadership, Editorial Board and Reviewers, Advisory Board]
-      - { name: qualification, label: Qualification, type: string, required: true }
+          values: [Editorial Leadership, Editorial Board Members, Advisory Board]
+      - { name: qualification, label: Qualification, type: string }
       - { name: designation, label: Designation, type: string, required: true }
       - { name: department, label: Department, type: string }
       - { name: institution, label: Institution, type: string }
       - { name: address, label: Institutional address, type: text, description: "Full postal address of the institution, including city, PIN or postcode and country" }
-      - { name: email, label: Official email, type: string, description: "The institutional email address, not a personal Gmail or Yahoo address" }
-      - { name: profileUrl, label: Profile link, type: string, description: "Institutional web page, Google Scholar, ORCID or similar, starting with https://" }
+      - { name: country, label: Country, type: string }
+      - { name: email, label: Official email, type: string, description: "The institutional email address. The ISSN centre does not accept Gmail, Yahoo or Rediffmail addresses." }
+      - { name: profileUrl, label: Institutional profile link, type: string, description: "The member's faculty page on the university website, starting with https:// (the ISSN centre does not accept ORCID here)" }
+      - { name: orcid, label: ORCID, type: string, description: "Optional, for example https://orcid.org/0000-0000-0000-0000" }
       - { name: order, label: Sort order, type: number }
 
   - name: sections

@@ -5,7 +5,7 @@ import { getCollection } from 'astro:content';
 import { site, mail, byOrder } from '../lib/site';
 
 const board = (await getCollection('board')).sort(byOrder);
-const groups = ['Editorial Leadership', 'Editorial Board and Reviewers', 'Advisory Board'];
+const groups = ['Editorial Leadership', 'Editorial Board Members', 'Advisory Board'];
 const grouped = groups
   .map((group) => ({ group, members: board.filter((m) => m.data.roleGroup === group) }))
   .filter((entry) => entry.members.length > 0);
@@ -13,7 +13,7 @@ const grouped = groups
 
 <Base
   title="Editorial board"
-  description={`The editorial board of ${site.journalTitle}, with the role, qualification and institution of every member.`}
+  description={`The editorial board of ${site.journalTitle}: members from India, Nepal, Sri Lanka, Bhutan and the United Arab Emirates, with designation, department, institutional address, official e-mail and profile.`}
 >
   <PageHead
     eyebrow="Governance"
@@ -33,7 +33,7 @@ const grouped = groups
                 <article class="person">
                   <p class="role">{member.data.role}</p>
                   <h3>{member.data.name}</h3>
-                  <p>{member.data.qualification}</p>
+                  {member.data.qualification && <p>{member.data.qualification}</p>}
                   <dl>
                     <dt>Designation</dt>
                     <dd>{member.data.designation}</dd>
@@ -55,6 +55,12 @@ const grouped = groups
                         <dd>{member.data.address}</dd>
                       </>
                     )}
+                    {member.data.country && (
+                      <>
+                        <dt>Country</dt>
+                        <dd>{member.data.country}</dd>
+                      </>
+                    )}
                     {member.data.email && (
                       <>
                         <dt>Official email</dt>
@@ -63,8 +69,14 @@ const grouped = groups
                     )}
                     {member.data.profileUrl && (
                       <>
-                        <dt>Profile</dt>
+                        <dt>Institutional profile</dt>
                         <dd><a href={member.data.profileUrl} rel="noopener">{member.data.profileUrl}</a></dd>
+                      </>
+                    )}
+                    {member.data.orcid && (
+                      <>
+                        <dt>ORCID</dt>
+                        <dd><a href={member.data.orcid} rel="noopener">{member.data.orcid}</a></dd>
                       </>
                     )}
                   </dl>
@@ -97,10 +109,11 @@ const grouped = groups
 
           <h2>Widening the board</h2>
           <p>
-            The board is expanding as the journal grows. Scholars holding a doctorate, with a record of published
+            The board brings together members from institutions in India, Nepal, Sri Lanka, Bhutan and the United Arab
+            Emirates, and it is expanding as the journal grows. Scholars holding a doctorate, with a record of published
             research and the willingness to return a review within three weeks, are invited to apply through the
             <a href="/for-reviewers">reviewer panel page</a>. Applications from institutions outside India are
-            particularly welcome, since a journal that calls itself international ought to look like one.
+            particularly welcome.
           </p>
         </div>
       </div>

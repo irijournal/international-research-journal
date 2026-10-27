@@ -156,7 +156,7 @@ def board_members():
     return sorted(out, key=lambda m: m.get('order', 50))
 
 
-def front_html(page_ranges):
+def front_html(page_ranges, starts=('i', 'ii', 'iii', 'iv')):
     rows = [('Title', J['title']), ('Type of publication', 'Journal (peer-reviewed, academic)'),
             ('Subject', J['subject']), ('Frequency', J['frequency']), ('Language', J['languages']),
             ('Format of publication', J['format']), ('Starting year', str(J['starting_year'])),
@@ -185,18 +185,19 @@ def front_html(page_ranges):
 
     def member(m):
         lines = [f"<div class='bm-role'>{E(m['role'])}</div>", f"<div class='bm-name'>{E(m['name'])}</div>"]
-        for key in ('qualification', 'designation', 'department', 'institution', 'address'):
+        for key in ('qualification', 'designation', 'department', 'institution', 'address', 'country'):
             if m.get(key):
                 lines.append(f"<div>{E(str(m[key]))}</div>")
         if m.get('email'):
             lines.append(f"<div>E-mail: {E(m['email'])}</div>")
         if m.get('profileUrl'):
-            label = 'ORCID' if 'orcid.org' in m['profileUrl'] else 'Profile'
-            lines.append(f"<div>{label}: {E(m['profileUrl'])}</div>")
+            lines.append(f"<div>Profile: {E(m['profileUrl'])}</div>")
+        if m.get('orcid'):
+            lines.append(f"<div>ORCID: {E(m['orcid'])}</div>")
         return f"<div class='bm'>{''.join(lines)}</div>"
 
     groups = ''
-    for g in ['Editorial Leadership', 'Editorial Board and Reviewers', 'Advisory Board']:
+    for g in ['Editorial Leadership', 'Editorial Board Members', 'Advisory Board']:
         ms = [m for m in board if m.get('roleGroup') == g]
         if ms:
             groups += f"<h2 class='fm-h2'>{E(g)}</h2><div class='bgrid'>{''.join(member(m) for m in ms)}</div>"
@@ -214,9 +215,9 @@ def front_html(page_ranges):
   <p class="fm-sub">{E(J['title'])} · {E(I['label_long'])}</p>
   <table class="toc"><thead><tr><th>S.No.</th><th>Title</th><th>Author(s)</th><th>Section / Type</th><th>Page No.</th></tr></thead>
   <tbody>
-  <tr><td class='c'>—</td><td>Journal Information</td><td>Journal</td><td>Front matter</td><td class='c'>i</td></tr>
-  <tr><td class='c'>—</td><td>Editorial Board</td><td>Journal</td><td>Front matter</td><td class='c'>ii</td></tr>
-  <tr><td class='c'>—</td><td>Contents</td><td>Journal</td><td>Front matter</td><td class='c'>iii</td></tr>
+  <tr><td class='c'>—</td><td>Journal Information</td><td>Journal</td><td>Front matter</td><td class='c'>{starts[0]}</td></tr>
+  <tr><td class='c'>—</td><td>Editorial Board</td><td>Journal</td><td>Front matter</td><td class='c'>{starts[1]}</td></tr>
+  <tr><td class='c'>—</td><td>Contents</td><td>Journal</td><td>Front matter</td><td class='c'>{starts[2]}</td></tr>
   <tr><td class='c'>—</td><td>Editorial: {{EDTITLE}}</td><td>{{EDAUTHOR}}</td><td>Editorial</td><td class='c'>{{EDPAGE}}</td></tr>
   {trs}
   </tbody></table>
@@ -232,7 +233,7 @@ def front_html(page_ranges):
   <div class="ed-body">{md_to_html(ebody)}</div>
 </section>"""
     contents = (contents.replace('{EDTITLE}', E(em['editorialTitle']))
-                .replace('{EDAUTHOR}', E(em['editorialAuthor'].split(',')[0])).replace('{EDPAGE}', 'iv'))
+                .replace('{EDAUTHOR}', E(em['editorialAuthor'].split(',')[0])).replace('{EDPAGE}', starts[3]))
     return [imprint, board_page, contents, editorial]
 
 
@@ -379,6 +380,13 @@ def main():
 
     # 3. front matter (one PDF per section so each starts on a new page)
     fm_parts = front_html(ranges)
+    print_pdfs([[write(os.path.join(TMP, f'fm{i}.html'), page_html(part, 'front')), os.path.join(TMP, f'fm{i}.pdf')]
+                for i, part in enumerate(fm_parts)])
+    starts, r = [], 1
+    for i in range(len(fm_parts)):
+        starts.append(roman(r))
+        r += page_count(os.path.join(TMP, f'fm{i}.pdf'))
+    fm_parts = front_html(ranges, starts)
     fm_pdfs = []
     jobs = []
     for i, part in enumerate(fm_parts):
