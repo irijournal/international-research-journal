@@ -64,7 +64,14 @@ const grouped = groups
                     {member.data.email && (
                       <>
                         <dt>Official email</dt>
-                        <dd><a href={`mailto:${member.data.email}`}>{member.data.email}</a></dd>
+                        <dd>
+                          {member.data.email.split(',').map((address, index) => (
+                            <>
+                              {index > 0 && <br />}
+                              <a href={`mailto:${address.trim()}`}>{address.trim()}</a>
+                            </>
+                          ))}
+                        </dd>
                       </>
                     )}
                     {member.data.profileUrl && (

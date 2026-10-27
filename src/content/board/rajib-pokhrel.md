@@ -9,5 +9,6 @@ institution: Pokhara University
 address: Dhungepatan, Pokhara-30, Gandaki Province, Nepal
 country: Nepal
 email: rajibp@pu.edu.np
+profileUrl: https://soe.pu.edu.np/rajib-pokhrel-3/
 order: 44
 ---
