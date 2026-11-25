@@ -2,27 +2,71 @@
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { site, fullJournalName } from '../lib/site';
+import { site, mail, fullJournalName, snippet } from '../lib/site';
 
 interface Props {
   title: string;
   description: string;
   ogType?: string;
+  /** Full <title> text, used as is (the home page). */
+  fullTitle?: string;
+  /** Social preview image, site-relative. */
+  image?: string;
+  imageAlt?: string;
+  noindex?: boolean;
 }
 
-const { title, description, ogType = 'website' } = Astro.props;
-const pageTitle = `${title} | ${fullJournalName}`;
-const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://example.org').toString();
+const { title, description, ogType = 'website', fullTitle, image = '/images/og-default.png', imageAlt, noindex = false } = Astro.props;
+const origin = Astro.site ?? new URL('https://internationalresearchinsights.com');
+const pageTitle = fullTitle ?? `${title} | International Research Insights`;
+const canonical = new URL(Astro.url.pathname, origin).toString();
+const imageUrl = new URL(image, origin).toString();
+const home = new URL('/', origin).toString();
+const metaDescription = snippet(description, 160);
 
 const structuredData = {
   '@context': 'https://schema.org',
-  '@type': 'Periodical',
-  name: fullJournalName,
-  alternateName: site.shortTitle,
-  publisher: { '@type': 'Organization', name: site.publisher, address: site.publisherAddress, logo: new URL('/images/logo-full.png', Astro.site ?? 'https://example.org').toString() },
-  inLanguage: ['hi', 'en'],
-  ...(site.issnOnline ? { issn: site.issnOnline } : {}),
-  url: canonical,
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${home}#publisher`,
+      name: site.publisher,
+      url: home,
+      email: mail('general'),
+      logo: { '@type': 'ImageObject', url: new URL('/images/logo-full.png', origin).toString(), width: 1200, height: 547 },
+      address: { '@type': 'PostalAddress', streetAddress: '85, Aath Visha, Kanasil, Tehsil Saipau', addressLocality: 'Dholpur', addressRegion: 'Rajasthan', postalCode: '328027', addressCountry: 'IN' },
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${home}#website`,
+      url: home,
+      name: fullJournalName,
+      alternateName: ['International Research Insights', site.shortTitle],
+      inLanguage: ['en', 'hi'],
+      publisher: { '@id': `${home}#publisher` },
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: { '@type': 'EntryPoint', urlTemplate: `${home}search?q={search_term_string}` },
+        'query-input': 'required name=search_term_string',
+      },
+    },
+    {
+      '@type': 'Periodical',
+      '@id': `${home}#journal`,
+      name: fullJournalName,
+      alternateName: site.shortTitle,
+      url: home,
+      description: site.tagline,
+      ...(site.issnOnline ? { issn: site.issnOnline, sameAs: [`https://portal.issn.org/resource/ISSN/${site.issnOnline}`] } : {}),
+      publisher: { '@id': `${home}#publisher` },
+      inLanguage: ['en', 'hi'],
+      isAccessibleForFree: true,
+      license: 'https://creativecommons.org/licenses/by/4.0/',
+      startDate: site.foundedYear,
+      genre: 'Multidisciplinary',
+      image: imageUrl,
+    },
+  ],
 };
 ---
 
@@ -32,14 +76,28 @@ const structuredData = {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
-    <meta name="description" content={description} />
+    <meta name="description" content={metaDescription} />
+    <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1'} />
     <link rel="canonical" href={canonical} />
+    <meta name="theme-color" content="#16335a" />
+    <meta name="author" content={site.publisher} />
+    {site.googleSiteVerification && <meta name="google-site-verification" content={site.googleSiteVerification} />}
+    {site.bingSiteVerification && <meta name="msvalidate.01" content={site.bingSiteVerification} />}
     <meta property="og:title" content={pageTitle} />
-    <meta property="og:description" content={description} />
+    <meta property="og:description" content={metaDescription} />
     <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonical} />
     <meta property="og:site_name" content={fullJournalName} />
-    <meta property="og:image" content={new URL('/images/logo-full.png', Astro.site ?? 'https://example.org').toString()} />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:image" content={imageUrl} />
+    {image === '/images/og-default.png' && <meta property="og:image:width" content="1200" />}
+    {image === '/images/og-default.png' && <meta property="og:image:height" content="630" />}
+    <meta property="og:image:alt" content={imageAlt ?? `${fullJournalName}, ISSN (Online) ${site.issnOnline}`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={metaDescription} />
+    <meta name="twitter:image" content={imageUrl} />
+    <link rel="alternate" type="application/rss+xml" title={`${fullJournalName}: new articles and announcements`} href="/rss.xml" />
     <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
     <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />

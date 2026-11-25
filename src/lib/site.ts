@@ -6,6 +6,8 @@ type OptionalSettings = {
   phone?: string;
   web3formsKey?: string;
   googleFormUrl?: string;
+  googleSiteVerification?: string;
+  bingSiteVerification?: string;
 };
 
 export const site: typeof settings & OptionalSettings = settings;
@@ -31,4 +33,11 @@ export function issueLabel(issue: { volume: number; number: number; month?: stri
 /** Sorts by an "order" field first, then alphabetically by a given key. */
 export function byOrder<T extends { data: { order?: number } }>(a: T, b: T): number {
   return (a.data.order ?? 50) - (b.data.order ?? 50);
+}
+
+/** Shortens text to a search-snippet length at a word boundary. */
+export function snippet(text: string, max = 158): string {
+  const clean = text.replace(/\s+/g, ' ').trim();
+  if (clean.length <= max) return clean;
+  return clean.slice(0, clean.lastIndexOf(' ', max - 1)).replace(/[,;:.]$/, '') + '…';
 }

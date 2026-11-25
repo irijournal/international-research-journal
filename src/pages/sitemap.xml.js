@@ -17,7 +17,6 @@ export async function GET({ site }) {
     '/sections',
     '/announcements',
     '/editorial-board',
-    '/search',
     ...pages.map((p) => `/${p.id}`),
     ...articles.map((a) => `/articles/${a.id}`),
     ...issues.map((i) => `/archives/${i.id}`),

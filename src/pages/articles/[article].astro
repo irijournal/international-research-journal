@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import PageHead from '../../components/PageHead.astro';
 import { getCollection, render } from 'astro:content';
-import { site, mail, issnLine, issueLabel, fullJournalName } from '../../lib/site';
+import { site, mail, issnLine, issueLabel, fullJournalName, snippet } from '../../lib/site';
 
 export async function getStaticPaths() {
   const articles = await getCollection('articles');
@@ -26,10 +26,70 @@ const citationDate = published && !Number.isNaN(published.getTime())
   ? `${published.getUTCFullYear()}/${String(published.getUTCMonth() + 1).padStart(2, '0')}/${String(published.getUTCDate()).padStart(2, '0')}`
   : String(year);
 const abstractParagraphs = article.data.abstract.split(/\n\s*\n/);
+const home = new URL('/', Astro.site).toString();
+const isoDate = published && !Number.isNaN(published.getTime()) ? published.toISOString().slice(0, 10) : String(year);
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'ScholarlyArticle',
+      '@id': `${pageUrl}#article`,
+      headline: article.data.title.slice(0, 110),
+      name: article.data.title,
+      url: pageUrl,
+      mainEntityOfPage: pageUrl,
+      abstract: article.data.abstract,
+      keywords: article.data.keywords.join(', '),
+      author: article.data.authors.map((name, index) => ({
+        '@type': 'Person',
+        name,
+        ...(article.data.affiliations?.[index] ? { affiliation: { '@type': 'Organization', name: article.data.affiliations[index] } } : {}),
+      })),
+      datePublished: isoDate,
+      inLanguage: 'en',
+      genre: article.data.articleType,
+      articleSection: article.data.section,
+      isAccessibleForFree: true,
+      license: 'https://creativecommons.org/licenses/by/4.0/',
+      publisher: { '@id': `${home}#publisher` },
+      ...(firstPage ? { pageStart: firstPage } : {}),
+      ...(lastPage ? { pageEnd: lastPage } : {}),
+      ...(article.data.pdf ? { encoding: { '@type': 'MediaObject', contentUrl: new URL(article.data.pdf, Astro.site).toString(), encodingFormat: 'application/pdf' } } : {}),
+      ...(article.data.doi ? { sameAs: `https://doi.org/${article.data.doi}` } : {}),
+      ...(issue
+        ? {
+            isPartOf: {
+              '@type': 'PublicationIssue',
+              issueNumber: String(issue.data.number),
+              datePublished: String(issue.data.year),
+              url: new URL(`/archives/${issue.id}`, Astro.site).toString(),
+              isPartOf: {
+                '@type': 'PublicationVolume',
+                volumeNumber: String(issue.data.volume),
+                isPartOf: { '@type': 'Periodical', '@id': `${home}#journal`, name: fullJournalName, ...(site.issnOnline ? { issn: site.issnOnline } : {}) },
+              },
+            },
+          }
+        : {}),
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: home },
+        { '@type': 'ListItem', position: 2, name: 'Archives', item: new URL('/archives', Astro.site).toString() },
+        ...(issue ? [{ '@type': 'ListItem', position: 3, name: `Volume ${issue.data.volume}, Issue ${issue.data.number}`, item: new URL(`/archives/${issue.id}`, Astro.site).toString() }] : []),
+        { '@type': 'ListItem', position: issue ? 4 : 3, name: article.data.title, item: pageUrl },
+      ],
+    },
+  ],
+};
 ---
 
-<Base title={article.data.title} description={article.data.abstract.slice(0, 180)} ogType="article">
+<Base title={article.data.title} description={snippet(article.data.abstract, 160)} ogType="article">
   <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleLd)} />
+    <meta property="article:published_time" content={isoDate} />
+    <meta property="article:section" content={article.data.section} />
     <meta name="citation_title" content={article.data.title} />
     {article.data.authors.map((author, index) => (
       <>

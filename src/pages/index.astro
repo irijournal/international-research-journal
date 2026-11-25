@@ -10,7 +10,7 @@ const currentIssue = issues.find((i) => i.id === site.currentIssueSlug) ?? issue
 const articles = (await getCollection('articles')).sort(byOrder);
 const currentArticles = currentIssue ? articles.filter((a) => a.data.issue === currentIssue.id) : [];
 const announcements = (await getCollection('announcements')).sort(
-  (a, b) => Number(b.data.pinned) - Number(a.data.pinned) || b.data.date.localeCompare(a.data.date),
+  (a, b) => Number(b.data.pinned) - Number(a.data.pinned) || (new Date(`${b.data.date} UTC`).getTime() || 0) - (new Date(`${a.data.date} UTC`).getTime() || 0),
 );
 const board = (await getCollection('board')).sort(byOrder);
 const leadership = board.filter((m) => m.data.roleGroup === 'Editorial Leadership');
@@ -26,13 +26,14 @@ const stats = [
 
 <Base
   title="Home"
-  description={`${fullJournalName}. A double anonymous peer reviewed, open access journal publishing research in law, health sciences, humanities, education and public policy.`}
+  fullTitle={`International Research Insights: Peer-Reviewed Multidisciplinary e-Journal | ISSN ${site.issnOnline}`}
+  description={`Peer-reviewed, open access multidisciplinary journal (ISSN ${site.issnOnline}) publishing research in law, health and nursing, Hindi, history, education, policy and science. Submit your paper.`}
 >
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <p class="eyebrow eyebrow-rule">Peer reviewed · Open access · Quarterly</p>
-        <h1 class="hero-title">Rigorous Research.<br />Fair Review.<br />Open to Every Reader.</h1>
+        <p class="eyebrow eyebrow-rule"><span><span class="hide-sm">International Research Insights · </span>{issnLine()}</span></p>
+        <h1 class="hero-title">A Peer-Reviewed, Open Access Multidisciplinary Journal</h1>
         <p class="lede">
           {fullJournalName} (ISSN (Online) {site.issnOnline}) is a peer-reviewed, open access journal publishing
           research in law, health sciences, humanities, education and public policy, in English and Hindi.
@@ -77,8 +78,8 @@ const stats = [
       </div>
     </div>
     <div class="wrap pillars">
-      <div class="pillar pillar-1"><p class="pillar-head"><span>01</span>Vision</p><p>A research culture in which careful work from every kind of institution is reviewed fairly, published openly and read widely.</p></div>
-      <div class="pillar pillar-2"><p class="pillar-head"><span>02</span>Mission</p><p>To publish peer-reviewed scholarship in law, health, humanities, education and public policy, in English and Hindi, with a written response to every author and one standard of review.</p></div>
+      <div class="pillar pillar-1" id="vision"><p class="pillar-head"><span>01</span>Vision</p><p>A research culture in which careful work from every kind of institution is reviewed fairly, published openly and read widely.</p></div>
+      <div class="pillar pillar-2" id="mission"><p class="pillar-head"><span>02</span>Mission</p><p>To publish peer-reviewed scholarship in law, health, humanities, education and public policy, in English and Hindi, with a written response to every author and one standard of review.</p></div>
       <div class="pillar pillar-3"><p class="pillar-head"><span>03</span>We stand for</p><p>Rigour in method, fairness in review, transparency in policy, and research that is open to every reader.</p></div>
     </div>
   </section>
