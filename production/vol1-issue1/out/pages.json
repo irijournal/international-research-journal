@@ -1,0 +1,29 @@
+{
+  "full_issue": "IRI-Vol-1-Issue-1-September-2026.pdf",
+  "front_matter_pages": 5,
+  "case-pendency-indian-high-courts": {
+    "first": 1,
+    "last": 17,
+    "pdf": "articles/case-pendency-indian-high-courts.pdf"
+  },
+  "mn-roy-organised-democracy-popular-sovereignty": {
+    "first": 18,
+    "last": 24,
+    "pdf": "articles/mn-roy-organised-democracy-popular-sovereignty.pdf"
+  },
+  "stress-among-bsc-nursing-students-guwahati": {
+    "first": 25,
+    "last": 35,
+    "pdf": "articles/stress-among-bsc-nursing-students-guwahati.pdf"
+  },
+  "patient-safety-knowledge-skills-practice-nursing-students": {
+    "first": 36,
+    "last": 43,
+    "pdf": "articles/patient-safety-knowledge-skills-practice-nursing-students.pdf"
+  },
+  "neuropsychiatric-disorders-comprehensive-overview": {
+    "first": 44,
+    "last": 53,
+    "pdf": "articles/neuropsychiatric-disorders-comprehensive-overview.pdf"
+  }
+}

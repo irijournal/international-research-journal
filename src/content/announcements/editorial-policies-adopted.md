@@ -15,7 +15,7 @@ The editorial board has adopted the journal's complete set of editorial policies
 - [Plagiarism policy](/plagiarism-policy), setting a total similarity limit of ten per cent with no single source above five per cent.
 - [Copyright and licensing](/copyright-and-licensing), under which authors retain copyright and articles appear under a CC BY 4.0 licence.
 - [Self archiving policy](/self-archiving-policy), permitting deposit of every version, anywhere, with no embargo.
-- [Open access and publication charges](/open-access-and-charges), confirming that the journal charges authors nothing at any stage.
+- [Open access policy](/open-access-and-charges), confirming that every article is free to read and reuse under a Creative Commons licence.
 - [Privacy statement](/privacy-statement), [terms and conditions](/terms-and-conditions) and [disclaimer](/disclaimer).
 
 ## Disclosure of artificial intelligence use

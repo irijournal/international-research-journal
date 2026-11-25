@@ -1,6 +1,6 @@
 ---
 slug: issn-and-indexing-status
-title: ISSN application filed, and where indexing stands
+title: ISSN assigned, and where indexing stands
 date: 5 August 2026
 summary: A plain statement of the journal's current identification and indexing position, published so that authors can judge it for themselves.
 pinned: false
@@ -10,7 +10,7 @@ Authors deciding where to send a manuscript are entitled to know exactly what a 
 
 ## What is in progress
 
-**ISSN.** The journal is published online only. An application for an online ISSN has been filed with the ISSN National Centre for India. The number will appear in the site header, on every article page and in every citation block as soon as it is allotted.
+**ISSN.** The journal is published online only. Its online ISSN, **2839-7134**, was assigned by the ISSN National Centre for India in November 2026, and now appears in the site header, on every article page and in every article PDF.
 
 **Google Scholar.** Article pages publish citation metadata in a form Scholar reads. Inclusion normally follows a few months after the first issue is published.
 

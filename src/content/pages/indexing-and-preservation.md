@@ -10,7 +10,7 @@ order: 20
 
 ## Identification
 
-The journal is published online only and has applied for an online ISSN to the ISSN National Centre for India. The number will be displayed in the header of this website, on every article page and in the citation block of every article as soon as it is allotted.
+The journal is published online only. Its online ISSN is **2839-7134**, assigned by the ISSN National Centre for India in November 2026. The ISSN is displayed in the header of this website, on every article page and in every article PDF. An ISSN identifies a serial publication; it is not an approval or a rating of the journal or its contents.
 
 The journal states its status plainly here because the alternative is what a great many new journals do, which is to imply accreditation they do not hold. This journal will claim an index only after that index has accepted it, and will name the date of acceptance when it does.
 
@@ -21,7 +21,7 @@ Indexing services require a publication record before they will consider an appl
 1. **Google Scholar.** The site is built so that every article page exposes its title, authors, abstract, publication date and citation metadata in a form Scholar can read. Inclusion normally follows within a few months of the first published issue.
 2. **Crossref.** Membership will be taken after the first issue, so that every article receives a DOI, a permanent identifier that survives any change of web address. Crossref membership carries an annual fee, which the journal will meet from its own resources and never from author charges.
 3. **Directory of Open Access Journals.** DOAJ requires an ISSN, a published archive, transparent policies and a record of peer review. The journal's policies were written to DOAJ's criteria from the start, and the application will be filed once the journal has published continuously for one year.
-4. **ROAD, the Directory of Open Access Scholarly Resources.** Application follows the allotment of the ISSN.
+4. **ROAD, the Directory of Open Access Scholarly Resources.** Application is now open to the journal, since the ISSN has been assigned.
 5. **Subject databases and national listings.** Applications will be made where the journal genuinely meets the criteria, and each success will be recorded on this page with its date.
 
 The journal does not purchase indexing, does not display purchased impact metrics, and does not use the phrase "impact factor" for any number it has not been awarded by a body entitled to award one. Services that offer an index listing or an impact factor in exchange for a fee are declined as a matter of policy.

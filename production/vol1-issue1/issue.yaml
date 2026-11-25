@@ -21,9 +21,9 @@ journal:
   licence: "Creative Commons Attribution 4.0 International (CC BY 4.0)"
   licence_url: "https://creativecommons.org/licenses/by/4.0/"
   review_model: "Double anonymous peer review"
-  access_model: "Diamond open access: free to read, free to publish"
-  # The ISSN has not been allotted. Never print a made-up number.
-  issn_online: ""
+  access_model: "Open access: every article is free to read"
+  # Assigned by the ISSN National Centre for India, November 2026.
+  issn_online: "2839-7134"
   issn_display_when_empty: "ISSN (Online): Applied for"   # research phase may change this wording or set it to "" (omit)
 
 issue:

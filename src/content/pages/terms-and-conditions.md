@@ -24,7 +24,7 @@ You may not use this website or its content to misrepresent what the journal has
 
 Submitting a manuscript means confirming the statements in the [author declaration](/author-declaration), and accepting the review process described in the [peer review policy](/peer-review-policy). Submission creates no obligation on the journal to publish, and no obligation on the author until acceptance is confirmed in writing.
 
-The journal charges nothing at any stage. Any communication demanding payment for submission, faster review, acceptance or publication in the name of this journal is fraudulent and should be reported to the editorial office at once.
+The journal writes to authors only from its official addresses ending in @internationalresearchinsights.com. Treat any message about a manuscript, a review or a publication decision that comes from any other address as suspicious, and report it to the editorial office. The journal never offers faster review or guaranteed acceptance.
 
 ## 4. Author responsibilities
 

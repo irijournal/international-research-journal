@@ -18,13 +18,13 @@ There are a great many journals. The honest question for anyone starting a new o
 
 The answer is not novelty of subject. Law, nursing, literature, history, education, policy and environmental science are all well served by excellent journals, and this journal does not pretend to compete with them at the top of their fields. The answer is a matter of access, and of how a manuscript is treated when it arrives.
 
-Consider the ordinary situation of a college teacher in a district town who has spent two years studying something worth knowing: how cases move through the courts, how nursing students cope with the demands of training, what a forgotten Hindi periodical reveals about its readership. That research is often good. What happens to it is often one of three things. It goes to a journal that publishes anything for a fee, where nobody reads it and nobody cites it. It goes to a journal that never replies. Or it is not written up at all, because the author reasonably concludes that neither outcome is worth two years of work.
+Consider the ordinary situation of a college teacher in a district town who has spent two years studying something worth knowing: how cases move through the courts, how nursing students cope with the demands of training, what a forgotten Hindi periodical reveals about its readership. That research is often good. What happens to it is often one of three things. It goes to a journal that publishes anything without real review, where nobody reads it and nobody cites it. It goes to a journal that never replies. Or it is not written up at all, because the author reasonably concludes that neither outcome is worth two years of work.
 
 This journal exists for that manuscript. Three commitments follow from it, and they are commitments rather than aspirations because a reader can check each one.
 
 **The first is that we reply.** Every submission receives a written editorial response within seven working days, and every manuscript that goes to review receives the reviewers' reports, whether the decision is acceptance or rejection.
 
-**The second is that we charge nothing.** No submission fee, no processing charge, no publication charge, no fee for a certificate, no paid fast track. A publication charge decides who can publish before anyone has read a word.
+**The second is that the work is open.** Every article is free to read, download and share from the day it is published, under a Creative Commons licence, with no subscription and no login. Research that cannot be read cannot be used.
 
 **The third is that the standard does not move.** Review is double anonymous, against criteria published on this website. Those criteria apply equally to a manuscript from a national institute and a manuscript from a college nobody has heard of.
 

@@ -28,7 +28,7 @@ const rows: { label: string; value: string; href?: string }[] = [
     ? [{ label: 'Current issue', value: issueLabel(currentIssue.data), href: '/current' }]
     : []),
   { label: 'Review model', value: site.reviewModel },
-  { label: 'Access and charges', value: site.accessModel },
+  { label: 'Access', value: site.accessModel },
   { label: 'Licence', value: site.licence },
   { label: 'Email', value: mail('general'), href: `mailto:${mail('general')}` },
   { label: 'Website', value: `https://${site.domain}`, href: `https://${site.domain}` },

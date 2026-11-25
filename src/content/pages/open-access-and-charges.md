@@ -1,46 +1,36 @@
 ---
 slug: open-access-and-charges
-title: Open Access and Publication Charges
-navLabel: Open Access and Charges
+title: Open Access Policy
+navLabel: Open Access Policy
 navGroup: About
-summary: The journal is diamond open access. It charges authors nothing and readers nothing. This page explains what that means and how the journal is sustained.
-updated: 5 August 2026
+summary: Every article published by the journal is free to read, download and reuse under a Creative Commons licence, from the day it is published.
+updated: 25 November 2026
 order: 30
 ---
 
 ## The policy in one line
 
-International Research Insights charges authors nothing and readers nothing.
-
-## What the journal does not charge for
-
-There is no submission fee, no article processing charge, no page charge, no colour figure charge, no charge for supplementary material, no charge for a certificate of publication, and no charge for a DOI. There is no paid fast track, because a paid fast track is a way of selling editorial decisions and this journal does not sell them.
-
-If anyone asks you for money in the name of this journal, at any stage, that person is not acting for the journal. Report it to the editorial office immediately with the correspondence attached.
+Every article published in International Research Insights is free to read, download and reuse, by anyone, from the moment it is published.
 
 ## What readers get
 
-Every article is free to read, download, print, distribute and reuse from the moment it is published. There is no subscription, no paywall, no registration, no login, and no limit on how many articles a reader may take. Articles are published under a Creative Commons Attribution 4.0 International licence, described in [copyright and licensing](/copyright-and-licensing).
-
-This is what is usually called diamond open access, meaning open at both ends: free for the reader and free for the author. It is the model that best fits a journal founded to publish good work from places where research budgets are small.
+There is no subscription, no paywall, no registration, no login, and no limit on how many articles a reader may take. Articles are published under a Creative Commons Attribution 4.0 International licence, described in [copyright and licensing](/copyright-and-licensing), which allows anyone to share and adapt the work for any purpose, provided the authors and the journal are credited.
 
 ## What authors get
 
 - A written editorial response to every submission, including those that are not sent for review.
 - Two independent reviewer reports on every manuscript that passes screening, sent to the author with the decision whether the decision is acceptance or rejection.
-- Copy editing and language support at no cost, for accepted manuscripts.
+- Copy editing and typesetting of accepted manuscripts.
 - Retained copyright, permanent archiving, and unrestricted rights to deposit and reuse their own work.
 
-## How the journal is sustained
+## Editorial independence
 
-The editorial board serves without payment. Reviewers serve without payment, as they do at every scholarly journal. The website is built on static publishing technology whose running cost is the domain name and very little else. Where a cost arises that cannot be absorbed, for example registration with an identifier service, the board meets it from its own resources or from institutional support that carries no influence over editorial decisions.
+Editorial decisions are made on the manuscript alone. The journal does not sell faster review, guaranteed acceptance or certificates, and no supporter, present or future, has any say in what the journal publishes.
 
-Any support the journal receives will be declared on this page, with the name of the supporter and the amount. No supporter, present or future, will have any say in what the journal publishes.
+## Official communication
+
+The journal writes to authors only from its official addresses ending in @internationalresearchinsights.com. Treat any message about a manuscript, a review or a publication decision that comes from any other address as suspicious, and report it to the editorial office.
 
 ## Printed copies
 
-The journal is published online only, on this website. It does not publish a print edition. Every article is available as a PDF with its volume, issue, month, year and page numbers, and anyone may print it for personal or institutional use under the terms of the CC BY licence without asking. The journal does not sell printed copies and does not offer paid reprints.
-
-## Why this model was chosen
-
-A publication charge decides, in advance, who can publish. It filters by budget rather than by quality, and it filters hardest against exactly the researchers this journal was founded to reach: early career scholars, teachers at colleges without research funds, clinicians and practitioners writing outside a grant. Removing the charge removes that filter. What remains is the only filter a journal should have, which is whether the work is any good.
+The journal is published online only, on this website. It does not publish a print edition. Every article is available as a PDF with its volume, issue, month, year and page numbers, and anyone may print it for personal or institutional use under the terms of the CC BY licence without asking.

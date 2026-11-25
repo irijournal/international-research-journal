@@ -10,7 +10,7 @@ order: 10
 
 ## What the journal is
 
-International Research Insights is a peer reviewed, open access electronic journal, published online only, that publishes original research across law, health and nursing sciences, language and literature, history and heritage, education, public policy, and science and environment studies. It is published four times a year, in March, June, September and December, and is free to read and free to publish in.
+International Research Insights is a peer reviewed, open access electronic journal, published online only, that publishes original research across law, health and nursing sciences, language and literature, history and heritage, education, public policy, and science and environment studies. It is published four times a year, in March, June, September and December, and every article is free to read.
 
 The journal was founded on a straightforward observation. A great deal of careful, useful research is produced in colleges, universities, hospitals, courts and classrooms that are not part of the small circle of institutions whose work travels easily. That research is often let down not by its quality but by the absence of an editorial process willing to read it properly, review it fairly and publish it to a standard that other scholars can cite with confidence. International Research Insights exists to provide that process.
 
@@ -19,7 +19,7 @@ The journal was founded on a straightforward observation. A great deal of carefu
 1. To publish original, evidence based research that advances understanding in its field, whether the field is constitutional law, clinical nursing practice, Hindi literary criticism or municipal water governance.
 2. To give every author a substantive, written editorial response, so that even a rejection leaves the author better equipped than before.
 3. To hold a single standard of review across every discipline the journal covers, so that a multidisciplinary title never becomes an excuse for uneven rigour.
-4. To keep scholarship freely available to readers and free of cost to authors, so that neither a library budget nor a research grant decides who can read or publish.
+4. To keep scholarship freely available to readers, so that a library budget does not decide who can read it.
 5. To publish in both Hindi and English, treating research written in Hindi as scholarship rather than as translation waiting to happen.
 
 ## Scope
@@ -39,7 +39,7 @@ Manuscripts that cross sections are welcome and are reviewed by referees drawn f
 
 ## What the journal does not publish
 
-The journal does not publish unedited conference abstracts, promotional writing, opinion pieces without evidence, student assignments submitted unchanged, work already published elsewhere, or manuscripts under consideration by another journal. It does not publish work whose data cannot be produced on request. It does not publish anything in exchange for payment, and it does not offer expedited review for a fee, because no such fee exists.
+The journal does not publish unedited conference abstracts, promotional writing, opinion pieces without evidence, student assignments submitted unchanged, work already published elsewhere, or manuscripts under consideration by another journal. It does not publish work whose data cannot be produced on request. It does not accept a manuscript because of any payment, and it does not offer expedited review.
 
 ## Standards and independence
 
@@ -49,7 +49,7 @@ The editorial board takes decisions on manuscripts alone. No advertiser, sponsor
 
 ## Publication model
 
-The journal is diamond open access. Authors pay no submission fee, no processing fee and no page charge. Readers pay nothing and need no subscription or login. Authors retain copyright and articles are published under a Creative Commons Attribution 4.0 International licence, which allows anyone to share and adapt the work with proper credit.
+The journal is open access. Readers pay nothing and need no subscription or login. Authors retain copyright and articles are published under a Creative Commons Attribution 4.0 International licence, which allows anyone to share and adapt the work with proper credit.
 
 The journal is published from Greater Noida, Uttar Pradesh, India, and is edited by a board that serves without payment. The details of its identification, frequency, licensing and preservation arrangements are recorded on the [indexing, abstracting and preservation](/indexing-and-preservation) page.
 

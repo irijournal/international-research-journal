@@ -3,7 +3,7 @@ slug: volume-1-issue-1-published
 title: "Volume 1, Issue 1 (September 2026) published"
 date: 18 October 2026
 summary: The founding issue of International Research Insights is now online, with five articles in law, political thought and the health sciences. Every article is free to read and download.
-pinned: true
+pinned: false
 ---
 
 The founding issue of International Research Insights: Multidisciplinary e-Journal, Volume 1, Issue 1 (July to September 2026), is now published online.

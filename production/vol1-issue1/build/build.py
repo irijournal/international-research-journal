@@ -15,7 +15,7 @@ from reportlab.lib.colors import HexColor
 ISSUE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BUILD = os.path.join(ISSUE, 'build')
 OUT = os.path.join(ISSUE, 'out')
-TMP = os.path.join(BUILD, 'tmp')
+TMP = os.environ.get('BUILD_TMP', os.path.join(BUILD, 'tmp'))
 REPO = '/home/user/international-research-journal'
 os.makedirs(os.path.join(OUT, 'articles'), exist_ok=True)
 os.makedirs(TMP, exist_ok=True)
@@ -180,7 +180,7 @@ def front_html(page_ranges, starts=('i', 'ii', 'iii', 'iv')):
   facts, data and references in their articles.</p>
   <p class="small"><b>Copyright and licence.</b> © {I['year']} The Author(s). All articles in this issue are published open
   access under the {E(J['licence'])}, which permits use, sharing and adaptation in any medium provided the original work
-  is properly cited. The journal charges no submission, processing or publication fee.</p>
+  is properly cited.</p>
 </section>"""
 
     def member(m):
@@ -405,7 +405,6 @@ def main():
    <tr><th>Publication</th><td>{E(NX['publication_date'])}</td></tr>
    <tr><th>Send manuscripts to</th><td>{E(J['email_submissions'])}</td></tr>
    <tr><th>Guidelines</th><td>{E(J['website'])}/submission-guidelines</td></tr>
-   <tr><th>Charges</th><td>None. No submission, processing or publication fee.</td></tr>
    <tr><th>Review</th><td>{E(J['review_model'])}</td></tr>
   </table>
 </section>"""

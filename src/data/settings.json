@@ -9,8 +9,8 @@
     "submissions": "submissions",
     "general": "info"
   },
-  "issnOnline": "",
-  "issnNote": "An application for an online ISSN has been filed with the ISSN National Centre for India. The number will be displayed here and on every article page as soon as it is allotted.",
+  "issnOnline": "2839-7134",
+  "issnNote": "The journal's online ISSN is 2839-7134.",
   "publicationType": "Journal",
   "publicationFormat": "Online",
   "subject": "Multidisciplinary",
@@ -21,9 +21,9 @@
   "frequency": "Quarterly, four issues a year (March, June, September, December)",
   "languages": "Hindi and English",
   "reviewModel": "Double anonymous peer review",
-  "accessModel": "Diamond open access, free to read and free to publish",
+  "accessModel": "Open access: every article is free to read",
   "licence": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
   "foundedYear": "2026",
   "currentIssueSlug": "volume-1-issue-1",
-  "footerNote": "International Research Insights is an independent, editorially governed, open access journal. It charges no fee to authors and no fee to readers."
+  "footerNote": "International Research Insights is an independent, editorially governed, open access journal. Every article is free to read."
 }

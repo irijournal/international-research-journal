@@ -38,7 +38,7 @@ The journal states the indexing and identifier status it actually holds, on the 
 
 ## Fraudulent solicitation
 
-The journal charges nothing to authors at any stage. Any email, message or website demanding payment for submission, review, acceptance, publication or a certificate in the name of this journal is fraudulent. Do not pay it. Send it to the editorial office so that the matter can be reported.
+The journal writes to authors only from its official addresses ending in @internationalresearchinsights.com. Treat any message about a manuscript, a review or a publication decision that comes from any other address as suspicious, and report it to the editorial office. The journal never sells faster review, guaranteed acceptance or certificates. Any website or message offering these in the journal's name is fraudulent.
 
 ## Liability
 

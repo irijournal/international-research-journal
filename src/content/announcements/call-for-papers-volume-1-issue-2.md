@@ -33,10 +33,6 @@ Manuscripts are accepted in English and in Hindi. Hindi manuscripts are reviewed
 
 Manuscripts received after 31 October 2026 are considered for Volume 1, Number 2.
 
-## Charges
-
-None. The journal charges no submission fee, no processing charge and no publication fee, and it never will. Any demand for payment made in the name of this journal is fraudulent and should be reported to the editorial office.
-
 ## How to submit
 
 Read the [submission guidelines](/submission-guidelines) in full, prepare the three required files, complete the [author declaration](/author-declaration), and email the set to the submissions address on the [contact](/contact) page using the subject line format given there.
