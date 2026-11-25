@@ -23,6 +23,10 @@ There is no subscription, no paywall, no registration, no login, and no limit on
 - Copy editing and typesetting of accepted manuscripts.
 - Retained copyright, permanent archiving, and unrestricted rights to deposit and reuse their own work.
 
+## Processing charges
+
+A processing charge is payable by authors only after a paper is accepted. The amounts, and what the charge covers, are set out on the [processing charges](/processing-charges) page. Readers are never charged.
+
 ## Editorial independence
 
 Editorial decisions are made on the manuscript alone. The journal does not sell faster review, guaranteed acceptance or certificates, and no supporter, present or future, has any say in what the journal publishes.

@@ -14,6 +14,14 @@ const announcements = (await getCollection('announcements')).sort(
 );
 const board = (await getCollection('board')).sort(byOrder);
 const leadership = board.filter((m) => m.data.roleGroup === 'Editorial Leadership');
+const countries = new Set(board.map((m) => m.data.country).filter(Boolean));
+const stats = [
+  { value: site.issnOnline || '—', label: 'ISSN (Online)' },
+  { value: String(currentArticles.length), label: `peer-reviewed articles in the current issue` },
+  { value: String(board.length), label: 'editorial board members' },
+  { value: String(countries.size), label: 'countries on the editorial board' },
+  { value: '7', label: 'working days to a first written reply' },
+];
 ---
 
 <Base
@@ -35,8 +43,8 @@ const leadership = board.filter((m) => m.data.roleGroup === 'Editorial Leadershi
       </div>
       <dl class="hero-plate">
         <div>
-          <dt>Identification</dt>
-          <dd>{issnLine()}</dd>
+          <dt>ISSN (Online)</dt>
+          <dd style="white-space:nowrap">{site.issnOnline}</dd>
         </div>
         <div>
           <dt>Review model</dt>
@@ -59,6 +67,14 @@ const leadership = board.filter((m) => m.data.roleGroup === 'Editorial Leadershi
           <dd>Open access, free to read</dd>
         </div>
       </dl>
+    </div>
+  </section>
+
+  <section class="stats-band" aria-label="The journal at a glance">
+    <div class="wrap stats">
+      {stats.map((item) => (
+        <div class="stat"><span class="stat-value">{item.value}</span><span class="stat-label">{item.label}</span></div>
+      ))}
     </div>
   </section>
 
@@ -120,7 +136,7 @@ const leadership = board.filter((m) => m.data.roleGroup === 'Editorial Leadershi
   <section class="band">
     <div class="wrap">
       <div class="section-head">
-        <h2>Research sections</h2>
+        <h2>Seven research sections, one standard of review</h2>
         <a href="/sections">Read the full scope</a>
       </div>
       <div class="grid grid-3">
@@ -175,7 +191,7 @@ const leadership = board.filter((m) => m.data.roleGroup === 'Editorial Leadershi
   <section class="band">
     <div class="wrap">
       <div class="section-head">
-        <h2>How publication works</h2>
+        <h2>Three stages, each with a written outcome</h2>
         <a href="/peer-review-policy">Peer review policy</a>
       </div>
       <div class="grid grid-3">
@@ -206,6 +222,19 @@ const leadership = board.filter((m) => m.data.roleGroup === 'Editorial Leadershi
           </p>
           <a class="card-link" href="/indexing-and-preservation">Preservation policy</a>
         </article>
+      </div>
+    </div>
+  </section>
+  <section class="cta-band">
+    <div class="wrap cta">
+      <div>
+        <p class="eyebrow">Call for papers</p>
+        <h2>Submissions are open for Volume 2, Issue 1 (March 2027)</h2>
+        <p>Processing charges are payable only after acceptance. Nothing is charged at submission or if a paper is not accepted.</p>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="/submission-guidelines">Submit a manuscript</a>
+        <a class="btn btn-ghost" href="/processing-charges">Processing charges</a>
       </div>
     </div>
   </section>

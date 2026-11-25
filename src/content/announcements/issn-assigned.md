@@ -3,7 +3,7 @@ slug: issn-assigned
 title: "ISSN (Online) 2839-7134 assigned"
 date: 25 November 2026
 summary: The journal has been assigned the online ISSN 2839-7134. It now appears on the website, on every article page and in every article PDF.
-pinned: true
+pinned: false
 ---
 
 International Research Insights: Multidisciplinary e-Journal has been assigned the International Standard Serial Number **ISSN (Online) 2839-7134** by the ISSN National Centre for India.

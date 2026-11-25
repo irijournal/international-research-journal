@@ -598,6 +598,16 @@ hr {
 .table-wrap table { margin: 0; }
 .prose caption { caption-side: top; text-align: left; font-weight: 600; font-size: 0.9rem; padding-bottom: 0.4rem; color: var(--ink); }
 
+.stats-band { background:var(--paper); border-bottom:1px solid var(--line); }
+.stats { display:grid; grid-template-columns:repeat(auto-fit, minmax(10rem, 1fr)); gap:1px; background:var(--line); padding:0; }
+.stat { background:var(--paper); padding:1.6rem 1.2rem; display:flex; flex-direction:column; gap:.35rem; }
+.stat-value { font-family:var(--display); font-size:clamp(1.8rem, 1.4rem + 1.4vw, 2.6rem); font-weight:700; color:var(--ink); line-height:1; }
+.stat-label { font-size:.86rem; color:var(--muted); line-height:1.35; }
+.cta-band { background:var(--ink); color:#d2deef; padding:clamp(2.4rem, 2rem + 2vw, 3.6rem) 0; }
+.cta { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:1.5rem; }
+.cta h2 { color:#fff; margin:.3rem 0 .6rem; }
+.cta p { margin:0; max-width:40rem; }
+
 /* --------------------------------- People ------------------------------- */
 
 .person {

@@ -29,6 +29,7 @@ const rows: { label: string; value: string; href?: string }[] = [
     : []),
   { label: 'Review model', value: site.reviewModel },
   { label: 'Access', value: site.accessModel },
+  { label: 'Processing charges', value: 'Payable only after acceptance; nothing at submission or on rejection', href: '/processing-charges' },
   { label: 'Licence', value: site.licence },
   { label: 'Email', value: mail('general'), href: `mailto:${mail('general')}` },
   { label: 'Website', value: `https://${site.domain}`, href: `https://${site.domain}` },
