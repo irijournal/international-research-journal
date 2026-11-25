@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import { site, issnLine, byOrder, fullJournalName } from '../lib/site';
+import { byOrder } from '../lib/site';
 
 const pages = (await getCollection('pages')).sort(byOrder);
 const sections = (await getCollection('sections')).sort(byOrder);
@@ -15,88 +15,84 @@ const isCurrent = (href: string) => (href.replace(/\/$/, '') || '/') === current
 const groups = [
   {
     label: 'About',
+    intro: 'The journal, the people who run it, and the policies that govern every decision it makes.',
+    kicker: 'The journal',
+    overview: '/about',
     items: [
       { label: 'About the Journal', href: '/about' },
       { label: 'Editorial Board', href: '/editorial-board' },
-      ...aboutPages
-        .filter((p) => p.id !== 'about')
-        .map((p) => ({ label: p.data.navLabel, href: `/${p.id}` })),
+      ...aboutPages.filter((p) => p.id !== 'about').map((p) => ({ label: p.data.navLabel, href: `/${p.id}` })),
+      ...standalonePages.filter((p) => p.id !== 'contact').map((p) => ({ label: p.data.navLabel, href: `/${p.id}` })),
     ],
   },
   {
-    label: 'Research Sections',
+    label: 'Research',
+    intro: 'Seven research sections, one standard of review: evidence first, written for readers who decide.',
+    kicker: 'Research sections',
+    overview: '/sections',
+    items: sections.map((s) => ({ label: s.data.title, href: `/sections/${s.id}` })),
+  },
+  {
+    label: 'Publications',
+    intro: 'Every issue and every article, free to read, with full citation details and PDFs.',
+    kicker: 'Issues and articles',
+    overview: '/archives',
     items: [
-      { label: 'All research sections', href: '/sections' },
-      ...sections.map((s) => ({ label: s.data.title, href: `/sections/${s.id}` })),
+      { label: 'Current Issue', href: '/current' },
+      { label: 'Archives', href: '/archives' },
+      { label: 'Announcements', href: '/announcements' },
+      { label: 'Search the Journal', href: '/search' },
     ],
   },
   {
     label: 'For Authors',
+    intro: 'What to send, how review works, what it costs after acceptance, and what happens next.',
+    kicker: 'Submitting your work',
+    overview: '/submission-guidelines',
     items: authorPages.map((p) => ({ label: p.data.navLabel, href: `/${p.id}` })),
   },
 ];
 ---
 
-<div class="utility">
-  <div class="wrap">
-    <ul>
-      <li>{issnLine()}</li>
-      <li>{site.reviewModel}</li>
-      <li>Open access</li>
-    </ul>
-    <ul>
-      <li><a href="/submission-guidelines">Submit a manuscript</a></li>
-      <li><a href="/contact">Contact</a></li>
-    </ul>
-  </div>
-</div>
-
-<header class="masthead">
-  <div class="wrap">
-    <a class="masthead-title" href="/">
-      <img class="masthead-logo" src="/images/emblem.png" alt="" width="58" height="72" />
-      <span class="name">{fullJournalName}</span>
-      <span class="sub">Peer reviewed academic {site.publicationType.toLowerCase()}</span>
-    </a>
-    <p class="masthead-meta">
-      <strong>{site.frequency.split(',')[0]} · {site.publicationFormat}</strong><br />
-      Published from {site.placeOfPublication}
-    </p>
-  </div>
-</header>
-
 <nav class="nav" id="site-nav" aria-label="Main">
   <div class="wrap nav-inner">
+    <a class="brand" href="/" aria-label="International Research Insights: Multidisciplinary e-Journal, home">
+      <img src="/images/emblem-white.png" alt="" width="40" height="50" />
+      <span class="brand-text"><span class="brand-name">International Research Insights</span><span class="brand-sub">Multidisciplinary e-Journal</span></span>
+    </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-collapse">Menu</button>
     <div class="nav-collapse" id="nav-collapse">
       <ul class="nav-list">
-        <li><a href="/" aria-current={isCurrent('/') ? 'page' : undefined}>Home</a></li>
-        <li><a href="/current" aria-current={isCurrent('/current') ? 'page' : undefined}>Current Issue</a></li>
-        <li><a href="/archives" aria-current={isCurrent('/archives') ? 'page' : undefined}>Archives</a></li>
         {groups.map((group) => (
           <li data-dropdown>
             <button type="button" aria-expanded="false">
               {group.label}<span class="caret" aria-hidden="true"></span>
             </button>
-            <ul class="submenu">
-              {group.items.map((item) => (
-                <li><a href={item.href}>{item.label}</a></li>
-              ))}
-            </ul>
+            <div class="submenu mega">
+              <div class="mega-intro">
+                <p class="mega-title">{group.label}</p>
+                <p>{group.intro}</p>
+                <a class="more-link" href={group.overview}>Overview</a>
+              </div>
+              <div class="mega-list">
+                <p class="mega-kicker">{group.kicker}</p>
+                <ol>
+                  {group.items.map((item, index) => (
+                    <li><a href={item.href}><span class="num">{String(index + 1).padStart(2, '0')}</span>{item.label}</a></li>
+                  ))}
+                </ol>
+              </div>
+            </div>
           </li>
         ))}
-        <li><a href="/announcements" aria-current={isCurrent('/announcements') ? 'page' : undefined}>Announcements</a></li>
-        {standalonePages.map((p) => (
-          <li>
-            <a href={`/${p.id}`} aria-current={isCurrent(`/${p.id}`) ? 'page' : undefined}>{p.data.navLabel}</a>
-          </li>
+        {standalonePages.filter((p) => p.id === 'contact').map((p) => (
+          <li><a href={`/${p.id}`} aria-current={isCurrent(`/${p.id}`) ? 'page' : undefined}>{p.data.navLabel}</a></li>
         ))}
       </ul>
-      <form class="nav-search" action="/search" method="get" role="search">
-        <label class="sr-only" for="nav-q" style="position:absolute;left:-9999px">Search the journal</label>
-        <input type="search" id="nav-q" name="q" placeholder="Search articles" />
-        <button type="submit">Search</button>
-      </form>
+      <a class="nav-search" href="/search" aria-label="Search the journal">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      </a>
+      <a class="nav-cta" href="/submission-guidelines">Submit</a>
     </div>
   </div>
 </nav>
@@ -131,7 +127,7 @@ const groups = [
         button.setAttribute('aria-expanded', String(!open));
       });
 
-      if (window.matchMedia('(min-width: 951px)').matches) {
+      if (window.matchMedia('(min-width: 1241px)').matches) {
         item.addEventListener('mouseenter', () => {
           closeAll(item);
           item.setAttribute('data-open', 'true');
