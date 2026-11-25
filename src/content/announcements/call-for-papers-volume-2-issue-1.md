@@ -26,4 +26,4 @@ Payable only after acceptance: ₹1,500 for a single author, ₹2,000 for two or
 
 ## How to submit
 
-Read the [submission guidelines](/submission-guidelines), complete the [author declaration](/author-declaration), and send the files to submissions@internationalresearchinsights.com.
+Read the [submission guidelines](/submission-guidelines), complete the [author declaration](/author-declaration), and submit through the **[online submission form](https://forms.gle/3C8Ksvb4vjYAdRey5)**. If you cannot use the form, email the files to submissions@internationalresearchinsights.com.

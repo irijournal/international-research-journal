@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import { byOrder, site, mail, issnLine } from '../lib/site';
+import { byOrder, site, mail, issnLine, submitUrl, submitIsExternal } from '../lib/site';
 
 const pages = (await getCollection('pages')).sort(byOrder);
 const sections = (await getCollection('sections')).sort(byOrder);
@@ -84,7 +84,7 @@ const groups = [
     <ul class="topbar-links">
       {callForPapers && <li class="topbar-hide-sm"><a href={`/announcements/${callForPapers.id}`}>Call for papers</a></li>}
       <li class="topbar-hide-md"><a href="/for-reviewers">Join as reviewer</a></li>
-      <li><a class="topbar-pill" href="/submission-guidelines">Submit manuscript</a></li>
+      <li><a class="topbar-pill" href={submitUrl} target={submitIsExternal ? '_blank' : undefined} rel={submitIsExternal ? 'noopener' : undefined}>Submit manuscript</a></li>
     </ul>
   </div>
 </div>

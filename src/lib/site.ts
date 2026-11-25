@@ -21,6 +21,10 @@ export function mail(key: MailKey): string {
 
 export const fullJournalName = site.journalTitle.trim();
 
+/** Where "Submit" buttons go: the online submission form when set, otherwise the guidelines page. */
+export const submitUrl = site.googleFormUrl || '/submission-guidelines';
+export const submitIsExternal = submitUrl.startsWith('http');
+
 export function issnLine(): string {
   return site.issnOnline ? `ISSN (Online): ${site.issnOnline}` : 'ISSN (Online): Applied for';
 }

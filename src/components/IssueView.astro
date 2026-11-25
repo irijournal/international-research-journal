@@ -1,6 +1,6 @@
 ---
 import { render } from 'astro:content';
-import { site, mail, issueLabel } from '../lib/site';
+import { site, mail, issueLabel, submitUrl } from '../lib/site';
 
 const { issue, articles } = Astro.props;
 const { Content } = await render(issue);
@@ -47,8 +47,8 @@ const { Content } = await render(issue);
             articles appear here in the order fixed by the editorial board.
           </p>
           <p style="margin-bottom:0">
-            To be considered, read the <a href="/submission-guidelines">submission guidelines</a> and send your
-            manuscript to <a href={`mailto:${mail('submissions')}`}>{mail('submissions')}</a>.
+            To be considered, read the <a href="/submission-guidelines">submission guidelines</a> and submit your
+            manuscript through the <a href={submitUrl}>online submission form</a>.
           </p>
         </div>
       )}

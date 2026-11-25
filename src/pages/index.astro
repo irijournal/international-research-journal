@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import JournalDetails from '../components/JournalDetails.astro';
 import { getCollection } from 'astro:content';
-import { site, mail, issnLine, issueLabel, byOrder, fullJournalName } from '../lib/site';
+import { site, mail, issnLine, issueLabel, byOrder, fullJournalName, submitUrl, submitIsExternal } from '../lib/site';
 
 const sections = (await getCollection('sections')).sort(byOrder);
 const issues = (await getCollection('issues')).sort(byOrder);
@@ -40,7 +40,7 @@ const stats = [
         </p>
         <p class="hero-tagline">Bridging scholarship and society, one issue at a time.</p>
         <div class="btn-row">
-          <a class="btn btn-primary" href="/submission-guidelines">Submit a manuscript</a>
+          <a class="btn btn-primary" href={submitUrl} target={submitIsExternal ? '_blank' : undefined} rel={submitIsExternal ? 'noopener' : undefined}>Submit a manuscript</a>
           <a class="btn btn-ghost" href="/current">Read the current issue</a>
         </div>
       </div>
@@ -247,7 +247,7 @@ const stats = [
         <p>Processing charges are payable only after acceptance. Nothing is charged at submission or if a paper is not accepted.</p>
       </div>
       <div class="btn-row">
-        <a class="btn btn-primary" href="/submission-guidelines">Submit a manuscript</a>
+        <a class="btn btn-primary" href={submitUrl} target={submitIsExternal ? '_blank' : undefined} rel={submitIsExternal ? 'noopener' : undefined}>Submit a manuscript</a>
         <a class="btn btn-ghost" href="/processing-charges">Processing charges</a>
       </div>
     </div>

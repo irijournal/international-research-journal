@@ -4,11 +4,11 @@ title: Submission Guidelines
 navLabel: Submission Guidelines
 navGroup: For Authors
 summary: How to prepare and send a manuscript to International Research Insights, including file structure, word limits, referencing, anonymisation and the covering letter.
-updated: 5 August 2026
+updated: 25 November 2026
 order: 10
 ---
 
-Read this page in full before you send anything. Most manuscripts that are returned without review are returned for reasons listed here, and every one of those reasons is avoidable.
+Read this page in full before you send anything. When your files are ready, submit them through the **[online submission form](https://forms.gle/3C8Ksvb4vjYAdRey5)**. Most manuscripts that are returned without review are returned for reasons listed here, and every one of those reasons is avoidable.
 
 ## Before you submit
 
@@ -23,7 +23,7 @@ Confirm all six statements below. If any one of them is not true, the manuscript
 
 ## What to send
 
-Send three files in a single email.
+Prepare three files. You will upload all three in the [online submission form](https://forms.gle/3C8Ksvb4vjYAdRey5).
 
 **File one: the anonymous manuscript.** The full text with no author name, no institutional address, no acknowledgement section and no self identifying phrasing such as "as I argued in my earlier paper". Cite your own previous work in the third person, exactly as you would cite anyone else. Name the file `manuscript-anonymous.docx`.
 
@@ -31,11 +31,11 @@ Send three files in a single email.
 
 **File three: the covering letter and declaration.** Use the text on the [author declaration and copyright form](/author-declaration) page. Paste it into a document, complete it and sign it. Name the file `declaration.docx`.
 
-Send all three to the submissions address as attachments in Microsoft Word format. Do not send PDF only, because the manuscript cannot be copy edited from a PDF. Do not send a link to a cloud folder, because links expire and manuscripts should not.
+Upload all three through the [online submission form](https://forms.gle/3C8Ksvb4vjYAdRey5) in Microsoft Word format (the signed declaration may be a PDF). The form asks you to sign in to Google so that files can be uploaded. Do not send the manuscript as a PDF only, because it cannot be copy edited from a PDF.
 
-## Subject line
+## If you cannot use the form
 
-Use this exact format so that your manuscript reaches the right reviewer without delay:
+Email the three files to the submissions address on the [contact](/contact) page, using this exact subject line so that your manuscript reaches the right reviewer without delay:
 
 `SUBMISSION | Section | Article type | First author surname | Short title`
 
@@ -111,4 +111,4 @@ A processing charge is payable only after a paper is accepted: ₹1,500 for a si
 
 ## Where to send it
 
-Manuscripts go to the submissions address published on the [contact](/contact) page. Queries about fit, scope or format go to the general editorial address. The editorial office replies to every message within five working days, and manuscripts are never left unanswered.
+Manuscripts are submitted through the [online submission form](https://forms.gle/3C8Ksvb4vjYAdRey5), or by email to the submissions address on the [contact](/contact) page if you cannot use the form. Queries about fit, scope or format go to the general editorial address. The editorial office replies to every message within five working days, and manuscripts are never left unanswered.
