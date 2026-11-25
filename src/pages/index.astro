@@ -30,6 +30,8 @@ const stats = [
 >
   <section class="hero">
     <div class="wrap">
+      <div class="hero-grid">
+      <div>
       <p class="eyebrow">Peer reviewed academic {site.publicationType.toLowerCase()} · {site.publicationFormat}</p>
       <h1>{fullJournalName}</h1>
       <p class="lede">
@@ -40,6 +42,14 @@ const stats = [
       <div class="btn-row">
         <a class="btn btn-primary" href="/submission-guidelines">Submit a manuscript</a>
         <a class="btn btn-ghost" href="/current">Read the current issue</a>
+      </div>
+      </div>
+      {currentIssue?.data.cover && (
+        <a class="hero-cover" href="/current">
+          <img src={currentIssue.data.cover.replace('cover-thumb', 'cover')} alt={`Cover of ${issueLabel(currentIssue.data)}`} width="600" height="849" />
+          <span>{issueLabel(currentIssue.data)}</span>
+        </a>
+      )}
       </div>
       <dl class="hero-plate">
         <div>

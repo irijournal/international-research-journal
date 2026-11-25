@@ -107,7 +107,7 @@ The average time from submission to first decision is targeted at five weeks. Wh
 
 ## Processing charges
 
-A processing charge is payable only after a paper is accepted: ₹1,500 for a single author, ₹2,000 for two or three authors, and ₹5,000 for papers in science, technology and the health sciences (USD 100 and USD 150 for authors from outside India). There is no charge at submission or if a paper is not accepted. Details are on the [processing charges](/processing-charges) page.
+A processing charge is payable only after a paper is accepted: ₹1,500 for a single author, ₹2,000 for two or three authors (plus ₹500 for each author beyond three), and ₹5,000 for papers in science, technology and the health sciences (USD 100 and USD 150 for authors from outside India). There is no charge at submission or if a paper is not accepted. Details are on the [processing charges](/processing-charges) page.
 
 ## Where to send it
 

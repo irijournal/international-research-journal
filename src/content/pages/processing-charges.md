@@ -18,6 +18,7 @@ Processing charges are payable **only after a paper is accepted** for publicatio
 | --- | --- | --- |
 | Single author | ₹1,500 | USD 100 |
 | Two or three authors | ₹2,000 | USD 100 |
+| Four or more authors | ₹2,000 + ₹500 for each author beyond three | USD 100 |
 | Papers in science, technology and the health sciences | ₹5,000 | USD 150 |
 
 Science, technology and health sciences papers are those in the [Science, Technology and Environment](/sections/science-technology-and-environment) and [Health and Nursing Sciences](/sections/health-and-nursing-sciences) sections, including nursing, pharmacy and medical research.

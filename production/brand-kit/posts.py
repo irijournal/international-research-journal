@@ -95,6 +95,7 @@ POST_HTML = {
 <tr><th>Category</th><th style="text-align:right">Per accepted paper</th></tr>
 <tr><td>Single author</td><td class="r">₹1,500</td></tr>
 <tr><td>2–3 authors</td><td class="r">₹2,000</td></tr>
+<tr><td>4 or more authors</td><td class="r">₹2,000 + ₹500 each extra</td></tr>
 <tr><td>Science, technology and health sciences papers</td><td class="r">₹5,000</td></tr>
 <tr><td>Authors from outside India: humanities, law, social sciences</td><td class="r">USD 100</td></tr>
 <tr><td>Authors from outside India: sciences</td><td class="r">USD 150</td></tr></table>

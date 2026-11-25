@@ -22,7 +22,7 @@ Every submission receives a written editorial response within seven working days
 
 ## Processing charges
 
-Payable only after acceptance: ₹1,500 for a single author, ₹2,000 for two or three authors, ₹5,000 for papers in science, technology and the health sciences (USD 100 and USD 150 for authors from outside India). There is no charge at submission or if a paper is not accepted. See [processing charges](/processing-charges).
+Payable only after acceptance: ₹1,500 for a single author, ₹2,000 for two or three authors (plus ₹500 for each author beyond three), ₹5,000 for papers in science, technology and the health sciences (USD 100 and USD 150 for authors from outside India). There is no charge at submission or if a paper is not accepted. See [processing charges](/processing-charges).
 
 ## How to submit
 
