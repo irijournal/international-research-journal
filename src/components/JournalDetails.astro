@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import { site, mail, issnLine, issueLabel, byOrder, fullJournalName } from '../lib/site';
 
+const { bare = false } = Astro.props as { bare?: boolean };
 const board = await getCollection('board');
 const editorInChief = board.find((m) => m.data.role === 'Editor in Chief');
 const sections = (await getCollection('sections')).sort(byOrder);
@@ -36,21 +37,34 @@ const rows: { label: string; value: string; href?: string }[] = [
 ];
 ---
 
-<section class="band" id="journal-details">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Journal details</h2>
-      <a href="/about">About the journal</a>
+{bare ? (
+  <table class="details-table" id="journal-details">
+    <tbody>
+      {rows.map((row) => (
+        <tr>
+          <th scope="row">{row.label}</th>
+          <td>{row.href ? <a href={row.href}>{row.value}</a> : row.value}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+) : (
+  <section class="band" id="journal-details">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Journal details</h2>
+        <a href="/about">About the journal</a>
+      </div>
+      <table class="details-table">
+        <tbody>
+          {rows.map((row) => (
+            <tr>
+              <th scope="row">{row.label}</th>
+              <td>{row.href ? <a href={row.href}>{row.value}</a> : row.value}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
-    <table class="details-table">
-      <tbody>
-        {rows.map((row) => (
-          <tr>
-            <th scope="row">{row.label}</th>
-            <td>{row.href ? <a href={row.href}>{row.value}</a> : row.value}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </div>
-</section>
+  </section>
+)}

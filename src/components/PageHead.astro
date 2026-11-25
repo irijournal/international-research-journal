@@ -4,10 +4,26 @@ interface Props {
   lede?: string;
   eyebrow?: string;
   crumbs?: { label: string; href?: string }[];
+  /** Set false where the page writes its own breadcrumb structured data. */
+  crumbsLd?: boolean;
 }
-const { title, lede, eyebrow, crumbs = [] } = Astro.props;
+const { title, lede, eyebrow, crumbs = [], crumbsLd = true } = Astro.props;
+const origin = Astro.site ?? new URL('https://internationalresearchinsights.com');
+const here = new URL(Astro.url.pathname, origin).toString();
+const trail = [{ label: 'Home', href: '/' }, ...crumbs];
+const crumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: trail.map((c, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: i === trail.length - 1 && !c.href ? title : c.label,
+    item: c.href ? new URL(c.href, origin).toString() : here,
+  })),
+};
 ---
 
+{crumbsLd && crumbs.length > 0 && <script type="application/ld+json" set:html={JSON.stringify(crumbLd)} />}
 <section class="page-head">
   <div class="wrap">
     {crumbs.length > 0 && (

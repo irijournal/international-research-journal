@@ -1,38 +1,44 @@
 ---
 import { getCollection } from 'astro:content';
-import { site, mail, issnLine, byOrder, fullJournalName } from '../lib/site';
+import { site, mail, issnLine, byOrder, fullJournalName, submitUrl, submitIsExternal } from '../lib/site';
 
 const pages = (await getCollection('pages')).sort(byOrder);
 const authorPages = pages.filter((p) => p.data.navGroup === 'For Authors');
 const aboutPages = pages.filter((p) => p.data.navGroup === 'About' && p.id !== 'about');
 const legalPages = pages.filter((p) => p.data.navGroup === 'Standalone' || p.data.navGroup === 'Footer only');
 const year = new Date().getFullYear();
+const external = submitIsExternal ? { target: '_blank', rel: 'noopener' } : {};
 ---
 
 <footer class="footer">
-  <div class="wrap">
-    <div class="footer-grid">
+  <div class="footer-main">
+    <div class="wrap footer-grid">
       <div class="footer-brand">
+        <img src="/images/emblem-white.png" alt="" width="51" height="64" loading="lazy" />
         <div class="name">{fullJournalName}</div>
+        <p>{issnLine()}</p>
         <p>{site.footerNote}</p>
         <p>Published by {site.publisher}, {site.publisherAddress}.</p>
-        <p>{issnLine()}</p>
       </div>
 
       <div>
-        <h2>Read</h2>
+        <h2>Quick Links</h2>
         <ul>
-          <li><a href="/current">Current issue</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About the Journal</a></li>
+          <li><a href="/editorial-board">Editorial Board</a></li>
+          <li><a href="/current">Current Issue</a></li>
           <li><a href="/archives">Archives</a></li>
-          <li><a href="/sections">Research sections</a></li>
+          <li><a href="/sections">Research Sections</a></li>
           <li><a href="/announcements">Announcements</a></li>
           <li><a href="/search">Search</a></li>
         </ul>
       </div>
 
       <div>
-        <h2>Publish</h2>
+        <h2>For Authors</h2>
         <ul>
+          <li><a href={submitUrl} {...external}>Submit Online</a></li>
           {authorPages.map((p) => (
             <li><a href={`/${p.id}`}>{p.data.navLabel}</a></li>
           ))}
@@ -40,37 +46,33 @@ const year = new Date().getFullYear();
       </div>
 
       <div>
-        <h2>The journal</h2>
+        <h2>Policies</h2>
         <ul>
-          <li><a href="/about">About the journal</a></li>
-          <li><a href="/editorial-board">Editorial board</a></li>
           {aboutPages.map((p) => (
+            <li><a href={`/${p.id}`}>{p.data.navLabel}</a></li>
+          ))}
+          {legalPages.filter((p) => p.id !== 'contact').map((p) => (
             <li><a href={`/${p.id}`}>{p.data.navLabel}</a></li>
           ))}
         </ul>
       </div>
 
       <div>
-        <h2>Editorial office</h2>
+        <h2>Contact</h2>
         <ul>
           <li>{site.editorialOfficeAddress}</li>
           <li><a href={`mailto:${mail('general')}`}>{mail('general')}</a></li>
           <li><a href={`mailto:${mail('submissions')}`}>{mail('submissions')}</a></li>
           {site.phone ? <li>{site.phone}</li> : null}
+          <li><a href="/contact">Contact form</a></li>
         </ul>
       </div>
     </div>
-
-    <div class="footer-bottom">
-      <span>Copyright {year} {site.publisher}. Articles are published under {site.licence}.</span>
-      <span>
-        {legalPages.map((p, index) => (
-          <>
-            {index > 0 ? ' · ' : ''}
-            <a href={`/${p.id}`}>{p.data.navLabel}</a>
-          </>
-        ))}
-      </span>
+  </div>
+  <div class="footer-bottom">
+    <div class="wrap">
+      <span>© {year} {site.publisher}. All rights reserved.</span>
+      <span>Articles are published under the <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener" target="_blank" style="color:inherit;text-decoration:underline">{site.licence}</a>.</span>
     </div>
   </div>
 </footer>

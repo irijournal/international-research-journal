@@ -7,6 +7,7 @@ type OptionalSettings = {
   web3formsKey?: string;
   googleFormUrl?: string;
   googleSiteVerification?: string;
+  callForPapersDeadline?: string;
   bingSiteVerification?: string;
 };
 

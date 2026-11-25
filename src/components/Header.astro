@@ -1,192 +1,104 @@
 ---
 import { getCollection } from 'astro:content';
-import { byOrder, site, mail, issnLine, submitUrl, submitIsExternal } from '../lib/site';
+import { byOrder, site, issnLine, submitUrl, submitIsExternal, fullJournalName } from '../lib/site';
 
 const pages = (await getCollection('pages')).sort(byOrder);
-const sections = (await getCollection('sections')).sort(byOrder);
-
-const aboutPages = pages.filter((p) => p.data.navGroup === 'About');
+const aboutPages = pages.filter((p) => p.data.navGroup === 'About' && p.id !== 'about');
 const authorPages = pages.filter((p) => p.data.navGroup === 'For Authors');
-const standalonePages = pages.filter((p) => p.data.navGroup === 'Standalone');
-
-const parseDate = (d: string) => new Date(`${d} UTC`).getTime() || 0;
-const updates = (await getCollection('announcements'))
-  .sort((a, b) => parseDate(b.data.date) - parseDate(a.data.date))
-  .slice(0, 6)
-  .map((a) => ({
-    href: `/announcements/${a.id}`,
-    title: a.data.title,
-    date: new Date(`${a.data.date} UTC`).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }),
-  }));
 const callForPapers = (await getCollection('announcements')).find((a) => a.data.pinned);
 
 const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
 const isCurrent = (href: string) => (href.replace(/\/$/, '') || '/') === currentPath;
+const external = submitIsExternal ? { target: '_blank', rel: 'noopener' } : {};
 
-const groups = [
+const menus = [
   {
     label: 'About',
-    intro: 'The journal, the people who run it, and the policies that govern every decision it makes.',
-    kicker: 'The journal',
-    overview: '/about',
     items: [
       { label: 'About the Journal', href: '/about' },
       { label: 'Editorial Board', href: '/editorial-board' },
-      ...aboutPages.filter((p) => p.id !== 'about').map((p) => ({ label: p.data.navLabel, href: `/${p.id}` })),
-      ...standalonePages.filter((p) => p.id !== 'contact').map((p) => ({ label: p.data.navLabel, href: `/${p.id}` })),
-    ],
-  },
-  {
-    label: 'Research',
-    intro: 'Seven research sections, one standard of review: evidence first, written for readers who decide.',
-    kicker: 'Research sections',
-    overview: '/sections',
-    items: sections.map((s) => ({ label: s.data.title, href: `/sections/${s.id}` })),
-  },
-  {
-    label: 'Publications',
-    intro: 'Every issue and every article, free to read, with full citation details and PDFs.',
-    kicker: 'Issues and articles',
-    overview: '/archives',
-    items: [
-      { label: 'Current Issue', href: '/current' },
-      { label: 'Archives', href: '/archives' },
+      { label: 'Research Sections', href: '/sections' },
+      ...aboutPages.map((p) => ({ label: p.data.navLabel, href: `/${p.id}` })),
       { label: 'Announcements', href: '/announcements' },
-      { label: 'Search the Journal', href: '/search' },
     ],
   },
   {
     label: 'For Authors',
-    intro: 'What to send, how review works, what it costs after acceptance, and what happens next.',
-    kicker: 'Submitting your work',
-    overview: '/submission-guidelines',
-    items: authorPages.map((p) => ({ label: p.data.navLabel, href: `/${p.id}` })),
+    items: [
+      ...authorPages.map((p) => ({ label: p.data.navLabel, href: `/${p.id}` })),
+      { label: 'Submit Online', href: submitUrl },
+    ],
   },
+];
+const links = [
+  { label: 'Current Issue', href: '/current' },
+  { label: 'Archives', href: '/archives' },
+  { label: 'Editorial Board', href: '/editorial-board' },
 ];
 ---
 
-<div class="topbar">
-  <div class="wrap topbar-inner">
-    <ul class="topbar-info">
-      <li>
-        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3.5 6l8.5 7 8.5-7"/></svg>
-        <a href={`mailto:${mail('general')}`}>{mail('general')}</a>
-      </li>
-      <li class="topbar-hide-sm">
-        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 3h10l4 4v14H5z"/><path d="M8 11h8M8 15h8M8 7h4"/></svg>
-        {issnLine()}
-      </li>
-      <li class="topbar-hide-md">
-        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
-        Greater Noida, Uttar Pradesh, India
-      </li>
-    </ul>
-    <ul class="topbar-links">
-      {callForPapers && <li class="topbar-hide-sm"><a href={`/announcements/${callForPapers.id}`}>Call for papers</a></li>}
-      <li class="topbar-hide-md"><a href="/for-reviewers">Join as reviewer</a></li>
-      <li><a class="topbar-pill" href={submitUrl} target={submitIsExternal ? '_blank' : undefined} rel={submitIsExternal ? 'noopener' : undefined}>Submit manuscript</a></li>
-    </ul>
-  </div>
-</div>
-
-<header class="masthead">
-  <div class="wrap masthead-inner">
-    <a class="masthead-brand" href="/" aria-label="International Research Insights: Multidisciplinary e-Journal, home">
-      <img src="/images/emblem.png" alt="International Research Insights emblem" width="88" height="110" />
-      <span class="masthead-text">
-        <span class="masthead-name">International Research Insights</span>
-        <span class="masthead-sub">Multidisciplinary e-Journal</span>
-        <span class="masthead-tag">Bridging scholarship and society</span>
-      </span>
+<header class="hdr-top" id="site-nav">
+  <div class="wrap hdr-top-inner">
+    <a class="logo" href="/" aria-label={`${fullJournalName}, home`}>
+      <img src="/images/emblem-white.png" alt="" width="32" height="40" />
+      <span class="logo-abbr" aria-hidden="true">IRI</span>
     </a>
-    <div class="masthead-side">
-      <p class="masthead-motto">Rigorous Research. Fair Review. Open to Every Reader.</p>
-      <ul class="masthead-links">
-        <li><a href="/#vision">Vision</a></li>
-        <li><a href="/#mission">Mission</a></li>
-        <li><a href="/current">Editor's message</a></li>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <nav class="nav" id="main-nav" aria-label="Main">
+      <ul class="nav-list">
+        <li><a href="/" aria-current={isCurrent('/') ? 'page' : undefined}>Home</a></li>
+        <li data-dropdown>
+          <button type="button" aria-expanded="false">{menus[0].label}<span class="caret" aria-hidden="true"></span></button>
+          <ul class="submenu">
+            {menus[0].items.map((item) => <li><a href={item.href}>{item.label}</a></li>)}
+          </ul>
+        </li>
+        {links.map((link) => (
+          <li><a href={link.href} aria-current={isCurrent(link.href) ? 'page' : undefined}>{link.label}</a></li>
+        ))}
+        <li data-dropdown>
+          <button type="button" aria-expanded="false">{menus[1].label}<span class="caret" aria-hidden="true"></span></button>
+          <ul class="submenu">
+            {menus[1].items.map((item) => (
+              <li><a href={item.href} {...(item.href === submitUrl ? external : {})}>{item.label}</a></li>
+            ))}
+          </ul>
+        </li>
+        <li><a href="/contact" aria-current={isCurrent('/contact') ? 'page' : undefined}>Contact</a></li>
       </ul>
-    </div>
+    </nav>
+    <a class="hdr-submit" href={submitUrl} {...external}>Submit Paper</a>
   </div>
 </header>
 
-<nav class="nav" id="site-nav" aria-label="Main">
-  <div class="wrap nav-inner">
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-collapse">
-      <span class="nav-toggle-bars" aria-hidden="true"></span>Menu
-    </button>
-    <div class="nav-collapse" id="nav-collapse">
-      <ul class="nav-list">
-        <li>
-          <a href="/" class="nav-home" aria-current={isCurrent('/') ? 'page' : undefined} aria-label="Home">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
-          </a>
-        </li>
-        {groups.map((group) => (
-          <li data-dropdown>
-            <button type="button" aria-expanded="false">
-              {group.label}<span class="caret" aria-hidden="true"></span>
-            </button>
-            <div class="submenu mega">
-              <div class="mega-intro">
-                <p class="mega-title">{group.label}</p>
-                <p>{group.intro}</p>
-                <a class="more-link" href={group.overview}>Overview</a>
-              </div>
-              <div class="mega-list">
-                <p class="mega-kicker">{group.kicker}</p>
-                <ol>
-                  {group.items.map((item, index) => (
-                    <li><a href={item.href}><span class="num">{String(index + 1).padStart(2, '0')}</span>{item.label}</a></li>
-                  ))}
-                </ol>
-              </div>
-            </div>
-          </li>
-        ))}
-        {standalonePages.filter((p) => p.id === 'contact').map((p) => (
-          <li><a href={`/${p.id}`} aria-current={isCurrent(`/${p.id}`) ? 'page' : undefined}>{p.data.navLabel}</a></li>
-        ))}
-      </ul>
-    </div>
-    <a class="nav-search" href="/search" aria-label="Search the journal">
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+<div class="hdr-title">
+  <div class="wrap hdr-title-inner">
+    <a class="journal-id" href="/">
+      <img src="/images/emblem.png" alt="International Research Insights emblem" width="47" height="58" />
+      <span>
+        <span class="journal-name">{fullJournalName}</span>
+        <span class="journal-meta"><strong>{issnLine()}</strong> · Peer reviewed · Open access · English and Hindi</span>
+      </span>
     </a>
+    <form class="hdr-search" action="/search" method="get" role="search">
+      <label class="sr-only" for="hdr-q">Search the journal</label>
+      <input type="search" id="hdr-q" name="q" placeholder="Search title, author, keyword" />
+      <button type="submit">Search</button>
+    </form>
   </div>
-</nav>
+</div>
 
-{updates.length > 0 && (
-  <div class="ticker" id="ticker">
-    <div class="wrap ticker-inner">
-      <p class="ticker-label"><span class="ticker-dot" aria-hidden="true"></span>Latest updates</p>
-      <div class="ticker-window">
-        <ul class="ticker-track">
-          {[...updates, ...updates].map((u, n) => (
-            <li aria-hidden={n >= updates.length ? 'true' : undefined}>
-              <span class="ticker-date">{u.date}</span>
-              <a href={u.href} tabindex={n >= updates.length ? -1 : undefined}>{u.title}</a>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <button class="ticker-pause" type="button" aria-label="Pause updates" aria-pressed="false">
-        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg>
-      </button>
-      <a class="ticker-all" href="/announcements">All updates</a>
+{site.callForPapersDeadline && (
+  <div class="notice" role="note">
+    <div class="wrap notice-inner">
+      <span><strong>Call for papers:</strong> last date of submission {site.callForPapersDeadline}.</span>
+      <a href={submitUrl} {...external}>Submit online</a>
+      {callForPapers && <a href={`/announcements/${callForPapers.id}`}>Details</a>}
     </div>
   </div>
 )}
 
 <script>
-  const ticker = document.getElementById('ticker');
-  const pause = ticker?.querySelector('.ticker-pause');
-  pause?.addEventListener('click', () => {
-    const paused = ticker.getAttribute('data-paused') === 'true';
-    ticker.setAttribute('data-paused', String(!paused));
-    pause.setAttribute('aria-pressed', String(!paused));
-    pause.setAttribute('aria-label', paused ? 'Pause updates' : 'Play updates');
-  });
-
   const nav = document.getElementById('site-nav');
   if (nav) {
     const toggle = nav.querySelector('.nav-toggle');
@@ -215,8 +127,7 @@ const groups = [
         item.setAttribute('data-open', String(!open));
         button.setAttribute('aria-expanded', String(!open));
       });
-
-      if (window.matchMedia('(min-width: 1101px)').matches) {
+      if (window.matchMedia('(min-width: 1081px) and (hover: hover)').matches) {
         item.addEventListener('mouseenter', () => {
           closeAll(item);
           item.setAttribute('data-open', 'true');

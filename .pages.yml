@@ -39,7 +39,8 @@ content:
       - { name: foundedYear, label: Year founded, type: string }
       - { name: currentIssueSlug, label: Current issue, type: string, description: "The file name of the issue that should appear under Current Issue, for example volume-1-issue-1" }
       - { name: web3formsKey, label: Contact form key, type: string, description: "Free access key from web3forms.com. Leave empty and the contact page shows an email button instead." }
-      - { name: googleFormUrl, label: Google Form URL, type: string, description: "Optional. Only used if you decide to collect submissions through a form." }
+      - { name: googleFormUrl, label: Online submission form URL, type: string, description: "The Google Form link. Every Submit button on the website opens it." }
+      - { name: callForPapersDeadline, label: Call for papers last date, type: string, description: "For example: 30 November 2026. Shown in the notice bar and on the home page. Leave empty to hide." }
       - { name: footerNote, label: Footer note, type: text }
       - name: social
         label: Social links

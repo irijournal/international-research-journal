@@ -114,6 +114,7 @@ const articleLd = {
     {article.data.authors.map((author) => <meta name="DC.creator" content={author} />)}
   </Fragment>
   <PageHead
+    crumbsLd={false}
     eyebrow={article.data.articleType}
     title={article.data.title}
     crumbs={[
