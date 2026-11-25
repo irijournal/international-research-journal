@@ -136,9 +136,9 @@ jobs.append(page('01-cfp-portrait', 1080, 1350, f"""
 <div class="c navy waves">
   {brand()}
   <div class="body" style="padding-top:64px">
-    <div class="eb">Submissions open all year</div>
-    <h1 style="font-size:112px;margin-top:22px">Call for Papers</h1>
-    <p class="it" style="font-size:36px;margin-top:10px;line-height:1.25">Send your paper any time. Accepted papers are published as soon as they are ready.</p>
+    <div class="eb">Peer reviewed · Open access · English and Hindi</div>
+    <h1 style="font-size:112px;margin-top:20px">Call for Papers</h1>
+    <div style="margin-top:26px;display:flex"><div style="display:inline-flex;flex-direction:column;align-self:flex-start;background:#fff;color:#0e2547;border-radius:8px;padding:16px 30px 18px"><span style="font-size:17px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#4b6584">Last date of submission</span><span style="font-size:46px;font-weight:600;line-height:1.1;margin-top:4px">30 November 2026</span></div></div>
     <div class="panel" style="margin-top:40px;padding:30px 34px">
       <div class="k" style="color:#a9c0e0">Seven research sections</div>
       <ol class="num" style="columns:2;column-gap:36px;font-size:29px;line-height:1.25;margin-top:18px">{sections.replace('<li>', '<li style="break-inside:avoid;margin-bottom:12px">')}</ol>
@@ -159,10 +159,10 @@ jobs.append(page('02-cfp-square', 1080, 1080, f"""
 <div class="c navy waves">
   {brand()}
   <div class="body" style="justify-content:center">
-    <div class="eb">Submissions open all year</div>
+    <div class="eb">Peer reviewed · English and Hindi</div>
     <h1 style="font-size:150px;margin-top:22px;font-weight:500">Call for<br>Papers</h1>
-    <p class="it" style="font-size:38px;margin-top:22px">Rigorous Research. Fair Review. Open to Every Reader.</p>
-    <p style="font-size:26px;margin-top:26px;color:#c9d6ea;letter-spacing:.02em">All seven sections · English and Hindi · Double anonymous peer review</p>
+    <div style="margin-top:30px;display:flex"><div style="display:inline-flex;flex-direction:column;align-self:flex-start;background:#fff;color:#0e2547;border-radius:8px;padding:16px 30px 18px"><span style="font-size:17px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#4b6584">Last date of submission</span><span style="font-size:50px;font-weight:600;line-height:1.1;margin-top:4px">30 November 2026</span></div></div>
+    <p style="font-size:26px;margin-top:30px;color:#c9d6ea;letter-spacing:.02em">All seven research sections · Double anonymous peer review</p>
   </div>
   {foot('Submit online', FORM, 'Read the guidelines', SITE)}
 </div>"""))
@@ -173,9 +173,9 @@ jobs.append(page('03-cfp-hindi', 1080, 1350, f"""
 <div class="c navy waves">
   {brand()}
   <div class="body hi" style="padding-top:60px">
-    <div class="eb hi" style="letter-spacing:.06em;font-size:26px">पूरे वर्ष प्रविष्टियाँ खुली हैं</div>
+    <div class="eb hi" style="letter-spacing:.06em;font-size:26px">सहकर्मी-समीक्षित · हिंदी और अंग्रेज़ी</div>
     <h1 class="hi" style="font-size:96px;margin-top:22px;line-height:1.2">शोध-पत्र आमंत्रण</h1>
-    <p style="font-size:32px;margin-top:6px;line-height:1.45">कभी भी शोध-पत्र भेजें। स्वीकृत शोध-पत्र तैयार होते ही प्रकाशित किए जाते हैं।</p>
+    <div style="margin-top:14px;display:flex"><div style="display:inline-flex;flex-direction:column;align-self:flex-start;background:#fff;color:#0e2547;border-radius:8px;padding:14px 30px 16px"><span style="font-size:22px;font-weight:700;letter-spacing:.02em;text-transform:uppercase;color:#4b6584">शोध-पत्र जमा करने की अंतिम तिथि</span><span style="font-size:46px;font-weight:600;line-height:1.1;margin-top:4px">30 नवंबर 2026</span></div></div>
     <div class="panel" style="margin-top:36px;padding:28px 34px">
       <div style="font-size:24px;font-weight:600;color:#a9c0e0">सात शोध खंड</div>
       <ol class="num" style="columns:2;column-gap:36px;font-size:26px;line-height:1.45;margin-top:14px">{sections_hi}</ol>

@@ -1,12 +1,14 @@
 ---
 slug: call-for-papers
-title: "Call for papers: submissions open all year"
+title: "Call for papers: last date of submission 30 November 2026"
 date: 25 November 2026
-summary: Submissions are open all year across all seven research sections, in English and Hindi. Accepted papers are published as soon as they are ready.
+summary: Original manuscripts are invited across all seven research sections, in English and Hindi. Last date of submission is 30 November 2026.
 pinned: true
 ---
 
-The editorial board of International Research Insights: Multidisciplinary e-Journal (ISSN (Online) 2839-7134) invites original manuscripts **at any time of the year**. There is no submission deadline. Accepted papers are published online as soon as they are ready and are included in the current quarterly issue.
+The editorial board of International Research Insights: Multidisciplinary e-Journal (ISSN (Online) 2839-7134) invites original manuscripts across all seven research sections.
+
+**Last date of submission: 30 November 2026.**
 
 ## Sections open
 

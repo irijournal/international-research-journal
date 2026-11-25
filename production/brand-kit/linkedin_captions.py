@@ -63,9 +63,10 @@ h('4. Captions (copy and paste)')
 
 posts = [
 ('01 · Call for papers (portrait)', f'''
-Call for Papers: submissions open all year
+Call for Papers
+Last date of submission: 30 November 2026
 
-International Research Insights: Multidisciplinary e-Journal (ISSN 2839-7134) invites original research at any time. There is no deadline: accepted papers are published as soon as they are ready.
+International Research Insights: Multidisciplinary e-Journal (ISSN 2839-7134) invites original research papers.
 
 What we publish
 • Research articles, review articles, case comments, short communications and book reviews
@@ -85,7 +86,7 @@ Please share this with colleagues and research scholars who are working on a pap
 #CallForPapers #ResearchPaper #AcademicPublishing #ResearchScholar #OpenAccess
 '''),
 ('02 · Call for papers (square)', f'''
-Our call for papers is open all year. Send your paper whenever it is ready.
+Call for Papers: last date of submission 30 November 2026.
 
 All seven research sections · English and Hindi · Double anonymous peer review · Processing charges only after acceptance.
 
@@ -94,9 +95,10 @@ Submit online: {F}
 #CallForPapers #Research #AcademicJournal
 '''),
 ('03 · शोध-पत्र आमंत्रण (Hindi)', f'''
-शोध-पत्र आमंत्रण: पूरे वर्ष प्रविष्टियाँ खुली हैं
+शोध-पत्र आमंत्रण
+अंतिम तिथि: 30 नवंबर 2026
 
-International Research Insights: Multidisciplinary e-Journal (ISSN 2839-7134) पूरे वर्ष हिंदी और अंग्रेज़ी में मौलिक शोध-पत्र आमंत्रित करता है। कोई अंतिम तिथि नहीं: स्वीकृत शोध-पत्र तैयार होते ही प्रकाशित किए जाते हैं।
+International Research Insights: Multidisciplinary e-Journal (ISSN 2839-7134) हिंदी और अंग्रेज़ी में मौलिक शोध-पत्र आमंत्रित करता है।
 
 • सात शोध खंड: विधि, स्वास्थ्य एवं नर्सिंग, हिंदी भाषा एवं साहित्य, इतिहास, शिक्षा, समाज एवं लोक नीति, विज्ञान एवं पर्यावरण
 • दोहरी अनाम सहकर्मी समीक्षा (दो समीक्षक)
@@ -160,7 +162,7 @@ International Research Insights publishes research in Hindi as well as English, 
 • They are published in Hindi with an English title, abstract and keywords, so the work can be found and cited internationally.
 • Our editorial office helps prepare the English abstract if you ask.
 
-Submissions are open all year: {F}
+Submit by 30 November 2026: {F}
 
 #हिंदी #HindiSahitya #HindiResearch #CallForPapers
 '''),
