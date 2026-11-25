@@ -1,12 +1,12 @@
 ---
-slug: call-for-papers-volume-2-issue-1
-title: "Call for papers: Volume 2, Issue 1 (January to March 2027)"
+slug: call-for-papers
+title: "Call for papers: submissions open all year"
 date: 25 November 2026
-summary: Submissions are open for Volume 2, Issue 1, to be published in March 2027, across all seven research sections, in English and Hindi.
+summary: Submissions are open all year across all seven research sections, in English and Hindi. Accepted papers are published as soon as they are ready.
 pinned: true
 ---
 
-The editorial board of International Research Insights: Multidisciplinary e-Journal (ISSN (Online) 2839-7134) invites original manuscripts for **Volume 2, Issue 1 (January to March 2027)**, to be published in March 2027.
+The editorial board of International Research Insights: Multidisciplinary e-Journal (ISSN (Online) 2839-7134) invites original manuscripts **at any time of the year**. There is no submission deadline. Accepted papers are published online as soon as they are ready and are included in the current quarterly issue.
 
 ## Sections open
 

@@ -32,7 +32,7 @@ Science, technology and health sciences papers are those in the [Science, Techno
 
 ## How and when to pay
 
-The editorial office sends the acceptance letter first. The invoice follows with the payment details, and the paper is scheduled for the next issue once payment is received. Payments are accepted only into the journal's official account named in the invoice, and a receipt is issued for every payment.
+The editorial office sends the acceptance letter first. The invoice follows with the payment details, and the paper is published once payment is received. Payments are accepted only into the journal's official account named in the invoice, and a receipt is issued for every payment.
 
 ## What the journal never charges for
 

@@ -63,9 +63,9 @@ h('4. Captions (copy and paste)')
 
 posts = [
 ('01 · Call for papers (portrait)', f'''
-Call for Papers: Volume 2, Issue 1 (January–March 2027)
+Call for Papers: submissions open all year
 
-International Research Insights: Multidisciplinary e-Journal (ISSN 2839-7134) invites original research for its next issue, to be published in March 2027.
+International Research Insights: Multidisciplinary e-Journal (ISSN 2839-7134) invites original research at any time. There is no deadline: accepted papers are published as soon as they are ready.
 
 What we publish
 • Research articles, review articles, case comments, short communications and book reviews
@@ -84,8 +84,8 @@ Please share this with colleagues and research scholars who are working on a pap
 
 #CallForPapers #ResearchPaper #AcademicPublishing #ResearchScholar #OpenAccess
 '''),
-('02 · Call for papers reminder (square)', f'''
-Submissions are open for Volume 2, Issue 1 (January–March 2027).
+('02 · Call for papers (square)', f'''
+Our call for papers is open all year. Send your paper whenever it is ready.
 
 All seven research sections · English and Hindi · Double anonymous peer review · Processing charges only after acceptance.
 
@@ -94,9 +94,9 @@ Submit online: {F}
 #CallForPapers #Research #AcademicJournal
 '''),
 ('03 · शोध-पत्र आमंत्रण (Hindi)', f'''
-शोध-पत्र आमंत्रण: खंड 2, अंक 1 (जनवरी–मार्च 2027)
+शोध-पत्र आमंत्रण: पूरे वर्ष प्रविष्टियाँ खुली हैं
 
-International Research Insights: Multidisciplinary e-Journal (ISSN 2839-7134) अपने अगले अंक के लिए हिंदी और अंग्रेज़ी में मौलिक शोध-पत्र आमंत्रित करता है। अंक मार्च 2027 में प्रकाशित होगा।
+International Research Insights: Multidisciplinary e-Journal (ISSN 2839-7134) पूरे वर्ष हिंदी और अंग्रेज़ी में मौलिक शोध-पत्र आमंत्रित करता है। कोई अंतिम तिथि नहीं: स्वीकृत शोध-पत्र तैयार होते ही प्रकाशित किए जाते हैं।
 
 • सात शोध खंड: विधि, स्वास्थ्य एवं नर्सिंग, हिंदी भाषा एवं साहित्य, इतिहास, शिक्षा, समाज एवं लोक नीति, विज्ञान एवं पर्यावरण
 • दोहरी अनाम सहकर्मी समीक्षा (दो समीक्षक)
@@ -160,7 +160,7 @@ International Research Insights publishes research in Hindi as well as English, 
 • They are published in Hindi with an English title, abstract and keywords, so the work can be found and cited internationally.
 • Our editorial office helps prepare the English abstract if you ask.
 
-Submissions for Volume 2, Issue 1 are open: {F}
+Submissions are open all year: {F}
 
 #हिंदी #HindiSahitya #HindiResearch #CallForPapers
 '''),

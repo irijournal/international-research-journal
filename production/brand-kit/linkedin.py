@@ -132,13 +132,13 @@ jobs = []
 
 # 1. Call for papers, portrait (detailed)
 sections = ''.join(f'<li>{s}</li>' for s in SECTIONS)
-jobs.append(page('01-cfp-vol2-issue1-portrait', 1080, 1350, f"""
+jobs.append(page('01-cfp-portrait', 1080, 1350, f"""
 <div class="c navy waves">
   {brand()}
   <div class="body" style="padding-top:64px">
-    <div class="eb">Call for papers · Submissions open</div>
-    <h1 style="font-size:104px;margin-top:22px">Volume 2, Issue 1</h1>
-    <p class="it" style="font-size:40px;margin-top:10px">January–March 2027 <span class="muted" style="font-style:normal">· published March 2027</span></p>
+    <div class="eb">Submissions open all year</div>
+    <h1 style="font-size:112px;margin-top:22px">Call for Papers</h1>
+    <p class="it" style="font-size:36px;margin-top:10px;line-height:1.25">Send your paper any time. Accepted papers are published as soon as they are ready.</p>
     <div class="panel" style="margin-top:40px;padding:30px 34px">
       <div class="k" style="color:#a9c0e0">Seven research sections</div>
       <ol class="num" style="columns:2;column-gap:36px;font-size:29px;line-height:1.25;margin-top:18px">{sections.replace('<li>', '<li style="break-inside:avoid;margin-bottom:12px">')}</ol>
@@ -155,11 +155,11 @@ jobs.append(page('01-cfp-vol2-issue1-portrait', 1080, 1350, f"""
 </div>"""))
 
 # 2. Call for papers, square (short)
-jobs.append(page('02-cfp-vol2-issue1-square', 1080, 1080, f"""
+jobs.append(page('02-cfp-square', 1080, 1080, f"""
 <div class="c navy waves">
   {brand()}
   <div class="body" style="justify-content:center">
-    <div class="eb">Volume 2 · Issue 1 · January–March 2027</div>
+    <div class="eb">Submissions open all year</div>
     <h1 style="font-size:150px;margin-top:22px;font-weight:500">Call for<br>Papers</h1>
     <p class="it" style="font-size:38px;margin-top:22px">Rigorous Research. Fair Review. Open to Every Reader.</p>
     <p style="font-size:26px;margin-top:26px;color:#c9d6ea;letter-spacing:.02em">All seven sections · English and Hindi · Double anonymous peer review</p>
@@ -169,13 +169,13 @@ jobs.append(page('02-cfp-vol2-issue1-square', 1080, 1080, f"""
 
 # 3. Call for papers, Hindi
 sections_hi = ''.join(f'<li style="break-inside:avoid;margin-bottom:12px">{s}</li>' for s in SECTIONS_HI)
-jobs.append(page('03-cfp-vol2-issue1-hindi', 1080, 1350, f"""
+jobs.append(page('03-cfp-hindi', 1080, 1350, f"""
 <div class="c navy waves">
   {brand()}
   <div class="body hi" style="padding-top:60px">
-    <div class="eb hi" style="letter-spacing:.06em;font-size:26px">शोध-पत्र आमंत्रण · प्रविष्टियाँ खुली हैं</div>
-    <h1 class="hi" style="font-size:92px;margin-top:22px;line-height:1.2">खंड 2, अंक 1</h1>
-    <p style="font-size:36px;margin-top:6px">जनवरी–मार्च 2027 <span class="muted">· प्रकाशन मार्च 2027</span></p>
+    <div class="eb hi" style="letter-spacing:.06em;font-size:26px">पूरे वर्ष प्रविष्टियाँ खुली हैं</div>
+    <h1 class="hi" style="font-size:96px;margin-top:22px;line-height:1.2">शोध-पत्र आमंत्रण</h1>
+    <p style="font-size:32px;margin-top:6px;line-height:1.45">कभी भी शोध-पत्र भेजें। स्वीकृत शोध-पत्र तैयार होते ही प्रकाशित किए जाते हैं।</p>
     <div class="panel" style="margin-top:36px;padding:28px 34px">
       <div style="font-size:24px;font-weight:600;color:#a9c0e0">सात शोध खंड</div>
       <ol class="num" style="columns:2;column-gap:36px;font-size:26px;line-height:1.45;margin-top:14px">{sections_hi}</ol>
@@ -306,7 +306,7 @@ jobs.append(page('09-post-write-in-hindi', 1080, 1350, f"""
       </ol>
     </div>
   </div>
-  {foot('Submit for Volume 2, Issue 1', FORM, 'Guidelines', SITE)}
+  {foot('Submit your manuscript', FORM, 'Guidelines', SITE)}
 </div>"""))
 
 # 10. Post: five checks before you submit

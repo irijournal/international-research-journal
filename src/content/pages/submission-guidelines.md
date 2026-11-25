@@ -92,7 +92,7 @@ Tools that generate or rewrite text may be used for language editing, and this m
 4. **Decision**, one of: accept, accept with minor revision, revise and resubmit, or reject. Reviewer reports are sent with the decision in every case, including rejection.
 5. **Revision**, normally within three weeks for minor revisions and six weeks for a revise and resubmit, with a point by point response to each reviewer comment.
 6. **Copy editing and proof**, with the author approving the final proof before publication.
-7. **Publication** in the next scheduled issue, under a Creative Commons Attribution 4.0 licence, at a permanent web address.
+7. **Publication** online as soon as the final proof is approved, under a Creative Commons Attribution 4.0 licence, at a permanent web address. Each article is included in the current quarterly issue. Manuscripts are accepted all year; there is no submission deadline.
 
 The average time from submission to first decision is targeted at five weeks. Where a manuscript takes longer, the editorial office will tell you why and when to expect the decision, without waiting to be asked.
 

@@ -6,4 +6,7 @@ export default defineConfig({
   site: 'https://internationalresearchinsights.com',
   trailingSlash: 'ignore',
   build: { format: 'directory' },
+  redirects: {
+    '/announcements/call-for-papers-volume-2-issue-1': '/announcements/call-for-papers',
+  },
 });
